@@ -1,12 +1,12 @@
 # Tempo
 
-[Heroku link]()
+[Heroku link](https://tempo.herokuapp.com/)
 
 [Trello link](https://trello.com/b/qC1AQZq5/tempo)
 
 ## Minimum Viable Product
 
-Tempo is a music streaming application inspired by Spotify and is built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+Tempo is a music streaming web application inspired by Spotify and is built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
 - [ ] New account creation, login, and guest login
 - [ ] Song playing while browsing

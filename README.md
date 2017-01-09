@@ -26,7 +26,7 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 
 ## Implementation Timeline
 
-#### Phase 1: Backend setup and Front End Authentication (2 days)
+### Phase 1: Backend setup and Front End Authentication (2 days)
 
 **Tasks:**
 - [ ] Set up database,
@@ -38,7 +38,7 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 
 Objective: Functioning rails project with front-end Authentication
 
-#### Phase 2: Song component (2 days)
+### Phase 2: Song component (2 days)
 
 **Tasks:**
 - [ ] Set up song model and controller
@@ -47,7 +47,7 @@ Objective: Functioning rails project with front-end Authentication
 
 Objective: A song can be played while the user is browsing.
 
-#### Phase 3: Allow songs to be added to queue (2 days)
+### Phase 3: Allow songs to be added to queue (2 days)
 
 **Tasks:**
 - [ ] create queue front-end
@@ -55,7 +55,7 @@ Objective: A song can be played while the user is browsing.
 
 Objective: User can add songs into queue to be played after current song.
 
-#### Phase 4: Playlist CRUD (2 days)
+### Phase 4: Playlist CRUD (2 days)
 
 **Tasks:**
 - [ ] Set up playlist backend

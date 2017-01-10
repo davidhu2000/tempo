@@ -20,14 +20,6 @@
 | lyrics          | text      |                               |
 
 
-## song_artists
-| column name     | data type | details                       |
-|-----------------|-----------|-------------------------------|
-| id              | integer   | not null, primary key         |
-| artist_id       | integer   | not null, indexed             |
-| song_id         | integer   | not null, indexed             |
-
-
 ## artists
 | column name     | data type | details                       |
 |-----------------|-----------|-------------------------------|

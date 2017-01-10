@@ -19,18 +19,8 @@
       image_url: 'https://www.url.com/image1'
     }
   },
-  music: {
-    artist: {},
-    album: {},
-    playlist: {
-      '1': {
-        id: '1',
-        userId: '1',
-        description: 'playlist number 1',
-        image_url: 'https://www.url.com/playlist1'
-      }
-    },
-    song: {
+  songs: {
+    index: {
       '3': {
         id: '3',
         title: 'song 3',
@@ -44,7 +34,31 @@
         albumId: '4',
         lyrics: 'Song lyrics are here',
         image_url: 'https://www.url.com/image4'
-      },
+      }
+    },
+    detail: {
+
+    }
+  },
+  album: {
+    index: {
+
+    },
+    detail: {
+
+    }
+  },
+  playlist: {
+    index: {
+      '1': {
+        id: '1',
+        userId: '1',
+        description: 'playlist number 1',
+        image_url: 'https://www.url.com/playlist1'
+      }
+    },
+    detail: {
+
     }
   },
   search: {

@@ -24,17 +24,17 @@ export const login = user => dispatch => (
       dispatch(clearErrors());
       return dispatch(receiveUser(res));
     },
-    err => dispatch(receiveErrors(err.reponseJSON))
+    err => dispatch(receiveErrors(err.responseJSON))
   )
 );
 
 export const logout = user => dispatch => (
-  SessionAPIUtil.lgout().then(
+  SessionAPIUtil.logout().then(
     res => {
       dispatch(clearErrors());
       return dispatch(receiveUser(null));
     },
-    err => dispatch(receiveErrors(err.reponseJSON))
+    err => dispatch(receiveErrors(err.responseJSON))
   )
 );
 
@@ -44,6 +44,6 @@ export const signup = user => dispatch => (
       dispatch(clearErrors());
       return dispatch(receiveUser(res));
     },
-    err => dispatch(receiveErrors(err.reponseJSON))
+    err => dispatch(receiveErrors(err.responseJSON))
   )
 );

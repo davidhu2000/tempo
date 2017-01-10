@@ -15,15 +15,19 @@
 #
 
 class User < ActiveRecord::Base
-  validates :username, :email, presence: true, uniqueness: true
+
+  validates :username, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: { message: "Password cannot be blank" }
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :session_token, presence: true
 
   after_initialize :ensure_session_token, :ensure_username
 
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
+    user = User.find_by(email: username) unless user
     user && user.valid_password?(password) ? user : nil
   end
 
@@ -35,7 +39,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_username
-    self.username ||= self.email
+    self.username = self.email if self.username.empty?
   end
 
   def ensure_session_token

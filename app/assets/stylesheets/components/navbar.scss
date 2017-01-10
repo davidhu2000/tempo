@@ -1,0 +1,113 @@
+$bg-1-4: #143313;
+$bg-2-4: #1A5A35;
+$bg-3-4: #218E93;
+$bg-4-4: #082A33;
+$line-height: 6vh;
+
+.navbar {
+  height: $line-height;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(14, 14, 14, 0.9);
+  color: white;
+}
+
+.navbar-header h1 {
+  line-height: $line-height;
+  display: block;
+  line-height: 5vh;
+  margin-left: 15px;
+  padding-left: 12vw;
+  font-size: 2em;
+  font-family: cursive;
+}
+
+.navbar-logo h1 {
+  display: block;
+  line-height: $line-height;
+  margin-left: 15px;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+
+  .navbar-button {
+    margin: 0 15px;
+    width: 80px;
+
+
+    a {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 1px solid #353535;
+      padding: 5px 8px;
+      width: 80px;
+      text-align: center;
+      background: #0c4e5f;
+      box-shadow: 2px 2px 2px #0a5568;
+
+      span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+    }
+
+    a:hover {
+      background: #175868;
+
+      span {
+        padding-right: 15px;
+      }
+
+      span:after {
+        opacity: 1;
+        right: 0;
+      }
+    }
+
+    a:active {
+      background: #175868;
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+
+
+  }
+
+  // .btn-login a {
+  //   background: $bg-1-4; /* For browsers that do not support gradients */
+  //   background: -webkit-linear-gradient(left, $bg-1-4 , $bg-2-4); /* For Safari 5.1 to 6.0 */
+  //   background: -o-linear-gradient(right, $bg-1-4, $bg-2-4); /* For Opera 11.1 to 12.0 */
+  //   background: -moz-linear-gradient(right, $bg-1-4, $bg-2-4); /* For Firefox 3.6 to 15 */
+  //   background: linear-gradient(to right, $bg-1-4 , $bg-2-4); /* Standard syntax */
+  // }
+  //
+  // .btn-signup a {
+  //   background: $bg-2-4; /* For browsers that do not support gradients */
+  //   background: -webkit-linear-gradient(left, $bg-2-4 , $bg-3-4); /* For Safari 5.1 to 6.0 */
+  //   background: -o-linear-gradient(right, $bg-2-4, $bg-3-4); /* For Opera 11.1 to 12.0 */
+  //   background: -moz-linear-gradient(right, $bg-2-4, $bg-3-4); /* For Firefox 3.6 to 15 */
+  //   background: linear-gradient(to right, $bg-2-4 , $bg-3-4); /* Standard syntax */
+  // }
+  //
+  // .btn-demo a {
+  //   background: $bg-3-4; /* For browsers that do not support gradients */
+  //   background: -webkit-linear-gradient(left, $bg-3-4 , $bg-4-4); /* For Safari 5.1 to 6.0 */
+  //   background: -o-linear-gradient(right, $bg-3-4, $bg-4-4); /* For Opera 11.1 to 12.0 */
+  //   background: -moz-linear-gradient(right, $bg-3-4, $bg-4-4); /* For Firefox 3.6 to 15 */
+  //   background: linear-gradient(to right, $bg-3-4 , $bg-4-4); /* Standard syntax */
+  // }
+}

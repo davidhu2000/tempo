@@ -9,6 +9,20 @@ class SessionForm extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this._redirectLoggedIn();
+  }
+
+  componentDidUpdate() {
+    this._redirectLoggedIn();
+  }
+
+  _redirectLoggedIn() {
+    if(this.props.loggedIn) {
+      this.props.router.replace('/browse');
+    }
+  }
+
   render() {
     if(this.props.formType === 'login') {
       return (
@@ -19,7 +33,7 @@ class SessionForm extends React.Component {
     } else {
       return (
         <div>
-          <SignupForm login={this.props.signup} />
+          <SignupForm signup={this.props.signup} />
         </div>
       );
     }

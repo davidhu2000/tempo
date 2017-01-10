@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
                  value='Login'></input>
 
           <span className='form-span'>
-            Need to create an account? <Link to='/signup'>Sign Up</Link>
+            Need an account? <Link to='/signup'>Sign Up</Link>
           </span>
         </form>
 

@@ -1,5 +1,7 @@
 class Api::UsersController < ApplicationController
   before_action :look_up_user, only: [:show, :update, :destroy]
+  before_action :require_logged_in, only: [:update, :destroy]
+  before_action :cannot_modify_other_users, only: [:update, :destroy]
 
   def show
   end
@@ -23,13 +25,24 @@ class Api::UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
+    if @user
+      @user.destroy
+      render 'api/users/show'
+    else
+      render json: ['User does not exist'], status: 401
+    end
   end
 
   private
 
   def look_up_user
     @user = User.find_by(id: params[:id])
+  end
+
+  def cannot_modify_other_users
+    unless current_user === @user
+      render json: ['Cannot modify other usees'], status: 401
+    end
   end
 
   def user_params

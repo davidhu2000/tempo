@@ -4,6 +4,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 import App from './app.jsx';
 import Splash from './main/splash';
+import SplashDisplay from './main/display';
 import SessionFormContainer from './session_form/session_form_container';
 
 
@@ -24,6 +25,7 @@ const Root = ({ store }) => {
           <IndexRoute onEnter={ _redirect } />
 
           <Route path="/splash" component={ Splash }>
+            <IndexRoute component={ SplashDisplay } />
             <Route path="/login" component={ SessionFormContainer } />
             <Route path="/signup" component={ SessionFormContainer } />
           </Route>

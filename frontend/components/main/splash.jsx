@@ -5,11 +5,11 @@ const Splash = ({ children }) => (
   <div>
     <div className='navbar'>
       <div className='navbar-logo'>
-        <h1>Logo</h1>
+        <h1><Link to='/'>Logo</Link></h1>
       </div>
 
       <div className='navbar-header'>
-        <h1>Welcome to Tempo</h1>
+        <h1><Link to='/'>Welcome to Tempo</Link></h1>
       </div>
 
       <div className='navbar-buttons'>
@@ -32,8 +32,6 @@ const Splash = ({ children }) => (
     </div>
 
     <div className='splash'>
-
-      <h1>Splash</h1>
       { children }
     </div>
   </div>

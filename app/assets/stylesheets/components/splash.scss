@@ -4,3 +4,49 @@
   width: 100vw;
   // filter: blur(3px) brightness(0.8);
 }
+
+.splash-display {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron {
+  height: 80%;
+  // background: orange;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    display: block;
+    font-size: 9em;
+    text-shadow: 3px 3px 3px white;
+  }
+
+  .splash-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+
+    a {
+      font-size: 5em;
+      border: 2px solid black;
+      padding: 20px 40px;
+      border-radius: 200px;
+      text-shadow: 2px 2px 2px white;
+      box-shadow: 10px 10px 10px black;
+    }
+
+    a:hover {
+      text-shadow: -2px -2px 2px gray;
+      transform: skewX(2deg);
+    }
+
+    a:active {
+      box-shadow: none;
+      transform: translateY(10px);
+    }
+  }
+}

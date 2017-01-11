@@ -24,7 +24,7 @@ class App extends React.Component {
     return (
       <div>
         <div>App</div>
-        <button onClick={ this.props.logout }>Logout</button>
+        <button className='form-button' onClick={ this.props.logout }>Logout</button>
         { this.props.children }
       </div>
     );

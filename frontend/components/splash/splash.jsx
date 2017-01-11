@@ -29,7 +29,7 @@ const Splash = ({ login, children }) => (
           </Link>
         </div>
         <div className='navbar-button btn-demo'>
-          <a>
+          <a onClick={ () => login(demoUser) }>
             <span>Demo</span>
           </a>
 

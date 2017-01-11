@@ -28,7 +28,7 @@ export const login = user => dispatch => (
   )
 );
 
-export const logout = user => dispatch => (
+export const logout = () => dispatch => (
   SessionAPIUtil.logout().then(
     res => {
       dispatch(clearErrors());

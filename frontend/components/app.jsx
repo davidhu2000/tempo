@@ -1,4 +1,5 @@
 import React from 'react';
+import { logout } from '../actions/session_actions';
 
 const App = ({ store }) => (
   <div>
@@ -7,3 +8,6 @@ const App = ({ store }) => (
 );
 
 export default App;
+
+// TODO: for testing
+window.logout = logout;

@@ -1,5 +1,5 @@
 .splash {
-  background-image: image_url('splash_background.jpg');
+  background-image: image_url('splash.jpg');
   height: 100vh;
   width: 100vw;
   // filter: blur(3px) brightness(0.8);
@@ -21,22 +21,28 @@
   h1 {
     display: block;
     font-size: 6em;
-    text-shadow: 3px 3px 3px white;
+    text-shadow: 5px 5px 3px black;
+    color: #FFFFFF;
   }
 
   .splash-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10vh;
 
+    :first-child {
+      margin-right: 150px;
+    }
     a {
       font-size: 3em;
       border: 2px solid black;
       padding: 20px 40px;
       border-radius: 200px;
-      text-shadow: 2px 2px 2px white;
-      box-shadow: 10px 10px 10px black;
-      background: rgba(60, 250, 165, 0.4);
+      text-shadow: 2px 2px 2px black;
+      box-shadow: 10px 10px 10px #555555;
+      color: white;
+      background: #1798c1;
+      // background: rgba(80, 80, 80, 0.8);
     }
 
     a:hover {

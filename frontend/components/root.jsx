@@ -2,7 +2,13 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
+import { logout } from '../actions/session_actions';
+
+// app components
 import AppContainer from './app/app_container';
+import Sidebar from './app/sidebar';
+
+// splash components
 import SplashContainer from './splash/splash_container';
 import SplashDisplay from './splash/display';
 import SessionFormContainer from './session_form/session_form_container';
@@ -31,6 +37,7 @@ const Root = ({ store }) => {
           </Route>
 
           <Route path="/browse" component={AppContainer}>
+            <IndexRoute component={ Sidebar } />
           </Route>
         </Route>
       </Router>

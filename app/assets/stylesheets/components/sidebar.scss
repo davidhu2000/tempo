@@ -1,0 +1,32 @@
+$sidebar-width: 100px;
+
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  background: $aqua-blue-more-transparent;
+
+  span {
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    height: $sidebar-width;
+    text-align: center;
+    line-height: $sidebar-width;
+  }
+
+  .sidebar-logo {
+    display: block;
+    height: 10vh;
+    margin-bottom: 5vh;
+  }
+
+  .sidebar-menu {
+    margin-top: 5vh;
+    width: 100px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}

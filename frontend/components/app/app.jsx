@@ -23,11 +23,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>App</div>
-        <button className='form-button' onClick={ this.props.logout }>Logout</button>
-        { this.props.children }
+        {React.cloneElement(this.props.children, { logout: this.props.logout })}
       </div>
     );
   }
 }
+
 export default withRouter(App);

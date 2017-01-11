@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='main'>
         {React.cloneElement(this.props.children, { logout: this.props.logout })}
       </div>
     );

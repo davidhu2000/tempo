@@ -1,32 +1,102 @@
-$sidebar-width: 100px;
+$sidebar-width: 5vw;
+$icon-width: 2vw;
 
 .sidebar {
   width: $sidebar-width;
   height: 100vh;
-  background: $aqua-blue-more-transparent;
+  background: $aqua-blue-most-transparent;
 
-  span {
-    border: 1px solid black;
+  a {
+    // border: 1px solid black;
     display: block;
     width: 100%;
     height: $sidebar-width;
     text-align: center;
     line-height: $sidebar-width;
+    color: white;
   }
 
   .sidebar-logo {
     display: block;
     height: 10vh;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
   }
 
   .sidebar-menu {
-    margin-top: 5vh;
-    width: 100px;
+    margin-top: 3vh;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
+}
+
+.sidebar-browse {
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+
+    img {
+      filter: invert(30%);
+      width: $icon-width;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    span {
+      text-align: center;
+      font-size: 0.8em;
+      display:inherit;
+      line-height: normal;
+      margin: 0 auto;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.sidebar-profile {
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+
+    img {
+      filter: invert(30%);
+      width: $icon-width;
+      margin: 0 auto;
+      padding: 0;
+      border-radius: 50px;
+    }
+
+    span {
+      text-align: center;
+      font-size: 0.8em;
+      display:inherit;
+      line-height: normal;
+      margin: 0 auto;
+      padding-top: 5px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .sidebar-logout {
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: 1px solid #353535;
+    padding: 5px 8px;
+    color: $aqua-blue;
+    text-align: center;
+    background: white;
+    box-shadow: 2px 2px 2px #132B11;
+  }
+
+  .sidebar-logout:hover {
+    background: $aqua-blue;
+    color: white;
+  }
 }

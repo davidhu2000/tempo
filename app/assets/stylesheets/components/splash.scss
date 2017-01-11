@@ -2,6 +2,8 @@
   background-image: image_url('splash.jpg');
   height: 100vh;
   width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
   // filter: blur(3px) brightness(0.8);
 }
 

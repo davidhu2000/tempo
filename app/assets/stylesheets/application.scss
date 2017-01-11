@@ -10,10 +10,17 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
-body {
-  font-family: 'Russo One', sans-serif;
-}
+
+
+$blue: black;
+
+@import 'base/reset.scss';
+@import 'base/font.scss';
+@import 'base/color.scss';
+@import 'components/splash.scss';
+@import 'components/navbar.scss';
+@import 'components/form.scss';
+@import 'components/errors.scss';

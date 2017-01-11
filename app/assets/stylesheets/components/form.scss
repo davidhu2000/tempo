@@ -1,10 +1,10 @@
 .form {
   display: block;
   width: 20vw;
-  background: rgba(162, 163, 165, 0.8);
+  background: $aqua-blue-more-transparent;//rgba(162, 163, 165, 0.8);
   padding: 20px;
   border-radius: 8px;
-  color: #191918;
+  color: white; // #191918;
   position: absolute;
   top: 20vh;
   left: 40vw;
@@ -51,23 +51,24 @@
 
 
 .form-button {
-  background-color: #3c843a;
+  background-color: white;
   width: 30%;
   padding: 5px 0;
   margin: 10px auto;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 3px 3px 3px #2f562d;
+  box-shadow: 3px 3px 3px black;
   border-radius: 20px;
+  color: $aqua-blue;
 }
 
 .form-button:hover {
-  background-color: #376835;
+  background-color: $aqua-blue;
+  color: white;
 }
 
 .form-button:active {
   box-shadow: none;
-  background-color: #376835;
+  background-color: $aqua-blue;
   transform: translateY(3px);
 }

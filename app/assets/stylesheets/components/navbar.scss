@@ -13,7 +13,7 @@ $btn-blue: #175868;
   height: $line-height;
   display: flex;
   justify-content: space-between;
-  background: rgba(14, 14, 14, 0.7);
+  background: $aqua-blue-more-transparent;
   color: #dddddd;
   box-shadow: 0 0 30px black;
 }
@@ -25,6 +25,7 @@ $btn-blue: #175868;
   margin-left: 15px;
   padding-left: 12vw;
   font-size: 2em;
+  text-shadow: 3px 3px 3px black;
 }
 
 .navbar-logo h1 {
@@ -49,8 +50,9 @@ $btn-blue: #175868;
       border: 1px solid #353535;
       padding: 5px 8px;
       width: 80px;
+      color: #1798c1;
       text-align: center;
-      background: ; // $btn-blue;
+      background: white; //#1798c1; // $btn-blue;
       box-shadow: 2px 2px 2px #132B11;
 
       span {
@@ -71,7 +73,8 @@ $btn-blue: #175868;
     }
 
     a:hover {
-      background: $btn-green;
+      background: $aqua-blue;
+      color: white;
 
       span {
         padding-right: 15px;
@@ -89,30 +92,6 @@ $btn-blue: #175868;
       transform: translateY(2px);
     }
 
-
   }
 
-  // .btn-login a {
-  //   background: $bg-1-4; /* For browsers that do not support gradients */
-  //   background: -webkit-linear-gradient(left, $bg-1-4 , $bg-2-4); /* For Safari 5.1 to 6.0 */
-  //   background: -o-linear-gradient(right, $bg-1-4, $bg-2-4); /* For Opera 11.1 to 12.0 */
-  //   background: -moz-linear-gradient(right, $bg-1-4, $bg-2-4); /* For Firefox 3.6 to 15 */
-  //   background: linear-gradient(to right, $bg-1-4 , $bg-2-4); /* Standard syntax */
-  // }
-  //
-  // .btn-signup a {
-  //   background: $bg-2-4; /* For browsers that do not support gradients */
-  //   background: -webkit-linear-gradient(left, $bg-2-4 , $bg-3-4); /* For Safari 5.1 to 6.0 */
-  //   background: -o-linear-gradient(right, $bg-2-4, $bg-3-4); /* For Opera 11.1 to 12.0 */
-  //   background: -moz-linear-gradient(right, $bg-2-4, $bg-3-4); /* For Firefox 3.6 to 15 */
-  //   background: linear-gradient(to right, $bg-2-4 , $bg-3-4); /* Standard syntax */
-  // }
-  //
-  // .btn-demo a {
-  //   background: $bg-3-4; /* For browsers that do not support gradients */
-  //   background: -webkit-linear-gradient(left, $bg-3-4 , $bg-4-4); /* For Safari 5.1 to 6.0 */
-  //   background: -o-linear-gradient(right, $bg-3-4, $bg-4-4); /* For Opera 11.1 to 12.0 */
-  //   background: -moz-linear-gradient(right, $bg-3-4, $bg-4-4); /* For Firefox 3.6 to 15 */
-  //   background: linear-gradient(to right, $bg-3-4 , $bg-4-4); /* Standard syntax */
-  // }
 }

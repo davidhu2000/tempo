@@ -1,12 +1,12 @@
 .splash {
   background-image: image_url('splash_background.jpg');
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   // filter: blur(3px) brightness(0.8);
 }
 
 .splash-display {
-  width: 70%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -14,14 +14,13 @@
 }
 
 .jumbotron {
-  height: 80%;
-  // background: orange;
+  height: 60%;
   width: 100%;
   text-align: center;
 
   h1 {
     display: block;
-    font-size: 9em;
+    font-size: 6em;
     text-shadow: 3px 3px 3px white;
   }
 
@@ -31,12 +30,13 @@
     margin-top: 10vh;
 
     a {
-      font-size: 5em;
+      font-size: 3em;
       border: 2px solid black;
       padding: 20px 40px;
       border-radius: 200px;
       text-shadow: 2px 2px 2px white;
       box-shadow: 10px 10px 10px black;
+      background: rgba(60, 250, 165, 0.4);
     }
 
     a:hover {

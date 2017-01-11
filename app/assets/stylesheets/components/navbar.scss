@@ -2,20 +2,26 @@ $bg-1-4: #143313;
 $bg-2-4: #1A5A35;
 $bg-3-4: #218E93;
 $bg-4-4: #082A33;
-$line-height: 6vh;
+$line-height: 8vh;
+
+$btn-green: #1E5D28;
+$btn-blue: #175868;
 
 .navbar {
+  position: absolute;
+  width: 100%;
   height: $line-height;
   display: flex;
   justify-content: space-between;
-  background: rgba(14, 14, 14, 0.9);
+  background: rgba(14, 14, 14, 0.7);
   color: #dddddd;
+  box-shadow: 0 0 30px black;
 }
 
 .navbar-header h1 {
   line-height: $line-height;
   display: block;
-  line-height: 5vh;
+  line-height: $line-height;
   margin-left: 15px;
   padding-left: 12vw;
   font-size: 2em;
@@ -44,8 +50,8 @@ $line-height: 6vh;
       padding: 5px 8px;
       width: 80px;
       text-align: center;
-      background: #0c4e5f;
-      box-shadow: 2px 2px 2px #0a5568;
+      background: $btn-blue;
+      box-shadow: 2px 2px 2px #132B11;
 
       span {
         cursor: pointer;
@@ -65,7 +71,7 @@ $line-height: 6vh;
     }
 
     a:hover {
-      background: #175868;
+      background: $btn-green;
 
       span {
         padding-right: 15px;

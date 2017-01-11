@@ -1,13 +1,22 @@
-.form-errors {
-  width: 20%;
+.errors-box {
+  width: 30vw;
   margin: 0 auto;
+  position: absolute;
+  top: 10vh;
+  left: 35vw;
+}
+
+.form-errors {
+  display: block;
+  margin: 0 auto;
+
   li:first-child {
     margin: 0 auto;
   }
 
   li {
     margin: 5px auto;
-    background: #F2DEDE;
+    background: rgba(242, 222, 222, 0.6);
     color: #A94442;
     height: 25px;
     border-radius: 10px;

@@ -3,18 +3,10 @@ import { withRouter, Link, hashHistory } from 'react-router';
 
 const demoUser = {
   username: 'Guest',
-  email: 'guest@tempo.com',
-  first_name: 'Gu',
-  last_name: 'Est',
-  image_url: ''
+  password: 'password'
 };
 
-const setGuestAccount = () => {
-  window.currentUser = demoUser;
-  hashHistory.push('/browse');
-};
-
-const Splash = ({ children }) => (
+const Splash = ({ login, children }) => (
   <div>
     <div className='navbar'>
       <div className='navbar-logo'>
@@ -37,7 +29,7 @@ const Splash = ({ children }) => (
           </Link>
         </div>
         <div className='navbar-button btn-demo'>
-          <a onClick={setGuestAccount}>
+          <a>
             <span>Demo</span>
           </a>
 

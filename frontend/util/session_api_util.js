@@ -20,3 +20,5 @@ export const signup = user => (
     data: { user }
   })
 );
+
+window.logout = logout;

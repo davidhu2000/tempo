@@ -65,36 +65,11 @@ $btn-blue: #175868;
       text-align: center;
       background: white; //#1798c1; // $btn-blue;
       box-shadow: 2px 2px 2px #132B11;
-
-      span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-
-      span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-      }
     }
 
     a:hover {
       background: $aqua-blue;
       color: white;
-
-      span {
-        padding-right: 15px;
-      }
-
-      span:after {
-        opacity: 1;
-        right: 0;
-      }
     }
 
     a:active {

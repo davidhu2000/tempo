@@ -20,10 +20,13 @@ $icon-width: 2vw;
   }
 
   a:hover {
-    transition: 0.5s;
-    transform: translateX(20px);
+    transition: 0.4s;
+    transform: translateX(8px);
     background-color: $aqua-blue-most-transparent;
-    border-right: 3px solid #519872;
+    // border-right: 2px solid $color4;
+    // border-top: 2px solid $color4;
+    border-bottom: 2px solid $color4;
+    // box-shadow: inset 0 0 10px black;
   }
 
   .sidebar-logo {
@@ -71,6 +74,7 @@ $icon-width: 2vw;
 }
 
 .sidebar-profile {
+  padding-bottom: 30px;
 
   a {
     display: flex;

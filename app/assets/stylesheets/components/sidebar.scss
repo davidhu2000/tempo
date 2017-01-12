@@ -4,7 +4,7 @@ $icon-width: 2vw;
 .sidebar {
   width: $sidebar-width;
   height: 100vh;
-  background: $aqua-blue-most-transparent;
+  // background: $aqua-blue-most-transparent;
 
   a {
     transition: 0.5s;
@@ -16,26 +16,31 @@ $icon-width: 2vw;
     text-align: center;
     line-height: $sidebar-width;
     color: white;
+    background-color: $aqua-blue-most-transparent;
   }
 
   a:hover {
     transition: 0.5s;
-    transform: translateX(10px);
-    // border-left: 3px solid #519872;
+    transform: translateX(20px);
+    background-color: $aqua-blue-most-transparent;
+    border-right: 3px solid #519872;
   }
 
   .sidebar-logo {
     display: block;
-    height: 10vh;
-    margin-bottom: 3vh;
+    height: $sidebar-width;
+    padding: 0;
+    margin: 0;
   }
 
   .sidebar-menu {
-    margin-top: 3vh;
-    height: 80vh;
+    height: 70vh;
+    background-color: $aqua-blue-most-transparent;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
 }
@@ -71,6 +76,7 @@ $icon-width: 2vw;
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
+    background: none;
 
     img {
       filter: invert(30%);
@@ -89,6 +95,12 @@ $icon-width: 2vw;
       padding-top: 5px;
       padding-bottom: 15px;
     }
+  }
+
+  a:hover {
+    transform: none;
+    background: none;
+    border: none;
   }
 
   .sidebar-logout {

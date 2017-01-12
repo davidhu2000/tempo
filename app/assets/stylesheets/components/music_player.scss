@@ -1,0 +1,20 @@
+.music-player {
+  background: orange;
+  width: 80vw;
+  height: 5vh;
+
+  i {
+    font-size: 1.7em;
+  }
+}
+
+.player {
+  display: flex;
+  justify-content: space-around;
+}
+
+.player-main {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+}

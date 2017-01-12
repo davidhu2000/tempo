@@ -15,25 +15,34 @@ class Player extends React.Component {
     return (
       <div className='player'>
 
-        <div className='player-backward'>
-          <button onClick={ this.props.backward }>
-            <i className='fa fa-backward'></i>
-          </button>
+        <div className='player-song-image'>
+          <img src='' />
         </div>
 
         <div className='player-main'>
-          <button onClick={ this.props.togglePlay }>
-            <i className={ this.playPauseClass() }></i>
-          </button>
+          <div className='player-backward'>
+            <button onClick={ this.props.backward }>
+              <i className='fa fa-backward'></i>
+            </button>
+          </div>
 
-          <button onClick={ this.props.random }>
-            <i className='fa fa-random'></i>
-          </button>
+          <div className='play-pause'>
+            <button onClick={ this.props.togglePlay }>
+              <i className={ this.playPauseClass() }></i>
+            </button>
+          </div>
+
+          <div className='player-forward'>
+            <button onClick={ this.props.forward }>
+              <i className='fa fa-forward'></i>
+            </button>
+          </div>
+
         </div>
 
-        <div className='player-forward'>
-          <button onClick={ this.props.forward }>
-            <i className='fa fa-forward'></i>
+        <div className='player-random'>
+          <button onClick={ this.props.random }>
+            <i className='fa fa-random'></i>
           </button>
         </div>
 

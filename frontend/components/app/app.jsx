@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import Sidebar from './sidebar';
+import CurrentSongContainer from '../current_song/current_song_container';
 
 class App extends React.Component {
   constructor(props){
@@ -30,6 +31,9 @@ class App extends React.Component {
         </div>
         <div className='col col-11'>
           { this.props.children }
+        </div>
+        <div className='current-song'>
+          <CurrentSongContainer />
         </div>
       </div>
     );

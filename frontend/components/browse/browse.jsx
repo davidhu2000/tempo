@@ -1,14 +1,17 @@
 import React from 'react';
 
-import CurrentSongContainer from '../current_song/current_song_container';
-
 class Browse extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <div className="browse">
-        <h1>Browse</h1>
-        <CurrentSongContainer />
+        <h1>Artists</h1>
+        <h1>Albums</h1>
+        <h1>Songs</h1>
+        <h1>Playlists</h1>
       </div>
     );
   }

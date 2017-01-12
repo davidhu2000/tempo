@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import ReactPlayer from 'react-player';
+
+import MusicPlayer from '../music_player/music_player';
 
 class CurrentSong extends React.Component {
   constructor(props) {
@@ -9,8 +10,9 @@ class CurrentSong extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>h1</h1>
+      <div className='current-song'>
+        <h1>Song Name</h1>
+        <MusicPlayer />
       </div>
     );
   }

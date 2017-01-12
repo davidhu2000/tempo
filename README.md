@@ -8,7 +8,7 @@
 
 Tempo is a music streaming web application inspired by Spotify and is built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
-- [ ] New account creation, login, and guest login
+- [x] New account creation, login, and guest login
 - [ ] Song playing while browsing
 - [ ] Maintain song queue
 - [ ] Subscribe to playlists
@@ -29,14 +29,15 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 ### Phase 1: Backend setup and Front End Authentication (2 days)
 
 **Tasks:**
-- [ ] Set up database,
-- [ ] Create seed data
-- [ ] User creation and deletion
-- [ ] Back-end authentication
-- [ ] Front-end authentication
-- [ ] Add styling to form
+- [x] Set up database,
+- [x] Create seed data
+- [x] User creation and deletion
+- [x] Back-end authentication
+- [x] Front-end authentication
+- [x] Add styling to form
+- [x] Create Splash page
 
-Objective: Functioning rails project with front-end Authentication
+&#10004; Objective: Functioning rails project with front-end Authentication
 
 ### Phase 2: Song component (2 days)
 

@@ -8,6 +8,7 @@ import { logout } from '../actions/session_actions';
 import AppContainer from './app/app_container';
 import Sidebar from './app/sidebar';
 import BrowseContainer from './browse/browse_container';
+import ArtistIndexContainer from './artist_index/artist_index_container';
 
 // splash components
 import SplashContainer from './splash/splash_container';
@@ -39,7 +40,10 @@ const Root = ({ store }) => {
 
           <Route component={AppContainer}>
             <Route path='/browse' component={ BrowseContainer }>
-
+              <Route path='/artists' component={ ArtistIndexContainer } />
+              <Route path='/albums' component={ ArtistIndexContainer } />
+              <Route path='/songs' component={ ArtistIndexContainer } />
+              <Route path='/playlists' component={ ArtistIndexContainer } />
             </Route>
           </Route>
         </Route>

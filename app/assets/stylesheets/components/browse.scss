@@ -1,5 +1,29 @@
+@keyframes fadeIn {
+  0% {
+    background-color: none;
+    opacity: 0;
+  }
+
+  100% {
+    background-color: rgba(20, 20, 20, 0.9);
+    opacity: 1;
+  }
+}
+
 .browse {
-  background: red;
+  padding: 20px 50px;
   height: 100vh;
-  width: 100%;
+  width: 95vw;
+
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+  div a {
+    color: white;
+    font-size: 5vh;
+    text-decoration: underline;
+  }
 }

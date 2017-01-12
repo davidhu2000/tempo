@@ -1,0 +1,37 @@
+$hover-opacity: 0.7;
+
+.artist-index {
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    background: $aqua-blue-super-transparent;
+    padding: 15px;
+    border-radius: 10px;
+
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    // img:hover {
+    //   opacity: $hover-opacity;
+    // }
+
+    span {
+      padding-top: 5px;
+      display: block;
+      color: white;
+      text-align: center;
+    }
+
+    // span:hover {
+    //   opacity: $hover-opacity;
+    // }
+  }
+
+  div:hover {
+    background: $aqua-blue-most-transparent;
+  }
+}

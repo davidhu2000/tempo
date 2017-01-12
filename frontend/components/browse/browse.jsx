@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
+
+import ArtistIndexContainer from '../artist_index/artist_index_container';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -8,10 +11,22 @@ class Browse extends React.Component {
   render() {
     return (
       <div className="browse">
-        <h1>Artists</h1>
-        <h1>Albums</h1>
-        <h1>Songs</h1>
-        <h1>Playlists</h1>
+        <div className='browse-artist'>
+          <Link to='/artists'>Artists</Link>
+          <ArtistIndexContainer />
+        </div>
+
+        <div className='browse-albums'>
+          <Link to='/albums'>Albums</Link>
+        </div>
+
+        <div className='browse-songs'>
+          <Link to='/songs'>Songs</Link>
+        </div>
+
+        <div className='browse-playlists'>
+          <Link to='/playlists'>Playlists</Link>
+        </div>
       </div>
     );
   }

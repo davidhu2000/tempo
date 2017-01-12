@@ -26,11 +26,11 @@ class App extends React.Component {
   render() {
     return (
       <div className='main'>
-        <div className='col col-1'>
-          <Sidebar logout={ this.props.logout }></Sidebar>
-        </div>
-        <div className='col col-11'>
+        <div className=''>
           { this.props.children }
+        </div>
+        <div className=''>
+          <Sidebar logout={ this.props.logout }></Sidebar>
         </div>
         <div className='current-song'>
           <CurrentSongContainer />

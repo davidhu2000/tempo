@@ -11,7 +11,6 @@ class CurrentSong extends React.Component {
   render() {
     return (
       <div className='current-song'>
-        <h1>Song Name</h1>
         <MusicPlayer />
       </div>
     );

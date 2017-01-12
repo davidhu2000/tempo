@@ -7,6 +7,7 @@ import { logout } from '../actions/session_actions';
 // app components
 import AppContainer from './app/app_container';
 import Sidebar from './app/sidebar';
+import Browse from './app/browse';
 
 // splash components
 import SplashContainer from './splash/splash_container';
@@ -36,8 +37,11 @@ const Root = ({ store }) => {
             <Route path="/signup" component={ SessionFormContainer } />
           </Route>
 
-          <Route path="/browse" component={AppContainer}>
-            <IndexRoute component={ Sidebar } />
+          <Route component={AppContainer}>
+            <Route path='/browse' component={ Browse }>
+              <IndexRoute component={ Sidebar } />
+
+            </Route>
           </Route>
         </Route>
       </Router>

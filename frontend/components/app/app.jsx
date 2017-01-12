@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+import Sidebar from './sidebar';
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -23,7 +25,12 @@ class App extends React.Component {
   render() {
     return (
       <div className='main'>
-        {React.cloneElement(this.props.children, { logout: this.props.logout })}
+        <div className='col col-1'>
+          <Sidebar logout={ this.props.logout }></Sidebar>
+        </div>
+        <div className='col col-11'>
+          { this.props.children }
+        </div>
       </div>
     );
   }

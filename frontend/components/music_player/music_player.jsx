@@ -7,10 +7,12 @@ import Progress from './elements/progress';
 class MusicPlayer extends React.Component {
   constructor(props) {
     super(props);
-    
+
     this.handleSongPlaying = this.handleSongPlaying.bind(this);
     this.handleSongFinished = this.handleSongFinished.bind(this);
     this.togglePlay = this.togglePlay.bind(this);
+    this.forward = this.forward.bind(this);
+    this.backward = this.backward.bind(this);
 
     this.state = {
       track: { url: '', title: '', image_url: '' },

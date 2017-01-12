@@ -28,9 +28,11 @@ class Splash extends React.Component  {
   render() {
     return (
       <div>
-        <div className='navbar'>
+        <div className='navbar col'>
           <div className='navbar-logo'>
-            <h1><Link to='/'>Logo</Link></h1>
+            <Link to='/'>
+              <img className='navbar-logo-icon' src="https://res.cloudinary.com/davidhu2000/image/upload/v1484198898/logo_hrwwkv.png" />
+            </Link>
           </div>
 
           <div className='navbar-header'>
@@ -38,6 +40,7 @@ class Splash extends React.Component  {
           </div>
 
           <div className='navbar-buttons'>
+
             <div className='navbar-button btn-login'>
               <Link to='/login'>
                 <span>Login</span>
@@ -52,8 +55,8 @@ class Splash extends React.Component  {
               <a onClick={ () => this.props.login(demoUser) }>
                 <span>Demo</span>
               </a>
-
             </div>
+
           </div>
         </div>
 

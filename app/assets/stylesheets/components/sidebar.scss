@@ -1,15 +1,14 @@
 $sidebar-width: 5vw;
 $icon-width: 2vw;
+$logo-width: 4.5vw;
 
 .sidebar {
   width: $sidebar-width;
   height: 100vh;
-  // background: $aqua-blue-most-transparent;
 
   a {
     transition: 0.5s;
     box-sizing: border-box;
-    // border: 1px solid black;
     display: block;
     width: 100%;
     height: $sidebar-width;
@@ -23,17 +22,23 @@ $icon-width: 2vw;
     transition: 0.4s;
     transform: translateX(8px);
     background-color: $aqua-blue-most-transparent;
-    // border-right: 2px solid $color4;
-    // border-top: 2px solid $color4;
     border-bottom: 2px solid $color4;
-    // box-shadow: inset 0 0 10px black;
   }
 
   .sidebar-logo {
+    position: relative;
     display: block;
     height: $sidebar-width;
     padding: 0;
     margin: 0;
+
+    .sidebar-logo-icon {
+      position: absolute;
+      height: $logo-width;
+      width: $logo-width;
+      top: ($sidebar-width - $logo-width) / 2;
+      left: ($sidebar-width - $logo-width) / 2;
+    }
   }
 
   .sidebar-menu {

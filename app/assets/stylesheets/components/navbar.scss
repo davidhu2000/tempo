@@ -3,6 +3,7 @@ $bg-2-4: #1A5A35;
 $bg-3-4: #218E93;
 $bg-4-4: #082A33;
 $line-height: 8vh;
+$logo-height: 6vh;
 
 $btn-green: #1E5D28;
 $btn-blue: #175868;
@@ -21,17 +22,27 @@ $btn-blue: #175868;
 .navbar-header h1 {
   line-height: $line-height;
   display: block;
-  line-height: $line-height;
   margin-left: 15px;
-  padding-left: 12vw;
+  padding-left: 17vw;
   font-size: 2em;
   text-shadow: 3px 3px 3px black;
 }
 
-.navbar-logo h1 {
+.navbar-logo {
+  position: relative;
   display: block;
+  width: $line-height;
   line-height: $line-height;
-  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.navbar-logo-icon {
+  position: absolute;
+  height: $logo-height;
+  width: $logo-height;
+  top: ($line-height - $logo-height) / 2;
+  left: ($line-height - $logo-height) / 2;
+  vertical-align: middle;
 }
 
 .navbar-buttons {

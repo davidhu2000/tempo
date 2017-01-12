@@ -10,7 +10,9 @@ class Sidebar extends React.Component {
     return (
       <div className='sidebar'>
         <div className='sidebar-logo'>
-          <Link to='/'>Logo</Link>
+          <Link to='/'>
+            <img className='sidebar-logo-icon' src="https://res.cloudinary.com/davidhu2000/image/upload/v1484198898/logo_hrwwkv.png" />
+          </Link>
         </div>
 
         <div className='sidebar-browse'>

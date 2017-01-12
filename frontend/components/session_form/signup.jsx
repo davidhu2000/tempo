@@ -96,7 +96,7 @@ class SignupForm extends React.Component {
                  value='Signup'></input>
 
           <span className='form-span'>
-            Have an account? <Link to='/login'>Login</Link>
+            <p>Have an account?</p> <Link to='/login'>Login</Link>
           </span>
         </form>
 

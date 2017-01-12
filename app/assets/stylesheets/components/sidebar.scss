@@ -7,6 +7,8 @@ $icon-width: 2vw;
   background: $aqua-blue-most-transparent;
 
   a {
+    transition: 0.5s;
+    box-sizing: border-box;
     // border: 1px solid black;
     display: block;
     width: 100%;
@@ -14,6 +16,12 @@ $icon-width: 2vw;
     text-align: center;
     line-height: $sidebar-width;
     color: white;
+  }
+
+  a:hover {
+    transition: 0.5s;
+    transform: translateX(10px);
+    // border-left: 3px solid #519872;
   }
 
   .sidebar-logo {

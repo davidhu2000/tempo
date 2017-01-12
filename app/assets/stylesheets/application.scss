@@ -13,16 +13,13 @@
  *= require_self
  */
 
-
-
-$blue: black;
-
 @import 'base/reset.scss';
 @import 'base/font.scss';
 @import 'base/color.scss';
+
 @import 'components/splash.scss';
 @import 'components/navbar.scss';
 @import 'components/form.scss';
 @import 'components/errors.scss';
-@import 'components/sidebar.scss';
 @import 'components/main.scss';
+@import 'components/sidebar.scss';

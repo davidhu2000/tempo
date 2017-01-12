@@ -41,7 +41,7 @@ class Player extends React.Component {
         </div>
 
         <div className='player-random'>
-          <button onClick={ this.props.random }>
+          <button>
             <i className='fa fa-random'></i>
           </button>
         </div>

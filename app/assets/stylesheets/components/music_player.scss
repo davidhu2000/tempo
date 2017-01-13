@@ -3,7 +3,9 @@ $height: 30px;
 .music-player {
   background: rgba(0, 0, 0, 0.9);
   width: 94vw;
-  height: 50px;
+  height: 5px;
+  overflow-y: hidden;
+  transition: 1s;
   box-shadow: 0px 0px 15px black;
   // border-radius: 40px;
 
@@ -21,7 +23,7 @@ $height: 30px;
 
 .music-player:hover {
   transition: 1s;
-  height: 150px;
+  height: 50px;
 }
 
 .player {
@@ -77,4 +79,13 @@ $height: 30px;
 .current-position {
   background: red;
   height: 3px;
+}
+
+.player-song-image {
+  height: $height;
+
+  img {
+    height: $height;
+    width: $height;
+  }
 }

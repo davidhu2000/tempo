@@ -36,6 +36,7 @@ class MusicPlayer extends React.Component {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
+  // TODO: update playFromPosition for forward and backward
   handleSongPlaying(audio) {
     this.setState({
       elapsed: this.formatMilliseconds(audio.position),
@@ -56,15 +57,16 @@ class MusicPlayer extends React.Component {
     }
   }
 
+  // TODO: Fix forward and backward
   forward() {
     this.setState({
-      playFromPosition: this.state.playFromPosition + 1000*10
+      playFromPosition: this.state.position + 1000*10
     });
   }
 
   backward() {
     this.setState({
-      playFromPosition: this.state.playFromPosition - 1000*10
+      playFromPosition: this.state.position - 1000*10
     });
   }
 

@@ -1,13 +1,44 @@
+# User Seeds
+
 20.times do
   first_name, last_name = Faker::Name.first_name, Faker::Name.last_name
   email = "#{first_name}_#{last_name}@#{['gmail', 'yahoo'].sample}.com"
   username = "#{first_name}_#{last_name}"
 
-  User.create!(username: username, email: email, first_name: first_name,
-               last_name: last_name, password: 'password',
-               image_url: Faker::Avatar.image)
+  User.create!(
+    username: username,
+    email: email,
+    first_name: first_name,
+    last_name: last_name,
+    password: 'password',
+    image_url: Faker::Avatar.image)
 end
 
-User.create!(username: 'Guest', email: 'guest@tempo.com',
-            first_name: 'Gu', last_name: 'Est', password: 'password',
-            image_url: Faker::Avatar.image)
+User.create!(
+  username: 'Guest',
+  email: 'guest@tempo.com',
+  first_name: 'Gu',
+  last_name: 'Est',
+  password: 'password',
+  image_url: Faker::Avatar.image)
+
+
+# Song Seeds
+
+Song.create!(
+  title: 'S3C',
+  album_id: 1,
+  order: 1,
+  track_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484334346/Unit-29A_-_01_-_S3C_lbqbx9.mp3')
+
+Song.create!(
+  title: 'Night Owl',
+  album_id: 2,
+  order: 1,
+  track_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484244565/Broke_For_Free_-_01_-_Night_Owl_ktzlla.mp3')
+
+Song.create!(
+  title: 'Close Call',
+  album_id: 3,
+  order: 1,
+  track_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484334474/ROZKOL_-_01_-_Close_Call_opzv72.mp3')

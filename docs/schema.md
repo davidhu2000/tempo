@@ -17,7 +17,8 @@
 | id              | integer   | not null, primary key         |
 | title           | string    | not null, indexed             |
 | album_id        | integer   | not null, indexed             |
-| order           | integer   | not null
+| order           | integer   | not null                      |
+| track_url       | string    | not null                      |
 | lyrics          | text      |                               |
 
 
@@ -34,6 +35,7 @@
 |-----------------|-----------|-------------------------------|
 | id              | integer   | not null, primary key         |
 | title           | string    | not null, indexed             |
+| artist_id       | integer   | not null                      |
 | image_url       | string    | have default image            |
 | description     | text      |                               |
 

@@ -72,16 +72,16 @@ class MusicPlayer extends React.Component {
     return (
       <div className='music-player'>
 
+        <Progress
+          position={this.state.position}
+          elapsed={this.state.elapsed}
+          total={this.state.total} />
+
         <Player
           togglePlay={this.togglePlay}
           playStatus={this.state.playStatus}
           forward={this.forward}
           backward={this.backward} />
-
-        <Progress
-          position={this.state.position}
-          elapsed={this.state.elapsed}
-          total={this.state.total} />
 
         <Sound
           url={'https://res.cloudinary.com/davidhu2000/video/upload/v1484244565/Broke_For_Free_-_01_-_Night_Owl_ktzlla.mp3'}

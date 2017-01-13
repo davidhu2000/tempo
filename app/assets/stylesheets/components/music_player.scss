@@ -1,20 +1,80 @@
-.music-player {
-  background: orange;
-  width: 80vw;
-  height: 5vh;
+$height: 30px;
 
+.music-player {
+  background: rgba(0, 0, 0, 0.9);
+  width: 94vw;
+  height: 50px;
+  box-shadow: 0px 0px 15px black;
+  // border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: $height;
+  }
   i {
-    font-size: 1.7em;
+    font-size: 1.2em;
+    display: block;
   }
 }
 
+.music-player:hover {
+  transition: 1s;
+  height: 150px;
+}
+
 .player {
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
+}
+
+.play-pause, .player-forward, .player-backward, .player-random {
+  color: $aqua-blue;
+  width: $height;
+  height: $height;
+  border-radius: 100%;
+  font-size: 15px;
+  outline: none;
+  line-height: $height;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.player-forward, .player-backward {
+  background: transparent;
+  border: 1px solid $aqua-blue;
+}
+
+.player-backward {
+  border-left: none;
+}
+
+.player-forward {
+  border-right: none;
 }
 
 .player-main {
   display: flex;
   justify-content: space-between;
   width: 20vw;
+}
+
+.progress {
+  color: $aqua-blue;
+  width: 100%;
+  text-align: center;
+  height: 1px;
+}
+
+.progressbar {
+  background: $aqua-blue-transparent;
+  width: 100%;
+  height: 3px;
+}
+
+.current-position {
+  background: red;
+  height: 3px;
 }

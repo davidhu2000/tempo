@@ -2,21 +2,34 @@ import React from 'react';
 
 class Progress extends React.Component {
 
+  getPercent() {
+    return `${this.props.position * 100}%`;
+  }
+
   render() {
     return (
       <div className="progress">
-        <span className="time-elapsed">
-          { this.props.elapsed }
-        </span>
+        <div className='progressbar'>
+          <div className='current-position' style={{width: this.getPercent()}}>
 
-        <progress value={this.props.position} max='1'></progress>
+          </div>
+        </div>
 
-        <span className='time-total'>
-          { this.props.total }
-        </span>
+
       </div>
     );
   }
 }
 
 export default Progress;
+
+// <progress value={this.props.position} max='1'></progress>
+
+
+// <span className='progress-label'>
+//   { this.props.total }
+// </span>
+//
+// <span className="progress-label">
+//   { this.props.elapsed }
+// </span>

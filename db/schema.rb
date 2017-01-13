@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113184747) do
+ActiveRecord::Schema.define(version: 20170113191336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "title",                                                                                                                        null: false
+    t.integer  "artist_id",                                                                                                                    null: false
+    t.string   "image_url",   default: "http://res.cloudinary.com/davidhu2000/image/upload/c_scale,w_500/v1484334953/album_default_image.jpg", null: false
+    t.text     "description"
+    t.datetime "created_at",                                                                                                                   null: false
+    t.datetime "updated_at",                                                                                                                   null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name",                                                                                                                                   null: false
+    t.string   "image_url",  default: "http://res.cloudinary.com/davidhu2000/image/upload/c_crop,h_290,w_290,x_85/v1484335512/default_artist_image.jpg", null: false
+    t.datetime "created_at",                                                                                                                             null: false
+    t.datetime "updated_at",                                                                                                                             null: false
+  end
 
   create_table "songs", force: :cascade do |t|
     t.string   "title",      default: "Untitled", null: false

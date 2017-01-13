@@ -5,6 +5,6 @@ class Api::SongsController < ApplicationController
   end
 
   def show
-    @song = Song.find_by(id: params[:id])
+    @song = Song.where(id: params[:id]).includes(:album => :artist).first
   end
 end

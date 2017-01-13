@@ -16,7 +16,7 @@ class Player extends React.Component {
       <div className='player'>
 
         <div className='player-song-image'>
-          <img src='http://vignette4.wikia.nocookie.net/simpsons/images/0/01/200px-Langdon_Alger.png/revision/latest?cb=20120815160236' />
+          <img src={ this.props.currentSong.image_url } />
         </div>
 
         <div className='player-main'>

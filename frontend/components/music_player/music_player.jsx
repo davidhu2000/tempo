@@ -83,10 +83,11 @@ class MusicPlayer extends React.Component {
           togglePlay={this.togglePlay}
           playStatus={this.state.playStatus}
           forward={this.forward}
-          backward={this.backward} />
+          backward={this.backward}
+          currentSong={this.props.currentSong} />
 
         <Sound
-          url={'https://res.cloudinary.com/davidhu2000/video/upload/v1484244565/Broke_For_Free_-_01_-_Night_Owl_ktzlla.mp3'}
+          url={this.props.currentSong.song_url}
           playStatus={this.state.playStatus}
           onPlaying={this.handleSongPlaying}
           playFromPosition={this.state.playFromPosition}

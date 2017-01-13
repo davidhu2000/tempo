@@ -9,13 +9,13 @@
 #  lyrics     :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  track_url  :string           not null
+#  song_url   :string           not null
 #
 
 class Song < ActiveRecord::Base
   validates :title, presence: true
   validates :album_id, presence: true
-  validates :track_url, presence: true
+  validates :song_url, presence: true
 
   belongs_to :album
 end

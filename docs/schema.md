@@ -17,6 +17,7 @@
 | id              | integer   | not null, primary key         |
 | title           | string    | not null, indexed             |
 | album_id        | integer   | not null, indexed             |
+| order           | integer   | not null
 | lyrics          | text      |                               |
 
 

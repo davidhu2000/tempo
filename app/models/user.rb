@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :session_token, presence: true
 
-  after_initialize :ensure_session_token, :ensure_username
+  after_initialize :ensure_session_token, :ensure_username, :ensure_profile_image
 
 
   def self.find_by_credentials(username, password)
@@ -40,6 +40,10 @@ class User < ActiveRecord::Base
 
   def ensure_username
     self.username = self.email if self.username.empty?
+  end
+
+  def ensure_profile_image
+    self.image_url = Faker::Avatar.image
   end
 
   def ensure_session_token

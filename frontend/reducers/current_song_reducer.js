@@ -1,13 +1,13 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_SONG } from '../actions/current_song_actions';
+import { RECEIVE_CURRENT_SONG } from '../actions/songs_actions';
 
 const _defaultState = {};
 
 const currentSongReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
-    case RECEIVE_SONG:
+    case RECEIVE_CURRENT_SONG:
       return action.currentSong;
     default:
       return state;

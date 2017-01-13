@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import ArtistIndexContainer from '../artist_index/artist_index_container';
+import SongIndexContainer from '../song_index/song_index_container';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Browse extends React.Component {
 
         <div className='browse-songs'>
           <Link to='/songs'>Songs</Link>
-          <ArtistIndexContainer />
+          <SongIndexContainer />
         </div>
 
         <div className='browse-playlists'>

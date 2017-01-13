@@ -46,6 +46,7 @@ const Root = ({ store }) => {
               <Route path='/playlists' component={ ArtistIndexContainer } />
             </Route>
           </Route>
+          
         </Route>
       </Router>
     </Provider>

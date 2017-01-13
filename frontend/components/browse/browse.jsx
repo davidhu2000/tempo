@@ -18,14 +18,17 @@ class Browse extends React.Component {
 
         <div className='browse-albums'>
           <Link to='/albums'>Albums</Link>
+          <ArtistIndexContainer />
         </div>
 
         <div className='browse-songs'>
           <Link to='/songs'>Songs</Link>
+          <ArtistIndexContainer />
         </div>
 
         <div className='browse-playlists'>
           <Link to='/playlists'>Playlists</Link>
+          <ArtistIndexContainer />
         </div>
       </div>
     );

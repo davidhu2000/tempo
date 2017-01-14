@@ -5,22 +5,21 @@
   padding: 20px 50px;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(20, 20, 20, 0.9);
+  background: $background-gradient-transparent-to-black;
 }
 
 .song-index-item {
   box-sizing: border-box;
-  display: relative;
+  // display: relative;
   display: block;
   height: 10vh;
   width: 10vh;
-  border: 3px solid red;
   text-align: center;
   align-items: center;
 
   img {
-    height: 5vh;
-    width: 5vh;
+    height: 10vh;
+    width: 10vh;
     margin: 0 auto;
   }
 
@@ -32,14 +31,15 @@
 .song-index-play {
   background: transparent;
   position: relative;
-  top: -5vh;
+  top: -10vh;
   width: 10vh;
   height: 10vh;
   font-size: 2em;
   opacity: 0;
+  color: $aqua-blue-transparent;
 }
 
 .song-index-play:hover {
   opacity: 0.9;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
 }

@@ -5,7 +5,7 @@
   }
 
   100% {
-    background-color: rgba(20, 20, 20, 0.9);
+    background: $background-gradient-transparent-to-black;
     opacity: 1;
   }
 }
@@ -28,5 +28,12 @@
     color: white;
     font-size: 5vh;
     text-decoration: underline;
+  }
+}
+
+.browse-songs {
+  .song-index {
+    height: 14vh;
+    background: none;
   }
 }

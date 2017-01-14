@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+  get 'albums/show'
+  end
+
+  namespace :api do
+  get 'albums/index'
+  end
+
   root 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do

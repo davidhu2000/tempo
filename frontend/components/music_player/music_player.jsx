@@ -13,11 +13,13 @@ class MusicPlayer extends React.Component {
     this.togglePlay = this.togglePlay.bind(this);
     this.forward = this.forward.bind(this);
     this.backward = this.backward.bind(this);
+    this.formatMilliseconds = this.formatMilliseconds.bind(this);
+    this.formatTimeToMilliseconds = this.formatTimeToMilliseconds.bind(this);
 
     this.state = {
       track: { song_url: '', title: '', image_url: '' },
       playStatus: Sound.status.PLAYING,
-      elpased: '00:00',
+      elapsed: '00:00',
       total: '00:00',
       position: 0,
       playFromPosition: 0,
@@ -34,11 +36,26 @@ class MusicPlayer extends React.Component {
 
     let seconds = Math.floor(milliseconds / 1000);
 
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+
+  formatTimeToMilliseconds(elapsed) {
+    let timeArr = elapsed.split(':').reverse();
+    let secondsArr = [1, 60, 3600];
+
+    let milliseconds = 0;
+
+    timeArr.forEach( (el, idx) => {
+      milliseconds += parseInt(el) * secondsArr[idx];
+    });
+
+    return milliseconds * 1000;
   }
 
   // TODO: update playFromPosition for forward and backward
   handleSongPlaying(audio) {
+    // console.log(audio.position);
+    // console.log(this.formatMilliseconds(audio.position));
     this.setState({
       elapsed: this.formatMilliseconds(audio.position),
       total: this.formatMilliseconds(audio.duration),
@@ -60,14 +77,18 @@ class MusicPlayer extends React.Component {
 
   // TODO: Fix forward and backward
   forward() {
+    console.log('hit forward');
+    console.log(this.state.elapsed);
+    console.log(this.formatTimeToMilliseconds(this.state.elapsed));
+    console.log(this.formatTimeToMilliseconds(this.state.elapsed) + 1000*10);
     this.setState({
-      playFromPosition: this.state.position + 1000*10
+      playFromPosition: 100000
     });
   }
 
   backward() {
     this.setState({
-      playFromPosition: this.state.position - 1000*10
+      playFromPosition: this.state.playFromPosition -= 1000*10
     });
   }
 

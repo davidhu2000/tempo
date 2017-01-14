@@ -6,16 +6,18 @@ const _defaultState = {
   detail: {}
 };
 
-const albumsReducer = (state, action) => {
+const albumsReducer = (state = _defaultState, action) => {
+  console.log('albumsReducer');
+  console.log(action);
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_ALBUMS:
       return merge({}, state, {
-        index: action.songs
+        index: action.albums
       });
     case RECEIVE_ALBUM:
       return merge({}, state, {
-        detail: action.song
+        detail: action.album
       });
     default:
       return state;

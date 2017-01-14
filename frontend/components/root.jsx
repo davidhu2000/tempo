@@ -44,6 +44,7 @@ const Root = ({ store }) => {
             <Route path='/browse' component={ BrowseContainer } />
             <Route path='/artists' component={ ArtistIndexContainer } />
             <Route path='/albums' component={ AlbumIndexContainer } />
+
             <Route path='/songs' component={ SongIndexContainer } />
             <Route path='/playlists' component={ ArtistIndexContainer } />
           </Route>

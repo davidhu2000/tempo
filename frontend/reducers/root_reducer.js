@@ -3,12 +3,14 @@ import sessionReducer from './session_reducer';
 import errorsReducer from './errors_reducer';
 import currentSongReducer from './current_song_reducer';
 import songsReducer from './songs_reducer';
+import albumsReducer from './albums_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   errors: errorsReducer,
   currentSong: currentSongReducer,
-  songs: songsReducer
+  songs: songsReducer,
+  albums: albumsReducer
 });
 
 export default rootReducer;

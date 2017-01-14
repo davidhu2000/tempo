@@ -6,7 +6,7 @@ import AlbumIndex from './album_index.jsx';
 import { fetchAllAlbums, fetchAlbum } from '../../actions/albums_actions';
 
 const mapStateToProps = ({ albums }) => ({
-  albums: values(albums)
+  albums: values(albums.index)
 });
 
 const mapDispatchToProps = dispatch => ({

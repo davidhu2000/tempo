@@ -1,0 +1,45 @@
+.album-index {
+  color: white;
+  width: 95vw;
+  height: 100vh;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-around;
+  background: $background-gradient-transparent-to-black;
+}
+
+.album-index-item {
+  box-sizing: border-box;
+  // display: relative;
+  display: block;
+  height: 20vh;
+  width: 20vh;
+  text-align: center;
+  align-items: center;
+
+  img {
+    height: 20vh;
+    width: 20vh;
+    margin: 0 auto;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+}
+
+.album-index-play {
+  background: transparent;
+  position: relative;
+  top: -10vh;
+  width: 10vh;
+  height: 10vh;
+  font-size: 2em;
+  opacity: 0;
+  color: $aqua-blue-transparent;
+}
+
+.album-index-play:hover {
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.7);
+}

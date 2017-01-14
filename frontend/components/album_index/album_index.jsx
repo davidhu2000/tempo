@@ -6,7 +6,7 @@ class AlbumIndex extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchAllAlbums();
   }
 
@@ -14,7 +14,6 @@ class AlbumIndex extends React.Component {
     return (
       <div key={album.id} className='album-index-item'>
         <img className='album-index-image'
-             onClick={ this.router.push(`/albums/${album.id}`)}
              src={album.image_url} />
       </div>
     );

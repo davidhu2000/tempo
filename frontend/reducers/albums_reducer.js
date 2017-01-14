@@ -1,20 +1,19 @@
 import { merge } from 'lodash';
-import { RECEIVE_SONG, RECEIVE_ALL_SONGS } from '../actions/songs_actions';
+import { RECEIVE_ALBUM, RECEIVE_ALL_ALBUMS } from '../actions/albums_actions';
 
 const _defaultState = {
   index: {},
   detail: {}
 };
 
-const songsReducer = (state = _defaultState, action) => {
+const albumsReducer = (state, action) => {
   Object.freeze(state);
-
   switch(action.type) {
-    case RECEIVE_ALL_SONGS:
+    case RECEIVE_ALL_ALBUMS:
       return merge({}, state, {
         index: action.songs
       });
-    case RECEIVE_SONG:
+    case RECEIVE_ALBUM:
       return merge({}, state, {
         detail: action.song
       });
@@ -23,4 +22,4 @@ const songsReducer = (state = _defaultState, action) => {
   }
 };
 
-export default songsReducer;
+export default albumsReducer;

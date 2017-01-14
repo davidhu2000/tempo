@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import ArtistIndexContainer from '../artist_index/artist_index_container';
 import SongIndexContainer from '../song_index/song_index_container';
+import AlbumIndexContainer from '../album_index/album_index_container';
 
 class Browse extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Browse extends React.Component {
 
         <div className='browse-albums'>
           <Link to='/albums'>Albums</Link>
-          <ArtistIndexContainer />
+          <AlbumIndexContainer />
         </div>
 
         <div className='browse-songs'>

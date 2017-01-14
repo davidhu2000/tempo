@@ -13,7 +13,7 @@ class App extends React.Component {
     this._redirectUnlessLoggedIn();
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     this._redirectUnlessLoggedIn();
   }
 

@@ -23,6 +23,14 @@ class App extends React.Component {
     }
   }
 
+  renderCurrentSong() {
+    return (
+      <div className='current-song'>
+        <CurrentSongContainer />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className='main'>
@@ -32,9 +40,8 @@ class App extends React.Component {
         <div className=''>
           <Sidebar logout={ this.props.logout }></Sidebar>
         </div>
-        <div className='current-song'>
-          <CurrentSongContainer />
-        </div>
+        { this.props.currentSong.song_url ? this.renderCurrentSong() : <div></div> }
+
       </div>
     );
   }

@@ -16,11 +16,12 @@ class MusicPlayer extends React.Component {
 
     this.state = {
       track: { url: '', title: '', image_url: '' },
-      playStatus: Sound.status.STOPPED,
+      playStatus: Sound.status.PLAYING,
       elpased: '00:00',
       total: '00:00',
       position: 0,
-      playFromPosition: 0
+      playFromPosition: 0,
+      playerShow: 'player-popup'
     };
   }
 
@@ -70,9 +71,22 @@ class MusicPlayer extends React.Component {
     });
   }
 
+  componentDidMount() {
+    setTimeout( () => {
+      this.setState({ playerShow: 'player-popdown' });
+    }, 3000);
+  }
+
+  componentWillReceiveProps() {
+    this.setState({ playerShow: 'player-popup' });
+    setTimeout( () => {
+      this.setState({ playerShow: 'player-popdown' });
+    }, 3000);
+  }
+
   render() {
     return (
-      <div className='music-player'>
+      <div className='music-player' id={this.state.playerShow}>
 
         <Progress
           position={this.state.position}

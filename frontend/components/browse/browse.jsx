@@ -31,6 +31,7 @@ class Browse extends React.Component {
           <Link to='/playlists'>Playlists</Link>
           <ArtistIndexContainer />
         </div>
+
       </div>
     );
   }

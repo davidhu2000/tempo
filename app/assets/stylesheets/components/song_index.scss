@@ -1,3 +1,45 @@
 .song-index {
   color: white;
+  width: 95vw;
+  height: 100vh;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+.song-index-item {
+  box-sizing: border-box;
+  display: relative;
+  display: block;
+  height: 10vh;
+  width: 10vh;
+  border: 3px solid red;
+  text-align: center;
+  align-items: center;
+
+  img {
+    height: 5vh;
+    width: 5vh;
+    margin: 0 auto;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+}
+
+.song-index-play {
+  background: transparent;
+  position: relative;
+  top: -5vh;
+  width: 10vh;
+  height: 10vh;
+  font-size: 2em;
+  opacity: 0;
+}
+
+.song-index-play:hover {
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.3);
 }

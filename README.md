@@ -8,12 +8,12 @@
 
 Tempo is a music streaming web application inspired by Spotify and is built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
+- [x] Hosting on Heroku
 - [x] New account creation, login, and guest login
 - [ ] Song playing while browsing
 - [ ] Maintain song queue
 - [ ] Subscribe to playlists
 - [ ] CRUD playlist
-- [ ] Hosting on Heroku
 - [ ] Production README [sample](docs/production_readme.md)
 
 ## Design Docs
@@ -42,9 +42,9 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 ### Phase 2: Song component (2 days)
 
 **Tasks:**
-- [ ] Set up song model and controller
-- [ ] Set up song component, reducer, and actions
-- [ ] Add styling song component
+- [x] Set up song model and controller
+- [x] Set up song component, reducer, and actions
+- [x] Add styling song component
 
 Objective: A song can be played while the user is browsing.
 

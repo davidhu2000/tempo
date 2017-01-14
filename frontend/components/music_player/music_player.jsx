@@ -15,7 +15,7 @@ class MusicPlayer extends React.Component {
     this.backward = this.backward.bind(this);
 
     this.state = {
-      track: { url: '', title: '', image_url: '' },
+      track: { song_url: '', title: '', image_url: '' },
       playStatus: Sound.status.PLAYING,
       elpased: '00:00',
       total: '00:00',
@@ -77,11 +77,13 @@ class MusicPlayer extends React.Component {
     }, 3000);
   }
 
-  componentWillReceiveProps() {
-    this.setState({ playerShow: 'player-popup' });
-    setTimeout( () => {
-      this.setState({ playerShow: 'player-popdown' });
-    }, 3000);
+  componentWillReceiveProps(newProps) {
+    if(newProps.currentSong.song_url !== this.props.currentSong.song_url) {
+      this.setState({ playerShow: 'player-popup' });
+      setTimeout( () => {
+        this.setState({ playerShow: 'player-popdown' });
+      }, 3000);
+    }
   }
 
   render() {

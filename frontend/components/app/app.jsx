@@ -35,10 +35,10 @@ class App extends React.Component {
     return (
       <div className='main'>
         <div className=''>
-          { this.props.children }
+          <Sidebar logout={ this.props.logout }></Sidebar>
         </div>
         <div className=''>
-          <Sidebar logout={ this.props.logout }></Sidebar>
+          { this.props.children }
         </div>
         { this.props.currentSong.song_url ? this.renderCurrentSong() : <div></div> }
 

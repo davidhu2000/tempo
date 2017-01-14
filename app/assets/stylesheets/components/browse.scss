@@ -11,10 +11,12 @@
 }
 
 .browse {
+  box-sizing: padding-box;
   padding: 20px 50px;
   height: 100vh;
   width: 95vw;
   overflow-y: auto;
+  overflow-x: hidden;
 
   animation-name: fadeIn;
   animation-iteration-count: 1;

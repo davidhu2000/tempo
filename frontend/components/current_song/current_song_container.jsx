@@ -7,11 +7,10 @@ const mapStateToProps = ({ currentSong }) => ({
   currentSong
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchCurrentSong: id => dispatch(fetchCurrentSong(id))
-});
+// const mapDispatchToProps = dispatch => ({
+//   fetchCurrentSong: id => dispatch(fetchCurrentSong(id))
+// });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(CurrentSong);

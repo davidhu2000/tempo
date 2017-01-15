@@ -100,7 +100,10 @@ class MusicPlayer extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if(newProps.currentSong.song_url !== this.props.currentSong.song_url) {
-      this.setState({ playerShow: 'player-popup' });
+      this.setState({
+        playerShow: 'player-popup',
+        playStatus: Sound.status.PLAYING
+       });
       setTimeout( () => {
         this.setState({ playerShow: 'player-popdown' });
       }, 3000);

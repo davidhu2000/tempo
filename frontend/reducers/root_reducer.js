@@ -5,6 +5,7 @@ import currentSongReducer from './current_song_reducer';
 import songsReducer from './songs_reducer';
 import albumsReducer from './albums_reducer';
 import artistsReducer from './artists_reducer';
+import queueReducer from './queue_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   currentSong: currentSongReducer,
   songs: songsReducer,
   albums: albumsReducer,
-  artists: artistsReducer
+  artists: artistsReducer,
+  queue: queueReducer
 });
 
 export default rootReducer;

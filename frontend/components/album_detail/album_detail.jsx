@@ -15,7 +15,9 @@ class AlbumDetail extends React.Component {
         <button className='album-detail-play' onClick={() => this.props.fetchCurrentSong(song.id)}>
           <i className='fa fa-play'></i>
         </button>
-        <i className='fa fa-plus'></i>
+        <button className='album-detail-queue' onClick={() => this.props.addToQueue(song)}>
+          <i className='fa fa-plus'></i>
+        </button>
         { song.title }
       </li>
     );
@@ -29,7 +31,7 @@ class AlbumDetail extends React.Component {
     );
   }
 
-  // TODO: Add artist image and name 
+  // TODO: Add artist image and name
   render() {
     return (
       <div className='album-detail'>

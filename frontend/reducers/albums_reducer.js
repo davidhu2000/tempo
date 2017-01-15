@@ -7,8 +7,6 @@ const _defaultState = {
 };
 
 const albumsReducer = (state = _defaultState, action) => {
-  console.log('albumsReducer');
-  console.log(action);
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_ALBUMS:

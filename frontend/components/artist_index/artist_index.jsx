@@ -1,25 +1,28 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class ArtistIndex extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchAllArtists();
+  }
+
+  renderArtist(artist) {
+    return (
+      <div key={artist.id} className='artist-index-item'>
+        <img className='artist-index-image'
+             src={artist.image_url} />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className='artist-index'>
-        <div className='artist'>
-          <img src='http://vignette1.wikia.nocookie.net/p__/images/2/28/200px-Orville_Simpson.png/revision/latest?cb=20141026105607&path-prefix=protagonist' />
-          <span>Artist Name</span>
-        </div>
-        <div className='artist'>
-          <img src='http://vignette4.wikia.nocookie.net/simpsons/images/0/01/200px-Langdon_Alger.png/revision/latest?cb=20120815160236'/>
-          <span>Artist Name</span>
-        </div>
-        <div className='artist'>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/7/72/Wikipedia_logo_gold-200px.png' />
-          <span>Artist Name</span>
-        </div>
+        { this.props.artists.map( artist => this.renderArtist(artist) )}
       </div>
     );
   }

@@ -29,12 +29,23 @@ class AlbumDetail extends React.Component {
     );
   }
 
+  // TODO: Add artist image and name 
   render() {
     return (
-      <div>
-        <div className='album-detail-title'>{ this.props.album.title }</div>
-        <img className='album-detail-image' src={ this.props.album.image_url } />
-        { this.renderSongList() }
+      <div className='album-detail'>
+
+        <div className='album-detail-info'>
+          <div className='album-detail-image'>
+            <img src={ this.props.album.image_url } />
+          </div>
+          <div className='album-detail-title'>
+            <span>{ this.props.album.title }</span>
+          </div>
+        </div>
+
+        <div className='album-detail-song-list'>
+          { this.renderSongList() }
+        </div>
       </div>
     );
   }

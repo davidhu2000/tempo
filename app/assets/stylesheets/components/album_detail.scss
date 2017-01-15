@@ -1,11 +1,38 @@
+.album-detail {
+  background: $background-gradient-transparent-to-black;
+  width: 95vw;
+  height: 100vh;
+  display: flex;
+  padding: 30px 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.album-detail-info {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .album-detail-title {
   color: white;
+  display: block;
   font-size: 2em;
+  padding-left: 20px;
 }
 
 .album-detail-image {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
+  display: block;
+}
+
+.album-detail-song-list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .album-detail-songs {

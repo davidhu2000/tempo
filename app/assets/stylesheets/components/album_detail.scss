@@ -1,0 +1,23 @@
+.album-detail-title {
+  color: white;
+  font-size: 2em;
+}
+
+.album-detail-image {
+  height: 400px;
+  width: 400px;
+}
+
+.album-detail-songs {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  li {
+    margin: 5px;
+
+    * {
+      margin-right: 5px;
+    }
+  }
+}

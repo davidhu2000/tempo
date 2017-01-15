@@ -8,14 +8,15 @@ const _defaultState = {
 
 const songsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-
+  console.log('Songs Reducer');
+  console.log(action);
   switch(action.type) {
     case RECEIVE_ALL_SONGS:
-      return merge({}, state, {
+      return merge({}, _defaultState, {
         index: action.songs
       });
     case RECEIVE_SONG:
-      return merge({}, state, {
+      return merge({}, _defaultState, {
         detail: action.song
       });
     default:

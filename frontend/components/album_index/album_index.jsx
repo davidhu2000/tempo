@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 class AlbumIndex extends React.Component {
   constructor(props) {
@@ -13,8 +13,10 @@ class AlbumIndex extends React.Component {
   renderAlbum(album) {
     return (
       <div key={album.id} className='album-index-item'>
-        <img className='album-index-image'
-             src={album.image_url} />
+        <Link to={`albums/${album.id}`}>
+          <img className='album-index-image'
+               src={album.image_url} />
+        </Link>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import * as AlbumsApiUtil from '../util/albums_api_util';
+import { receiveAllSongs } from './songs_actions';
 
 export const RECEIVE_ALL_ALBUMS = 'RECEIVE_ALL_ALBUMS';
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM';
@@ -21,8 +22,11 @@ export const fetchAllAlbums = () => dispatch => (
 );
 
 export const fetchAlbum = id => dispatch => (
-  AlbumsApiUtil.fetchAlbum()
+  AlbumsApiUtil.fetchAlbum(id)
     .then(
-      res => dispatch(receiveAlbum(res))
+      res => {
+        dispatch(receiveAllSongs(res.songs));
+        return dispatch(receiveAlbum(res.album));
+      }
     )
 );

@@ -1,0 +1,58 @@
+.artist-detail {
+  color: white;
+  height: 100vh;
+  overflow-y: hidden;
+  background: $background-gradient-transparent-to-black;
+}
+
+.artist-detail-info {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
+  width: 95vw;
+  background: $background-gradient-transparent-to-black;
+}
+
+.artist-detail-name {
+  font-size: 3em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.artist-detail-image {
+  img {
+    border-radius: 500px;
+  }
+}
+
+.artist-detail-album-list {
+  width: 92vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 3vw;
+}
+
+.artist-detail-album-info {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+.artist-detail-album-image {
+  padding-right: 20px;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.artist-detail-album-song {
+  margin: 5px;
+
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

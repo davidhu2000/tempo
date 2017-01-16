@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-import MusicPlayer from '../music_player/music_player';
+import MusicPlayerContainer from '../music_player/music_player_container';
 
 class CurrentSong extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class CurrentSong extends React.Component {
   render() {
     return (
       <div className='current-song'>
-        <MusicPlayer currentSong={ this.props.currentSong } />
+        <MusicPlayerContainer />
       </div>
     );
   }

@@ -1,7 +1,8 @@
 import { merge } from 'lodash';
 import { ADD_TO_QUEUE,
          SHUFFLE_QUEUE,
-         CLEAR_QUEUE } from '../actions/queue_actions';
+         CLEAR_QUEUE,
+         REMOVE_FIRST_SONG } from '../actions/queue_actions';
 
 function shuffle(array) {
    let counter = array.length;
@@ -23,13 +24,16 @@ const queueReducer = (state = _defaultState, action) => {
 
   switch(action.type) {
     case ADD_TO_QUEUE:
-
       let newState = merge([], state);
       newState = state.concat([action.song]);
       return newState;
-    case SHUFFLE_QUEUE:
+    case REMOVE_FIRST_SONG:
       let newState2 = merge([], state);
-      return shuffle(newState2);
+      newState2.shift();
+      return newState;
+    case SHUFFLE_QUEUE:
+      let newState3 = merge([], state);
+      return shuffle(newState3);
     case CLEAR_QUEUE:
       return [];
     default:

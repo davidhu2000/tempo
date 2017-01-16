@@ -30,10 +30,15 @@ export const fetchAllSongs = () => dispatch => (
 
 // actions for the current song being played
 export const RECEIVE_CURRENT_SONG = 'RECEIVE_CURRENT_SONG';
+export const CLEAR_CURRENT_SONG = 'CLEAR_CURRENT_SONG';
 
 export const receiveCurrentSong = currentSong => ({
   type: RECEIVE_CURRENT_SONG,
   currentSong
+});
+
+export const clearCurrentSong = () => ({
+  type: CLEAR_CURRENT_SONG
 });
 
 export const fetchCurrentSong = id => dispatch => (

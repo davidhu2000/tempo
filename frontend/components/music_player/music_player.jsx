@@ -54,8 +54,6 @@ class MusicPlayer extends React.Component {
 
   // TODO: update playFromPosition for forward and backward
   handleSongPlaying(audio) {
-    // console.log(audio.position);
-    // console.log(this.formatMilliseconds(audio.position));
     this.setState({
       elapsed: this.formatMilliseconds(audio.position),
       total: this.formatMilliseconds(audio.duration),
@@ -64,7 +62,14 @@ class MusicPlayer extends React.Component {
   }
 
   handleSongFinished() {
+    debugger;
     // TODO: find next song in queue or hide music player if no song in queue
+    if(this.props.queue.length === 0) {
+      this.props.clearCurrentSong();
+    } else {
+      this.props.receiveCurrentSong(this.props.queue[0]);
+      this.props.removeFirstSong();
+    }
   }
 
   togglePlay() {
@@ -77,10 +82,6 @@ class MusicPlayer extends React.Component {
 
   // TODO: Fix forward and backward
   forward() {
-    console.log('hit forward');
-    console.log(this.state.elapsed);
-    console.log(this.formatTimeToMilliseconds(this.state.elapsed));
-    console.log(this.formatTimeToMilliseconds(this.state.elapsed) + 1000*10);
     this.setState({
       playFromPosition: 100000
     });

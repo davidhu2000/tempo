@@ -14,7 +14,6 @@ class MusicPlayer extends React.Component {
     this.forward = this.forward.bind(this);
     this.backward = this.backward.bind(this);
     this.formatMilliseconds = this.formatMilliseconds.bind(this);
-    this.formatTimeToMilliseconds = this.formatTimeToMilliseconds.bind(this);
 
     this.state = {
       track: { song_url: '', title: '', image_url: '' },
@@ -23,6 +22,7 @@ class MusicPlayer extends React.Component {
       total: '00:00',
       position: 0,
       playFromPosition: 0,
+      positionInMilliseconds: 0,
       playerShow: 'player-popup'
     };
   }
@@ -39,25 +39,12 @@ class MusicPlayer extends React.Component {
     return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
-  formatTimeToMilliseconds(elapsed) {
-    let timeArr = elapsed.split(':').reverse();
-    let secondsArr = [1, 60, 3600];
-
-    let milliseconds = 0;
-
-    timeArr.forEach( (el, idx) => {
-      milliseconds += parseInt(el) * secondsArr[idx];
-    });
-
-    return milliseconds * 1000;
-  }
-
-  // TODO: update playFromPosition for forward and backward
   handleSongPlaying(audio) {
     this.setState({
       elapsed: this.formatMilliseconds(audio.position),
       total: this.formatMilliseconds(audio.duration),
-      position: audio.position / audio.duration
+      position: audio.position / audio.duration,
+      positionInMilliseconds: audio.position
     });
   }
 
@@ -83,13 +70,13 @@ class MusicPlayer extends React.Component {
   // TODO: Fix forward and backward
   forward() {
     this.setState({
-      playFromPosition: 100000
+      playFromPosition: this.state.positionInMilliseconds + 10000
     });
   }
 
   backward() {
     this.setState({
-      playFromPosition: this.state.playFromPosition -= 1000*10
+      playFromPosition: this.state.positionInMilliseconds - 10000
     });
   }
 

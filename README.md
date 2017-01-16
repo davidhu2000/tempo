@@ -10,8 +10,8 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 
 - [x] Hosting on Heroku
 - [x] New account creation, login, and guest login
-- [ ] Song playing while browsing
-- [ ] Maintain song queue
+- [x] Song playing while browsing
+- [x] Maintain song queue
 - [ ] Subscribe to playlists
 - [ ] CRUD playlist
 - [ ] Production README [sample](docs/production_readme.md)
@@ -52,7 +52,7 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 
 **Tasks:**
 - [x] create queue front-end
-- [ ] add ability to add songs, albums, and playlists into queue.
+- [x] add ability to add songs into queue.
 
 Objective: User can add songs into queue to be played after current song.
 

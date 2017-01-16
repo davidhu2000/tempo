@@ -126,3 +126,118 @@ Song.create!(
   order: 5,
   song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484424451/The%20Long%20Ryders/The_Long_Ryders_-_06_-_Run_Dusty_Run_yfkfae.mp3'
 )
+
+
+Artist.create!(
+  name: 'Circus Marcus',
+  image_url: 'https://freemusicarchive.org/file/images/artists/Circus_Marcus_-_20130705151555292.JPG?width=290&height=290'
+)
+
+Album.create!(
+  title: 'Vous êtes quelqu\'un de terriblement absent',
+  artist_id: 5,
+  image_url: 'https://freemusicarchive.org/file/images/albums/Circus_Marcus_-_Vous_tes_quelquun_de_terriblement_absent_-_20151101171113082.jpg?width=290&height=290'
+)
+
+Song.create!(
+  title: 'La première page',
+  album_id: 5,
+  order: 1,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604989/circus_marcus/vous_ets_quelqun_de_terriblement_absent/Circus_Marcus_-_01_-_La_premire_page.mp3'
+)
+
+Song.create!(
+  title: 'Le réveil',
+  album_id: 5,
+  order: 2,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484605025/circus_marcus/vous_ets_quelqun_de_terriblement_absent/Circus_Marcus_-_02_-_Le_rveil.mp3'
+)
+
+Song.create!(
+  title: 'La tapa del sábado',
+  album_id: 5,
+  order: 3,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484605020/circus_marcus/vous_ets_quelqun_de_terriblement_absent/Circus_Marcus_-_03_-_La_tapa_del_sbado.mp3'
+)
+
+Song.create!(
+  title: 'Un triste soir d\'été en bord de lac ',
+  album_id: 5,
+  order: 4,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484605029/circus_marcus/vous_ets_quelqun_de_terriblement_absent/Circus_Marcus_-_04_-_Un_triste_soir_dt_en_bord_de_lac.mp3'
+)
+
+Song.create!(
+  title: 'La tragédie de la femme a poils',
+  album_id: 5,
+  order: 5,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484605026/circus_marcus/vous_ets_quelqun_de_terriblement_absent/Circus_Marcus_-_05_-_La_tragdie_de_la_femme_a_poils.mp3'
+)
+
+Album.create!(
+  title: 'Aux puces',
+  artist_id: 5,
+  image_url: 'https://freemusicarchive.org/file/images/albums/Circus_Marcus_-_Aux_puces_-_2012031165048550.jpg?width=290&height=290'
+)
+
+Song.create!(
+  title: 'Aux puces No 1 - Les chaises Louis XVI',
+  album_id: 6,
+  order: 1,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604840/circus_marcus/aux_puces/Circus_Marcus_-_01_-_Aux_puces_No_1_-_Les_chaises_Louis_XVI.mp3'
+)
+
+Song.create!(
+  title: 'Aux puces No 2 - Carosello',
+  album_id: 6,
+  order: 2,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604874/circus_marcus/aux_puces/Circus_Marcus_-_02_-_Aux_puces_No_2_-_Carosello.mp3'
+)
+
+Song.create!(
+  title: 'Aux puces No 4 - Noctambule',
+  album_id: 6,
+  order: 3,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604922/circus_marcus/aux_puces/Circus_Marcus_-_04_-_Aux_puces_No_4_-_Noctambule.mp3'
+)
+
+Song.create!(
+  title: 'Aux puces No 5',
+  album_id: 6,
+  order: 4,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604868/circus_marcus/aux_puces/Circus_Marcus_-_05_-_Aux_puces_No_5.mp3'
+)
+
+Album.create!(
+  title: 'Petrified',
+  artist_id: 5,
+  image_url: 'https://freemusicarchive.org/file/images/albums/Circus_Marcus_-_Petrified_-_20160509124532319.jpg?width=290&height=290'
+)
+
+Song.create!(
+  title: 'Phoenix',
+  album_id: 7,
+  order: 1,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604728/circus_marcus/petrified/Circus_Marcus_-_01_-_Phoenix.mp3'
+)
+
+Song.create!(
+  title: 'Petrified',
+  album_id: 7,
+  order: 2,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604681/circus_marcus/petrified/Circus_Marcus_-_02_-_Petrified.mp3'
+)
+
+Song.create!(
+  title: 'Runaway',
+  album_id: 7,
+  order: 3,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604686/circus_marcus/petrified/Circus_Marcus_-_03_-_Runaway.mp3'
+)
+
+Song.create!(
+  title: 'La brise',
+  album_id: 7,
+  order: 4,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604742/circus_marcus/petrified/Circus_Marcus_-_04_-_La_brise.mp3'
+)

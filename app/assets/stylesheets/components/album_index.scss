@@ -28,18 +28,25 @@
   }
 }
 
-.album-index-play {
+.album-index-play, .album-index-queue {
   background: transparent;
   position: relative;
-  top: -10vh;
-  width: 10vh;
-  height: 10vh;
-  font-size: 2em;
-  opacity: 0;
-  color: $aqua-blue-transparent;
+  top: -12vh;
+  width: 10%;
+  height: 10%;
+  font-size: 3em;
+  opacity: 0.4;
+  color: $aqua-blue;
 }
 
-.album-index-play:hover {
+.album-index-play:hover, .album-index-queue:hover {
   opacity: 0.9;
-  background: rgba(0, 0, 0, 0.7);
+}
+
+.album-index-play {
+  left: 4vh;
+}
+
+.album-index-queue {
+  right: 5vh;
 }

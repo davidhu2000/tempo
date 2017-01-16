@@ -1,0 +1,23 @@
+.current-user-profile {
+  color: white;
+  padding: 50px;
+  font-size: 2em;
+}
+
+.current-user-info {
+  display: flex;
+  flex-direction: row;
+
+  .current-user-greeting {
+    padding-left: 30px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+    border-radius: 500px;
+    background: white;
+  }
+}

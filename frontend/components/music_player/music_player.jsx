@@ -49,8 +49,6 @@ class MusicPlayer extends React.Component {
   }
 
   handleSongFinished() {
-    debugger;
-    // TODO: find next song in queue or hide music player if no song in queue
     if(this.props.queue.length === 0) {
       this.props.clearCurrentSong();
     } else {

@@ -30,7 +30,7 @@ const queueReducer = (state = _defaultState, action) => {
     case REMOVE_FIRST_SONG:
       let newState2 = merge([], state);
       newState2.shift();
-      return newState;
+      return newState2;
     case SHUFFLE_QUEUE:
       let newState3 = merge([], state);
       return shuffle(newState3);

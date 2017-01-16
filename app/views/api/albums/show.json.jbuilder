@@ -1,7 +1,4 @@
-json.album do
-  json.partial! "api/albums/album", album: @album
-end
-
+json.partial! "api/albums/album", album: @album
 json.songs do
   @album.songs.each do |song|
     json.set! song.id do

@@ -14,6 +14,7 @@ import AlbumIndexContainer from './album_index/album_index_container';
 
 import AlbumDetailContainer from './album_detail/album_detail_container';
 import ArtistDetailContainer from './artist_detail/artist_detail_container';
+import CurrentUserDetailContainer from './current_user_detail/current_user_detail_container';
 
 // splash components
 import SplashContainer from './splash/splash_container';
@@ -51,6 +52,7 @@ const Root = ({ store }) => {
             <Route path='/albums/:albumId' component={ AlbumDetailContainer} />
             <Route path='/songs' component={ SongIndexContainer } />
             <Route path='/playlists' component={ ArtistIndexContainer } />
+            <Route path='/profile' component={ CurrentUserDetailContainer } />
           </Route>
 
         </Route>

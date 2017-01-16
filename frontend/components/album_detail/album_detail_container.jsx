@@ -7,9 +7,9 @@ import { fetchAlbum } from '../../actions/albums_actions';
 import { fetchCurrentSong } from '../../actions/songs_actions';
 import { addToQueue } from '../../actions/queue_actions';
 
-const mapStateToProps = ({ albums, songs }, ownProps) => ({
+const mapStateToProps = ({ albums }, ownProps) => ({
   album: albums.detail,
-  songs: values(songs.index),
+  songs: values(albums.detail.songs),
   albumId: ownProps.params.albumId
 });
 

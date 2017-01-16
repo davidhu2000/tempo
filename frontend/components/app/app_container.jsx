@@ -4,9 +4,10 @@ import App from './app';
 
 import { logout } from '../../actions/session_actions';
 
-const mapStateToProps = ({ session, currentSong }) => ({
+const mapStateToProps = ({ session, currentSong, errors }) => ({
   loggedIn: Boolean(session.currentUser),
-  errors: session.errors,
+  errors: errors,
+  currentUser: session.currentUser,
   currentSong
 });
 

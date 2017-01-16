@@ -6,6 +6,15 @@ class Sidebar extends React.Component {
     super(props);
   }
 
+  displayUserName() {
+    let user = this.props.currentUser;
+    if(user.first_name === '') {
+      return user.username;
+    } else {
+      return user.first_name;
+    }
+  }
+
   render() {
     return (
       <div className='sidebar'>
@@ -29,9 +38,9 @@ class Sidebar extends React.Component {
 
         <div className='sidebar-menu'>
           <div className='sidebar-profile'>
-            <Link to='/'>
-              <img src='https://image.shutterstock.com/display_pic_with_logo/1142849/149083895/stock-vector-male-avatar-profile-picture-vector-149083895.jpg'/>
-              <span>Username</span>
+            <Link to='/profile'>
+              <img src={ this.props.currentUser.image_url }/>
+              <span>{ this.displayUserName() }</span>
             </Link>
             <button className='sidebar-logout' onClick={ this.props.logout }>Logout</button>
           </div>

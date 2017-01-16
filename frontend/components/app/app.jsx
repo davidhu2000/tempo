@@ -32,18 +32,25 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <div className='main'>
-        <div className=''>
-          <Sidebar logout={ this.props.logout }></Sidebar>
-        </div>
-        <div className=''>
-          { this.props.children }
-        </div>
-        { this.props.currentSong.song_url ? this.renderCurrentSong() : <div></div> }
+    if(this.props.currentUser) {
 
-      </div>
-    );
+      return (
+        <div className='main'>
+          <div className=''>
+            <Sidebar
+              logout={ this.props.logout }
+              currentUser={this.props.currentUser} />
+          </div>
+          <div className=''>
+            { this.props.children }
+          </div>
+          { this.props.currentSong.song_url ? this.renderCurrentSong() : <div></div> }
+
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
   }
 }
 

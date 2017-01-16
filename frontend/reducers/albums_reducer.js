@@ -8,15 +8,14 @@ const _defaultState = {
 
 const albumsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
+
   switch(action.type) {
     case RECEIVE_ALL_ALBUMS:
       return merge({}, state, {
         index: action.albums
       });
     case RECEIVE_ALBUM:
-      return merge({}, state, {
-        detail: action.album
-      });
+      return { detail: action.album };
     default:
       return state;
   }

@@ -14,6 +14,7 @@
 .song-index-item {
   box-sizing: border-box;
   // display: relative;
+  margin: 15px;
   display: block;
   height: 10vh;
   width: 10vh;
@@ -39,7 +40,7 @@
   height: 10vh;
   font-size: 2em;
   opacity: 0;
-  color: $aqua-blue-transparent;
+  color: $color5;
 }
 
 .song-index-play:hover {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import ClassNames from 'classnames';
 
 class Songs extends React.Component {
@@ -16,8 +16,12 @@ class Songs extends React.Component {
   }
 
 
-  componentWillMount() {
-    this.props.fetchAllSongs();
+  componentDidMount() {
+    if(this.props.router.location.pathname === '/browse') {
+      this.props.fetchAllSongs(8);
+    } else {
+      this.props.fetchAllSongs(-1);
+    }
   }
 
   renderSong(song) {
@@ -40,4 +44,4 @@ class Songs extends React.Component {
   }
 }
 
-export default Songs;
+export default withRouter(Songs);

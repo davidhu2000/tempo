@@ -4,7 +4,10 @@
   height: 100vh;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
   background: $background-gradient-transparent-to-black;
 }
 

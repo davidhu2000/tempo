@@ -26,6 +26,7 @@ class CurrentUserDetail extends React.Component {
     }
   }
 
+  // TODO: provide random song
   render() {
     return (
       <div className='current-user-profile'>
@@ -35,7 +36,7 @@ class CurrentUserDetail extends React.Component {
           </div>
           <div className='current-user-greeting'>
             { this.renderGreeting() }
-            <span>{ this.displayUserName() }</span>
+            { this.displayUserName() }
           </div>
         </div>
 

@@ -21,8 +21,8 @@ export const fetchSong = id => dispatch => (
     )
 );
 
-export const fetchAllSongs = () => dispatch => (
-  SongsApiUtil.fetchAllSongs()
+export const fetchAllSongs = (limit) => dispatch => (
+  SongsApiUtil.fetchAllSongs(limit)
     .then(
       res => dispatch(receiveAllSongs(res))
     )

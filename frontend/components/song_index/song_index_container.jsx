@@ -11,7 +11,7 @@ const mapStateToProps = ({ songs }, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchSong: id => dispatch(fetchSong(id)),
-  fetchAllSongs: () => dispatch(fetchAllSongs()),
+  fetchAllSongs: (limit) => dispatch(fetchAllSongs(limit)),
   fetchCurrentSong: id => dispatch(fetchCurrentSong(id))
 });
 

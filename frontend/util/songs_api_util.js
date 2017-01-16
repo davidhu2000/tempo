@@ -5,9 +5,9 @@ export const fetchSong = id => (
   })
 );
 
-export const fetchAllSongs = () => (
+export const fetchAllSongs = (limit) => (
   $.ajax({
     method: 'GET',
-    url: `/api/songs`
+    url: `/api/songs?limit=${limit}`,
   })
 );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 class ArtistIndex extends React.Component {
   constructor(props) {
@@ -13,8 +13,11 @@ class ArtistIndex extends React.Component {
   renderArtist(artist) {
     return (
       <div key={artist.id} className='artist-index-item'>
-        <img className='artist-index-image'
-             src={artist.image_url} />
+        <Link to={`/artists/${artist.id}`}>
+          <img
+            className='artist-index-image'
+            src={artist.image_url} />
+        </Link>
       </div>
     );
   }

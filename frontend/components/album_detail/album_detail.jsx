@@ -26,7 +26,7 @@ class AlbumDetail extends React.Component {
   renderSongList() {
     return (
       <ul className='album-detail-songs'>
-        { this.props.songs.map( (song, idx) => this.renderSong(song) ) }
+        { this.props.songs.map( song => this.renderSong(song) ) }
       </ul>
     );
   }

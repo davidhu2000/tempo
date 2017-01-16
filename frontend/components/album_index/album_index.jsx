@@ -17,6 +17,14 @@ class AlbumIndex extends React.Component {
           <img className='album-index-image'
                src={album.image_url} />
         </Link>
+
+        <button className='album-index-play-test' onClick={() => this.props.playFirstSongAndAddAlbumToQueue(album.id) }>
+          <i className='fa fa-play'></i>
+        </button>
+        <button className='album-index-queue' onClick={() => this.props.fetchAlbumToQueue(album.id)}>
+          <i className='fa fa-plus'></i>
+        </button>
+
       </div>
     );
   }

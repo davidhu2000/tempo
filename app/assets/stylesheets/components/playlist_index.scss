@@ -11,14 +11,14 @@
   box-sizing: border-box;
   // display: relative;
   display: block;
-  height: 20vh;
-  width: 20vh;
+  height: 16vh;
+  width: 16vh;
   text-align: center;
   align-items: center;
 
   img {
-    height: 20vh;
-    width: 20vh;
+    height: 16vh;
+    width: 16vh;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
   }
@@ -31,7 +31,7 @@
 .playlist-index-play, .playlist-index-queue {
   background: transparent;
   position: relative;
-  top: -12vh;
+  top: -11vh;
   width: 10%;
   height: 10%;
   font-size: 3em;

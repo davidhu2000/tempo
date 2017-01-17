@@ -11,7 +11,7 @@ const albumsReducer = (state = _defaultState, action) => {
 
   switch(action.type) {
     case RECEIVE_ALL_ALBUMS:
-      return merge({}, state, {
+      return merge({}, _defaultState, {
         index: action.albums
       });
     case RECEIVE_ALBUM:

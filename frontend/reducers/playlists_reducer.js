@@ -10,7 +10,7 @@ const playlistsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_PLAYLISTS:
-      return merge({}, {
+      return merge({}, _defaultState, {
         index: action.playlists
       });
     case RECEIVE_PLAYLIST:

@@ -10,11 +10,11 @@ const artistsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_ARTISTS:
-      return merge({}, state, {
+      return merge({}, _defaultState, {
         index: action.artists
       });
     case RECEIVE_ARTIST:
-      return merge({}, state, {
+      return merge({}, _defaultState, {
         detail: action.artist
       });
     default:

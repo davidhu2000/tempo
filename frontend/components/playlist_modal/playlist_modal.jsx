@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { merge } from 'lodash';
 
 const customStyles = {
   content : {
@@ -20,15 +21,29 @@ const customStyles = {
 
 
 class PlaylistModal extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      modalIsOpen: false,
-      title: '',
-      description: '',
-      image_url: ''
-    };
+    if(props.playlist) {
+      this.state = {
+        modalIsOpen: false,
+        id: props.playlist.id,
+        title: props.playlist.title,
+        description: props.playlist.description,
+        image_url: props.playlist.image_url
+      };
+      this.buttonVal = 'Update playlist';
+      this.formAction = this.props.updatePlaylist;
+    } else {
+      this.state = {
+        modalIsOpen: false,
+        title: '',
+        description: '',
+        image_url: ''
+      };
+      this.buttonVal = 'Create a playlist';
+      this.formAction = this.props.createPlaylist;
+    }
 
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -67,13 +82,14 @@ class PlaylistModal extends React.Component {
     this.setState({
       modalIsOpen: false
     });
-    this.handleSubmit();
   }
 
   render() {
+
+
     return (
       <div>
-        <button onClick={this.openModal}>Create a Playlist</button>
+        <button onClick={this.openModal}>{ this.buttonVal }</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -82,7 +98,7 @@ class PlaylistModal extends React.Component {
           className='modal'
           contentLabel="Playlist Modal" >
 
-          <form onSubmit={() => { this.props.createPlaylist(this.state); this.closeModal();} } className='modal-form'>
+          <form onSubmit={() => { this.formAction(this.state); this.closeModal(); } } className='modal-form'>
             <label htmlFor='title' className='form-label'>
               { "Title" }
             </label>

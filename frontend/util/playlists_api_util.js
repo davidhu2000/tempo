@@ -15,7 +15,7 @@ export const fetchPlaylist = id => (
 
 export const updatePlaylist = playlist => (
   $.ajax({
-    method: 'GET',
+    method: 'PATCH',
     url: `/api/playlists/${playlist.id}`,
     data: { playlist }
   })

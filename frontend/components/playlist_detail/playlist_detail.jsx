@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PlaylistModal from '../playlist_modal/playlist_modal';
 
 class PlaylistDetail extends React.Component {
   constructor(props) {
@@ -16,9 +16,13 @@ class PlaylistDetail extends React.Component {
         <div>
           <button
             onClick={ () => this.props.deletePlaylist(this.props.playlistId)}
-            className='form-button' >
+            className='playlist-button' >
             Delete Playlist
           </button>
+          <PlaylistModal
+            playlist={ this.props.playlist }
+            formType='edit'
+            updatePlaylist={ this.props.updatePlaylist }/>
         </div>
       );
     } else {
@@ -59,12 +63,15 @@ class PlaylistDetail extends React.Component {
           <div className='playlist-detail-title'>
             <span>{ this.props.playlist.title }</span>
             { this.renderButtons() }
+
           </div>
         </div>
 
         <div className='playlist-detail-song-list'>
           { this.renderSongList() }
         </div>
+
+
       </div>
     );
   }

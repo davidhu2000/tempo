@@ -1,0 +1,52 @@
+.playlist-index {
+  color: white;
+  width: 95vw;
+  height: 100vh;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.playlist-index-item {
+  box-sizing: border-box;
+  // display: relative;
+  display: block;
+  height: 20vh;
+  width: 20vh;
+  text-align: center;
+  align-items: center;
+
+  img {
+    height: 20vh;
+    width: 20vh;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+}
+
+.playlist-index-play, .playlist-index-queue {
+  background: transparent;
+  position: relative;
+  top: -12vh;
+  width: 10%;
+  height: 10%;
+  font-size: 3em;
+  opacity: 0.4;
+  color: $color5;
+}
+
+.playlist-index-play:hover, .playlist-index-queue:hover {
+  opacity: 0.9;
+}
+
+.playlist-index-play {
+  left: 4vh;
+}
+
+.playlist-index-queue {
+  right: 5vh;
+}

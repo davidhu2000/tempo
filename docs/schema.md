@@ -44,6 +44,7 @@
 | column name     | data type | details                       |
 |-----------------|-----------|-------------------------------|
 | id              | integer   | not null, primary key         |
+| title           | string    | have default values           |
 | user_id         | integer   | not null, indexed             |
 | image_url       | string    | have default image            |
 | description     | text      |                               |

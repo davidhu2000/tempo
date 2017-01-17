@@ -1,4 +1,5 @@
 import * as AlbumsApiUtil from '../util/albums_api_util';
+import * as PlaylistsApiUtil from '../util/playlists_api_util';
 import { values } from 'lodash';
 import { receiveCurrentSong } from './songs_actions';
 
@@ -39,7 +40,21 @@ export const fetchAlbumToQueue = id => dispatch => (
 export const playFirstSongAndAddAlbumToQueue = id => dispatch => (
   AlbumsApiUtil.fetchAlbum(id).then(
     res => {
-      console.log(res);
+      dispatch(receiveCurrentSong( values(res.songs)[0] ));
+      return dispatch(addAlbumToQueue( values(res.songs).slice(1) ));
+    }
+  )
+);
+
+export const fetchPlaylistToQueue = id => dispatch => (
+  PlaylistsApiUtil.fetchPlaylist(id).then(
+    res => dispatch(addAlbumToQueue(values(res.songs)))
+  )
+);
+
+export const playFirstSongAndAddPlaylistToQueue = id => dispatch => (
+  PlaylistsApiUtil.fetchPlaylist(id).then(
+    res => {
       dispatch(receiveCurrentSong( values(res.songs)[0] ));
       return dispatch(addAlbumToQueue( values(res.songs).slice(1) ));
     }

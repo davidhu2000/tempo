@@ -15,7 +15,9 @@ const albumsReducer = (state = _defaultState, action) => {
         index: action.albums
       });
     case RECEIVE_ALBUM:
-      return { detail: action.album };
+      return merge({}, _defaultState, {
+        detail: action.album
+      });
     default:
       return state;
   }

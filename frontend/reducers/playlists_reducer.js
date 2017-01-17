@@ -14,9 +14,9 @@ const playlistsReducer = (state = _defaultState, action) => {
         index: action.playlists
       });
     case RECEIVE_PLAYLIST:
-      return {
+      return merge({}, _defaultState, {
         detail: action.playlist
-      };
+      });
     default:
       return state;
   }

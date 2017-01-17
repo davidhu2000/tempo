@@ -241,3 +241,29 @@ Song.create!(
   order: 4,
   song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484604742/circus_marcus/petrified/Circus_Marcus_-_04_-_La_brise.mp3'
 )
+
+Playlist.create!(
+  title: 'My awesome playlist',
+  user_id: 1,
+  description: 'This is awesome'
+)
+
+PlaylistSong.create!(
+  playlist_id: 1,
+  song_id: 2
+)
+
+PlaylistSong.create!(
+  playlist_id: 1,
+  song_id: 3
+)
+
+PlaylistSong.create!(
+  playlist_id: 1,
+  song_id: 4
+)
+
+PlaylistSong.create!(
+  playlist_id: 1,
+  song_id: 5
+)

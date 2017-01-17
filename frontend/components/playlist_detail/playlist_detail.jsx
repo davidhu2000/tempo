@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class PlaylistDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -7,6 +8,22 @@ class PlaylistDetail extends React.Component {
 
   componentDidMount() {
     this.props.fetchPlaylist(this.props.playlistId);
+  }
+
+  renderButtons() {
+    if(this.props.currentUserId === this.props.playlist.user_id) {
+      return (
+        <div>
+          <button
+            onClick={ () => this.props.deletePlaylist(this.props.playlistId)}
+            className='form-button' >
+            Delete Playlist
+          </button>
+        </div>
+      );
+    } else {
+      return <div></div>;
+    }
   }
 
   renderSong(song) {
@@ -41,6 +58,7 @@ class PlaylistDetail extends React.Component {
           </div>
           <div className='playlist-detail-title'>
             <span>{ this.props.playlist.title }</span>
+            { this.renderButtons() }
           </div>
         </div>
 

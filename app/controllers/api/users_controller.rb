@@ -36,7 +36,7 @@ class Api::UsersController < ApplicationController
   private
 
   def look_up_user
-    @user = User.find_by(id: params[:id])
+    @user = User.where(id: params[:id]).includes(:playlists).first
   end
 
   def cannot_modify_other_users

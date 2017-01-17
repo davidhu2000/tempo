@@ -13,6 +13,8 @@
 
 class Playlist < ActiveRecord::Base
   validates :user_id, null: false
+  
+  belongs_to :user
 
   has_many :playlist_songs
 

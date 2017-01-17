@@ -8,6 +8,7 @@ import { logout } from '../actions/session_actions';
 import AppContainer from './app/app_container';
 import Sidebar from './app/sidebar';
 import BrowseContainer from './browse/browse_container';
+
 import ArtistIndexContainer from './artist_index/artist_index_container';
 import SongIndexContainer from './song_index/song_index_container';
 import AlbumIndexContainer from './album_index/album_index_container';
@@ -15,6 +16,7 @@ import PlaylistIndexContainer from './playlist_index/playlist_index_container';
 
 import AlbumDetailContainer from './album_detail/album_detail_container';
 import ArtistDetailContainer from './artist_detail/artist_detail_container';
+import PlaylistDetailContainer from './playlist_detail/playlist_detail_container';
 import CurrentUserDetailContainer from './current_user_detail/current_user_detail_container';
 
 
@@ -54,6 +56,7 @@ const Root = ({ store }) => {
             <Route path='/albums/:albumId' component={ AlbumDetailContainer} />
             <Route path='/songs' component={ SongIndexContainer } />
             <Route path='/playlists' component={ PlaylistIndexContainer } />
+            <Route path='/playlists/:playlistId' component={ PlaylistDetailContainer } />
             <Route path='/profile' component={ CurrentUserDetailContainer } />
           </Route>
 

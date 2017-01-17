@@ -17,6 +17,7 @@ class CurrentUserDetail extends React.Component {
   renderGreeting() {
     let time = new Date;
     let hour = time.getHours();
+    
     if( hour >= 0 && hour < 12 ) {
       return 'Good morning, ';
     } else if(hour >= 12 && hour < 18) {
@@ -37,6 +38,14 @@ class CurrentUserDetail extends React.Component {
           <div className='current-user-greeting'>
             { this.renderGreeting() }
             { this.displayUserName() }
+          </div>
+
+          <div className='current-user-actions'>
+            <button>Create a playlist</button>
+          </div>
+
+          <div className='current-user-playlist-list'>
+
           </div>
         </div>
 

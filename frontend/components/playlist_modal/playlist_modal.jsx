@@ -3,12 +3,18 @@ import Modal from 'react-modal';
 
 const customStyles = {
   content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    position                   : 'absolute',
+    top                        : '40px',
+    left                       : '40px',
+    right                      : '40px',
+    bottom                     : '40px',
+    border                     : '1px solid #ccc',
+    overflow                   : 'auto',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+
   }
 };
 
@@ -72,10 +78,9 @@ class PlaylistModal extends React.Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
+          style={customStyles}
+          className='modal'
           contentLabel="Playlist Modal" >
-
-          <h2 className='modal-title'>Let's create a playlist.</h2>
-          <button onClick={this.closeModal}>close</button>
 
           <form onSubmit={() => { this.props.createPlaylist(this.state); this.closeModal();} } className='modal-form'>
             <label htmlFor='title' className='form-label'>

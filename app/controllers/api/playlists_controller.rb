@@ -39,7 +39,7 @@ class Api::PlaylistsController < ApplicationController
   private
 
   def get_playlist
-    @playlist = Playlist.find_by(id: params[:id])
+    @playlist = Playlist.where(id: params[:id]).includes(:songs).first
   end
 
   def playlist_params

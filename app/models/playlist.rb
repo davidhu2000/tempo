@@ -8,10 +8,13 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  title       :string           default("Untitled")
 #
 
 class Playlist < ActiveRecord::Base
   validates :user_id, null: false
 
   has_many :playlist_songs
+
+  has_many :songs, through: :playlist_songs
 end

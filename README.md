@@ -54,14 +54,16 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 - [x] create queue front-end
 - [x] add ability to add songs into queue.
 
-Objective: User can add songs into queue to be played after current song.
+&#10004; Objective: User can add songs into queue to be played after current song.
 
 ### Phase 4: Playlist CRUD (2 days)
 
 **Tasks:**
-- [ ] Set up playlist backend
-- [ ] Set up playlist component, reducer, and actions
-- [ ] Add styling to playlist index and show page
+- [x] Set up playlist backend
+- [x] Set up playlist component, reducer, and actions
+- [x] Add styling to playlist index and show page
+- [x] Allow user to create, update, and delete playlist
+- [ ] Allow user to add songs to playlist
 
 Objective: User can create, view, update, and delete custom playlists
 

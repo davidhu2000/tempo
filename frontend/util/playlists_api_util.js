@@ -23,17 +23,11 @@ export const updatePlaylist = playlist => (
 
 export const fetchAllPlaylists = filter => {
   let url = `/api/playlists`;
-  if(filter) {
-    if(filter.ownerId) {
-      url += `?owner_id=${filter.ownerId}`;
-    } else if(filter.followerId) {
-      // TODO: Add params for following playlists
-    }
-  }
 
   return $.ajax({
     method: 'GET',
-    url: url
+    url: url,
+    data: filter
   });
 };
 

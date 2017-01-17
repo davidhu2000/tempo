@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 import configureStore from './store/store.js';
 
 import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
+
+  const appElement = document.getElementById('current-user-profile');
+  Modal.setAppElement(root);
 
   let store;
   if(window.currentUser) {

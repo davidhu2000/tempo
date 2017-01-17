@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaylistIndexContainer from '../playlist_index/playlist_index_container';
+import PlaylistModal from '../playlist_modal/playlist_modal';
 
 class CurrentUserDetail extends React.Component {
   constructor(props) {
@@ -28,43 +29,10 @@ class CurrentUserDetail extends React.Component {
     }
   }
 
-  // renderOnePlaylist(playlist) {
-  //   return (
-  //     <li key={playlist.id}>
-  //       <button className='playlist-index-play' >
-  //         <i className='fa fa-play'></i>
-  //       </button>
-  //       <button className='playlist-index-queue' >
-  //         <i className='fa fa-plus'></i>
-  //       </button>
-  //       { playlist.title }
-  //     </li>
-  //   );
-  // }
-  //
-  // renderUserPlaylists() {
-  //   if(this.props.playlists) {
-  //     return (
-  //       <div className='current-user-playlist-list'>
-  //         <h2 className='current-user-playlist-title'>
-  //           Here are the playlists you created:
-  //           <ul>
-  //             { this.props.playlists.map( playlist => this.renderOnePlaylist(playlist) )}
-  //           </ul>
-  //         </h2>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div></div>
-  //     );
-  //   }
-  // }
-
   // TODO: provide random song
   render() {
     return (
-      <div className='current-user-profile'>
+      <div className='current-user-profile' id='current-user-profile'>
         <div className='current-user-info'>
           <div className='current-user-image'>
             <img src={ this.props.currentUser.image_url} />
@@ -75,7 +43,7 @@ class CurrentUserDetail extends React.Component {
           </div>
 
           <div className='current-user-actions'>
-            <button>Create a playlist</button>
+            <PlaylistModal createPlaylist={ this.props.createPlaylist }/>
           </div>
         </div>
         <div className='current-user-playlists'>

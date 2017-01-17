@@ -3,7 +3,15 @@ class Api::PlaylistsController < ApplicationController
   before_action :require_user_to_be_author, only: [:update]
 
   def index
-    @playlists = Playlist.all
+    if params[:owner_id]
+      @playlists = Playlist.where(user_id: params[:owner_id])
+    elsif params[:user_id]
+
+    else
+      @playlists = Playlist.all
+    end
+
+    @playlists ||= []
   end
 
   def create

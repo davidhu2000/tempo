@@ -21,12 +21,19 @@ export const updatePlaylist = playlist => (
   })
 );
 
-export const fetchAllPlaylists = () => (
-  $.ajax({
+export const fetchAllPlaylists = filter => {
+  let url = `/api/playlists`;
+  if(filter.ownerId) {
+    url += `?owner_id=${filter.ownerId}`;
+  } else if(filter.followerId) {
+
+  }
+  console.log(url);
+  return $.ajax({
     method: 'GET',
-    url: `/api/playlists/`
-  })
-);
+    url: url
+  });
+};
 
 export const deletePlaylist = id => (
   $.ajax({

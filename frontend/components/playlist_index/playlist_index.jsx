@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 class PlaylistIndex extends React.Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class PlaylistIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllPlaylists();
+    this.props.fetchAllPlaylists(this.props.filter);
   }
 
   renderPlaylist(playlist) {
@@ -38,4 +38,4 @@ class PlaylistIndex extends React.Component {
   }
 }
 
-export default PlaylistIndex;
+export default withRouter(PlaylistIndex);

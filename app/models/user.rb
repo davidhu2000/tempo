@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_profile_image
-    self.image_url = Faker::Avatar.image
+    self.image_url = Faker::Avatar.image if self.image_url.empty?
   end
 
   def ensure_session_token

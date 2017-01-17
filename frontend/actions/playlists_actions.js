@@ -14,8 +14,8 @@ export const receivePlaylist = playlist => ({
   playlist
 });
 
-export const fetchAllPlaylists = () => dispatch => (
-  PlaylistsApiUtil.fetchAllPlaylists()
+export const fetchAllPlaylists = filter => dispatch => (
+  PlaylistsApiUtil.fetchAllPlaylists(filter)
     .then(
       res => dispatch(receiveAllPlaylists(res))
     )

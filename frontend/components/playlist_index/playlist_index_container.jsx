@@ -11,7 +11,7 @@ const mapStateToProps = ({ playlists }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllPlaylists: () => dispatch(fetchAllPlaylists()),
+  fetchAllPlaylists: filter => dispatch(fetchAllPlaylists(filter)),
   fetchPlaylist: id => dispatch(fetchPlaylist(id)),
   fetchPlaylistToQueue: id => dispatch(fetchPlaylistToQueue(id)),
   playFirstSongAndAddPlaylistToQueue: id => dispatch(playFirstSongAndAddPlaylistToQueue(id))

@@ -2,6 +2,8 @@
   color: white;
   padding: 50px;
   font-size: 2em;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 .current-user-info {
@@ -19,5 +21,37 @@
     width: 300px;
     border-radius: 500px;
     background: white;
+  }
+}
+
+.current-user-actions {
+  font-size: 12px;
+
+  button {
+    border: 1px solid black;
+    background-color: white;
+    color: $aqua-blue;
+    padding: 5px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px black;
+  }
+
+  button:hover {
+    color: white;
+    background: $aqua-blue;
+  }
+}
+
+.current-user-playlists {
+  // overflow-x: hidden;
+
+  .playlist-index {
+    height: auto;
+    width: 100%;
+  }
+
+  i {
+    font-size: 40px;
+    top: -12vh;
   }
 }

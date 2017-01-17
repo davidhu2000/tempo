@@ -22,20 +22,22 @@ const _defaultState = [];
 
 const queueReducer = (state = _defaultState, action) => {
   Object.freeze(state);
+  console.log('queue reducer');
+  console.log(action);
   switch(action.type) {
     case ADD_TO_QUEUE:
-      let newState = merge([], state);
-      newState = state.concat([action.song]);
+      let newState = state.concat([action.song]);
       return newState;
     case ADD_ALBUM_TO_QUEUE:
-      return merge([], state, action.songs);
-    case REMOVE_FIRST_SONG:
-      let newState2 = merge([], state);
-      newState2.shift();
+      let newState2 = state.concat(action.songs);
       return newState2;
-    case SHUFFLE_QUEUE:
+    case REMOVE_FIRST_SONG:
       let newState3 = merge([], state);
-      return shuffle(newState3);
+      newState3.shift();
+      return newState3;
+    case SHUFFLE_QUEUE:
+      let newState4 = merge([], state);
+      return shuffle(newState4);
     case CLEAR_QUEUE:
       return [];
     default:

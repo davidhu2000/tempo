@@ -1,10 +1,17 @@
 import React from 'react';
 import PlaylistIndexContainer from '../playlist_index/playlist_index_container';
-import PlaylistModal from '../playlist_modal/playlist_modal';
+import PlaylistForm from '../playlist_form/playlist_form';
 
 class CurrentUserDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showForm: false
+    };
+
+    this.toggleForm = this.toggleForm.bind(this);
+    this.renderForm = this.renderForm.bind(this);
   }
 
   displayUserName() {
@@ -29,6 +36,20 @@ class CurrentUserDetail extends React.Component {
     }
   }
 
+  toggleForm() {
+    this.setState({
+      showForm: !this.state.showForm
+    });
+  }
+
+  renderForm() {
+    if(this.state.showForm) {
+      return (
+        <PlaylistForm formType='new' createPlaylist={this.props.createPlaylist}/>
+      );
+    }
+  }
+
   // TODO: provide random song
   render() {
     return (
@@ -42,13 +63,13 @@ class CurrentUserDetail extends React.Component {
             { this.displayUserName() }
           </div>
 
-          <div className='current-user-actions'>
-            <PlaylistModal createPlaylist={ this.props.createPlaylist }/>
-          </div>
+          <button className='form-button' onClick={ this.toggleForm }>Create a playlist</button>
         </div>
         <div className='current-user-playlists'>
           <PlaylistIndexContainer filter={ {ownerId: this.props.currentUser.id} }/>
         </div>
+
+        { this.renderForm() }
       </div>
     );
   }

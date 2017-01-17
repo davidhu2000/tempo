@@ -1,9 +1,13 @@
 import React from 'react';
-import PlaylistModal from '../playlist_modal/playlist_modal';
+import PlaylistForm from '../playlist_form/playlist_form';
 
 class PlaylistDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showForm: false
+    };
   }
 
   componentDidMount() {
@@ -19,15 +23,16 @@ class PlaylistDetail extends React.Component {
             className='playlist-button' >
             Delete Playlist
           </button>
-          <PlaylistModal
-            playlist={ this.props.playlist }
-            formType='edit'
-            updatePlaylist={ this.props.updatePlaylist }/>
+          <button className='playlist-button'>Create a Playlist</button>
         </div>
       );
     } else {
       return <div></div>;
     }
+  }
+
+  renderForm() {
+
   }
 
   renderSong(song) {

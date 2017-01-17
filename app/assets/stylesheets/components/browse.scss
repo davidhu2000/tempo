@@ -50,5 +50,15 @@
   .playlist-index {
     height: 20vh;
     background: none;
+    font-size: 20px;
+
+    .playlist-index-item {
+      font-size: 20px;
+      height: 10vh;
+
+      h4 {
+        font-size: 20px;
+      }
+    }
   }
 }

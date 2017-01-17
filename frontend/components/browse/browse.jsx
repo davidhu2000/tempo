@@ -30,8 +30,8 @@ class Browse extends React.Component {
         </div>
 
         <div className='browse-playlists'>
-          <Link to='/playlists'>Playlists</Link>
-          <PlaylistIndexContainer />
+          <Link to='/playlists'>Random Playlist</Link>
+          <PlaylistIndexContainer filter={ {limit: 1} }/>
         </div>
 
       </div>

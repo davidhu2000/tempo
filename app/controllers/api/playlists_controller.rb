@@ -11,6 +11,10 @@ class Api::PlaylistsController < ApplicationController
       @playlists = Playlist.all
     end
 
+    if params[:limit]
+      @playlists = @playlists.limit(params[:limit])
+    end
+
     @playlists ||= []
   end
 
@@ -51,7 +55,7 @@ class Api::PlaylistsController < ApplicationController
   end
 
   def playlist_params
-    params.require(:playlist).permit(:title, :description)
+    params.require(:playlist).permit(:title, :description, :image_url)
   end
 
   def require_user_to_be_author

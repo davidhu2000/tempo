@@ -59,15 +59,13 @@ class PlaylistModal extends React.Component {
   }
 
   handleSubmit(e) {
-    // e.preventDefault();
-    let newState = {};
-    newState['title'] = this.state.title;
-    newState['description'] = this.state.description;
+    e.preventDefault();
     this.closeModal();
-    this.props.createPlaylist(newState);
+    this.formAction(this.state);
   }
 
-  openModal() {
+  openModal(e) {
+    e.preventDefault();
     this.setState({
       modalIsOpen: true
     });
@@ -78,18 +76,17 @@ class PlaylistModal extends React.Component {
     // this.refs.subtitle.style.color = '#f00';
   }
 
-  closeModal() {
+  closeModal(e) {
+    e.preventDefault();
     this.setState({
       modalIsOpen: false
     });
   }
 
   render() {
-
-
     return (
       <div>
-        <button onClick={this.openModal}>{ this.buttonVal }</button>
+        <button onClick={ this.openModal }>{ this.buttonVal }</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -98,7 +95,7 @@ class PlaylistModal extends React.Component {
           className='modal'
           contentLabel="Playlist Modal" >
 
-          <form onSubmit={() => { this.formAction(this.state); this.closeModal(); } } className='modal-form'>
+          <form onSubmit={ this.handleSubmit } className='modal-form'>
             <label htmlFor='title' className='form-label'>
               { "Title" }
             </label>
@@ -129,7 +126,7 @@ class PlaylistModal extends React.Component {
               onChange={ this.update('image_url') }
               className='form-input'></input>
 
-            <input type='submit' value='Create Playlist' className='form-button' ></input>
+            <input type='submit' value={ this.buttonVal } className='form-button' ></input>
 
           </form>
         </Modal>

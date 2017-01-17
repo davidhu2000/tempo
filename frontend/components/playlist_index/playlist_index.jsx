@@ -13,18 +13,22 @@ class PlaylistIndex extends React.Component {
   renderPlaylist(playlist) {
     return (
       <div key={playlist.id} className='playlist-index-item'>
-        <Link to={`playlists/${playlist.id}`}>
-          <img className='playlist-index-image'
-               src={playlist.image_url} />
-        </Link>
 
         <button className='playlist-index-play' onClick={() => this.props.playFirstSongAndAddPlaylistToQueue(playlist.id) }>
           <i className='fa fa-play'></i>
         </button>
+
         <button className='playlist-index-queue' onClick={() => this.props.fetchPlaylistToQueue(playlist.id)}>
           <i className='fa fa-plus'></i>
         </button>
 
+        <Link to={`playlists/${playlist.id}`}>
+          <img className='playlist-index-image'
+               src={playlist.image_url} />
+        </Link>
+        <Link to={`playlists/${playlist.id}`}>
+          <h4>{ playlist.title }</h4>
+        </Link>
       </div>
     );
   }

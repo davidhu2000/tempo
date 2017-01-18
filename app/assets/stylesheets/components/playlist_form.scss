@@ -1,16 +1,12 @@
 @keyframes slideOut {
   0% {
-    // width: 0vw;
     opacity: 0;
     transform: rotateY(90deg);
-    // transform: rotate3d(1, 1, 0, 90deg);
   }
 
   100% {
-    // width: 30vw;
     opacity: 1;
     transform: rotateY(0deg);
-    // transform: rotate3d(1, 1, 0, 0deg);
   }
 }
 
@@ -26,6 +22,7 @@
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+
   animation-name: slideOut;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;

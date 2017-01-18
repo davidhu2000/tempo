@@ -60,7 +60,7 @@ class ArtistDetail extends React.Component {
   render() {
     return (
       <div className='artist-detail'>
-        <div className='artist-detail-info'>
+        <div className='artist-detail-info' >
           <div className='artist-detail-image'>
             <img src={ this.props.artist.image_url } />
           </div>

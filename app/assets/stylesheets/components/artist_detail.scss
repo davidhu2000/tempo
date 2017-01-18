@@ -1,11 +1,5 @@
 .artist-detail {
   color: white;
-  box-sizing: border-box;
-  height: 100vh;
-  width: 95vw;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background: $background-gradient-transparent-to-black;
 }
 
 .artist-detail-info {
@@ -13,8 +7,10 @@
   justify-content: flex-start;
   padding: 50px;
   width: 100%;
+  position: relative;
   background: $background-gradient-transparent-to-black;
 }
+
 
 .artist-detail-name {
   font-size: 3em;

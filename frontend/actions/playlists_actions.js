@@ -53,3 +53,8 @@ export const deletePlaylist = id => dispatch => (
       res => hashHistory.push('/playlists')
     )
 );
+
+export const addSongToPlaylist = (songId, playlistId) => dispatch => (
+  PlaylistsApiUtil.addSongToPlaylist(songId, playlistId)
+
+);

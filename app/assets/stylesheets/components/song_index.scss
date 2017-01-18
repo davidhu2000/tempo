@@ -60,7 +60,7 @@
   }
 }
 
-.song-index-play, .song-index-queue {
+.song-index-play, .song-index-queue, .song-index-playlist  {
   background: transparent;
   position: relative;
   font-size: 1em;
@@ -82,7 +82,7 @@
 
 }
 
-.song-index-play:hover, .song-index-queue:hover {
+.song-index-play:hover, .song-index-queue:hover, .song-index-playlist:hover {
   opacity: 0.9;
 
   span {

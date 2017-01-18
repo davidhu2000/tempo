@@ -1,11 +1,19 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import ClassNames from 'classnames';
+import PickPlaylistFormContainer from '../pick_playlist_form/pick_playlist_form_container';
 
 class Songs extends React.Component {
   constructor(props) {
     super(props);
     this.renderSong = this.renderSong.bind(this);
+    this.toggleForm = this.toggleForm.bind(this);
+    this.renderForm = this.renderForm.bind(this);
+
+    this.state = {
+      showForm: false,
+      songId: null
+    };
   }
 
   playPauseClass() {
@@ -21,7 +29,28 @@ class Songs extends React.Component {
     }
   }
 
+  toggleForm(id) {
+    return e => {
+      e.preventDefault();
+      this.setState({
+        songId: id,
+        showForm: !this.state.showForm
+      });
+    };
+  }
+
+  renderForm() {
+    if(this.state.showForm) {
+      return (
+        <PickPlaylistFormContainer
+          formType='new'
+          songId={ this.state.songId } />
+      );
+    }
+  }
+
   renderSong(song) {
+    console.log(this.state);
     return (
       <div key={song.id} className='song-index-item'>
 
@@ -35,10 +64,15 @@ class Songs extends React.Component {
             <span>Add To Queue</span>
             <i className='fa fa-plus'></i>
           </button>
+
+          <button className='song-index-playlist' onClick={ this.toggleForm(song.id) }>
+            <span>Add to playlist</span>
+            <i className="fa fa-sign-in"></i>
+          </button>
+
           { this.renderImage(song) }
           <p>{ song.title }</p>
         </div>
-
       </div>
     );
   }
@@ -47,6 +81,7 @@ class Songs extends React.Component {
     return (
       <div className='song-index'>
         { this.props.songs.map( song => this.renderSong(song)) }
+        { this.renderForm() }
       </div>
     );
   }

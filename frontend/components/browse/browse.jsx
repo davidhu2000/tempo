@@ -13,27 +13,17 @@ class Browse extends React.Component {
 
   render() {
     return (
-      <div className="browse">
-        <div className='browse-artist'>
+      <div className='browse'>
+        <nav className='browse-navbar'>
           <Link to='/artists'>Artists</Link>
-          <ArtistIndexContainer />
-        </div>
-
-        <div className='browse-albums'>
           <Link to='/albums'>Albums</Link>
-          <AlbumIndexContainer />
-        </div>
-
-        <div className='browse-songs'>
           <Link to='/songs'>Songs</Link>
-          <SongIndexContainer />
-        </div>
+          <Link to='/playlists'>Playlists</Link>
+        </nav>
 
-        <div className='browse-playlists'>
-          <Link to='/playlists'>Random Playlist</Link>
-          <PlaylistIndexContainer filter={ {limit: 1} }/>
+        <div className='browse-main'>
+          { this.props.children }
         </div>
-
       </div>
     );
   }

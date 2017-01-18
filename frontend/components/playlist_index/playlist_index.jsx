@@ -15,10 +15,12 @@ class PlaylistIndex extends React.Component {
       <div key={playlist.id} className='playlist-index-item'>
 
         <button className='playlist-index-play' onClick={() => this.props.playFirstSongAndAddPlaylistToQueue(playlist.id) }>
+          <span>Play</span>
           <i className='fa fa-play'></i>
         </button>
 
         <button className='playlist-index-queue' onClick={() => this.props.fetchPlaylistToQueue(playlist.id)}>
+          <span>Add to Queue</span>
           <i className='fa fa-plus'></i>
         </button>
 

@@ -8,7 +8,6 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-  background: $background-gradient-transparent-to-black;
 }
 
 .song-index-item {
@@ -20,6 +19,7 @@
   width: 10vh;
   text-align: center;
   align-items: center;
+  box-shadow: 3px 3px 5px black;
 
   img {
     height: 10vh;
@@ -30,6 +30,11 @@
   h4 {
     font-size: 10px;
   }
+}
+
+.song-index-item:active {
+  box-shadow: none;
+  transform: translateY(3px);
 }
 
 .song-index-play {

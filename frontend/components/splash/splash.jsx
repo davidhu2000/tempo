@@ -21,7 +21,7 @@ class Splash extends React.Component  {
 
   _redirectLoggedIn() {
     if(this.props.loggedIn) {
-      this.props.router.replace('/browse');
+      this.props.router.replace('/artists');
     }
   }
 

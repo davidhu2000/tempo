@@ -17,6 +17,7 @@ class ArtistIndex extends React.Component {
           <img
             className='artist-index-image'
             src={artist.image_url} />
+          <span>{artist.name}</span>
         </Link>
       </div>
     );

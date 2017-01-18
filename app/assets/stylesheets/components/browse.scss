@@ -11,8 +11,8 @@
 }
 
 .browse {
-  box-sizing: padding-box;
-  padding: 20px 50px;
+  // box-sizing: padding-box;
+  padding: 20px 0px 20px 50px;
   height: 100vh;
   width: 95vw;
   overflow-y: auto;
@@ -24,41 +24,30 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 
-  div a {
-    color: white;
-    font-size: 5vh;
-    text-decoration: underline;
+}
+
+.browse-navbar {
+  width: 100%;
+  height: 5vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+
+  a {
+    width: 25%;
+    height: 5vh;
+    text-align: center;
+  }
+  a:hover {
+    color: $aqua-blue;
+    font-size: 25px;
   }
 }
 
-.browse-songs {
-  .song-index {
-    height: 14vh;
-    background: none;
-    justify-content: space-around;
-  }
-}
-
-.browse-albums {
-  .album-index {
-    height: 24vh;
-    background: none;
-  }
-}
-
-.browse-playlists {
-  .playlist-index {
-    height: 20vh;
-    background: none;
-    font-size: 20px;
-
-    .playlist-index-item {
-      font-size: 20px;
-      height: 10vh;
-
-      h4 {
-        font-size: 20px;
-      }
-    }
-  }
+.browse-main {
+  height: 90vh;
+  width: 100%;
+  // overflow: hidden;
+  // overflow-y: scroll;
 }

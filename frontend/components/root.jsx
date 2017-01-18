@@ -31,7 +31,7 @@ const Root = ({ store }) => {
 
   const _redirect = (nextState, replace) => {
     if(store.getState().session.currentUser) {
-      replace('/browse');
+      replace('/artists');
     } else {
       replace('/splash');
     }
@@ -50,15 +50,18 @@ const Root = ({ store }) => {
           </Route>
 
           <Route component={AppContainer}>
-            <Route path='/browse' component={ BrowseContainer } />
-            <Route path='/artists' component={ ArtistIndexContainer } />
-            <Route path='/artists/:artistId' component={ ArtistDetailContainer } />
-            <Route path='/albums' component={ AlbumIndexContainer } />
-            <Route path='/albums/:albumId' component={ AlbumDetailContainer} />
-            <Route path='/songs' component={ SongIndexContainer } />
-            <Route path='/playlists' component={ PlaylistIndexContainer } />
-            <Route path='/playlists/:playlistId' component={ PlaylistDetailContainer } />
-            <Route path='/profile' component={ CurrentUserDetailContainer } />
+            <Route path='/browse' component={ BrowseContainer }>
+
+              <Route path='/artists' component={ ArtistIndexContainer } />
+              <Route path='/artists/:artistId' component={ ArtistDetailContainer } />
+              <Route path='/albums' component={ AlbumIndexContainer } />
+              <Route path='/albums/:albumId' component={ AlbumDetailContainer} />
+              <Route path='/songs' component={ SongIndexContainer } />
+              <Route path='/playlists' component={ PlaylistIndexContainer } />
+              <Route path='/playlists/:playlistId' component={ PlaylistDetailContainer } />
+              <Route path='/profile' component={ CurrentUserDetailContainer } />
+
+            </Route>
           </Route>
 
         </Route>

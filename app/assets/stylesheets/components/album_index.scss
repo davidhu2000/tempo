@@ -1,11 +1,12 @@
 .album-index {
   color: white;
-  width: 95vw;
-  height: 100vh;
+  // width: 95vw;
+  // height: 100vh;
   padding: 20px 50px;
   display: flex;
-  justify-content: space-around;
-  background: $background-gradient-transparent-to-black;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .album-index-item {
@@ -16,6 +17,7 @@
   width: 20vh;
   text-align: center;
   align-items: center;
+  margin: 20px 20px;
 
   img {
     height: 20vh;

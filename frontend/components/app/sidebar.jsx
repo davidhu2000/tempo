@@ -30,7 +30,7 @@ class Sidebar extends React.Component {
             <span>Search</span>
           </Link>
 
-          <Link to='/browse'>
+          <Link to='/artists'>
             <img src='http://res.cloudinary.com/davidhu2000/image/upload/v1484176608/browse_icon_b1vtyu.svg'/>
             <span>Browse</span>
           </Link>

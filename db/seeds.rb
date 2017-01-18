@@ -7,7 +7,7 @@ User.create!(
   last_name: 'Est',
   password: 'password',
   image_url: Faker::Avatar.image)
-  
+
 20.times do
   first_name, last_name = Faker::Name.first_name, Faker::Name.last_name
   email = "#{first_name}_#{last_name}@#{['gmail', 'yahoo'].sample}.com"
@@ -266,4 +266,91 @@ PlaylistSong.create!(
 PlaylistSong.create!(
   playlist_id: 1,
   song_id: 5
+)
+
+Artist.create!(
+  name: 'Eileen Ho',
+  image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/v1484782074/eileen_ho/eileen_ho_artist_picture.jpg'
+)
+
+Album.create!(
+  title: 'Live Album',
+  artist_id: 22,
+  image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/c_scale,h_500/v1484782224/eileen_ho/eileen_ho_live_album_artwork.jpg',
+)
+
+Song.create!(
+  title: 'Adam Sandler - Grow Old with You',
+  album_id: 8,
+  order: 1,
+  song_url: 'http://res.cloudinary.com/davidhu2000/image/upload/v1484782290/eileen_ho/cover_album/album_art_09.jpg'
+)
+
+Song.create!(
+  title: 'Bruno Mars - Just the Way You are',
+  album_id: 8,
+  order: 2,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782025/eileen_ho/cover_album/Bruno_Mars_-_Just_the_Way_You_Are_cover_by_-eileen.mp3'
+)
+
+Song.create!(
+  title: 'Eagle Eye Cherry - Save Tonight',
+  album_id: 8,
+  order: 3,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782025/eileen_ho/cover_album/Eagle_Eye_Cherry_-_Save_Tonight_cover_by_-eileen.mp3'
+)
+
+Song.create!(
+  title: 'Meghan Trainor - Credit',
+  album_id: 8,
+  order: 4,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484781985/eileen_ho/cover_album/Meghan_Trainor_-_Credit_cover_by_-eileen.mp3'
+)
+
+Song.create!(
+  title: 'Pixie Lott - Mama Do',
+  album_id: 8,
+  order: 5,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782066/eileen_ho/cover_album/Pixie_Lott_-_Mama_Do_cover_by_-eileen.mp3'
+)
+
+Song.create!(
+  title: 'Shawn Mendes - Stitches',
+  album_id: 8,
+  order: 6,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782067/eileen_ho/cover_album/Shawn_Mendes_-_Stitches_cover_by_-eileen.mp3'
+)
+
+Song.create!(
+  title: 'Third Eye Blind - Jumper',
+  album_id: 8,
+  order: 7,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782008/eileen_ho/cover_album/Third_Eye_Blind_-_Jumper_cover_by_-eileen.mp3'
+)
+
+Album.create!(
+  title: 'Cover Album',
+  artist_id: 22,
+  image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/v1484782290/eileen_ho/cover_album/album_art_09.jpg',
+)
+
+Song.create!(
+  title: 'First open mic night',
+  album_id: 9,
+  order: 1,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484781234/eileen_ho/live_album/Eileen_s_first_open_mic.mp3'
+)
+
+Song.create!(
+  title: 'Live at Whiskey RRFC Aerosmith Cryin\'',
+  album_id: 9,
+  order: 2,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782500/eileen_ho/live_album/RRFC_Aerosmith_-_Cryin.mp3'
+)
+
+Song.create!(
+  title: 'Show at Whiskey Go Go',
+  album_id: 9,
+  order: 3,
+  song_url: 'http://res.cloudinary.com/davidhu2000/video/upload/v1484782718/eileen_ho/live_album/RRFC_Show_at_Whiskey_a_Go_Go.mp3'
 )

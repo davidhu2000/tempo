@@ -24,8 +24,8 @@ class PickPlaylistForm extends React.Component {
 
       return (
         <select onChange={ this.handleChange }>
-          <option value='--select a playlist--' disabled selected>{'--select a playlist--'}</option>
-          { playlists.map( (pl, idx) => <option key={idx} value={pl.id}>{pl.title}</option> )}
+          <option value='initial' disabled>{'--select a playlist--'}</option>
+          { playlists.map( (pl, idx) => <option key={`pl${idx}`} value={pl.id}>{pl.title}</option> )}
         </select>
       );
     }
@@ -50,8 +50,8 @@ class PickPlaylistForm extends React.Component {
     // debugger;
     if(this.state.showForm) {
       return (
-        <div>
-          <form onSubmit={ this.handleSubmit } className='playlist-form'>
+        <div className='pick-playlist-parent'>
+          <form onSubmit={ this.handleSubmit } className='playlist-form pick-playlist'>
             { this.renderSelection() }
 
             <input type='submit' value={ this.buttonVal } className='form-button' ></input>

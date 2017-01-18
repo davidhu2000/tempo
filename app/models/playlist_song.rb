@@ -10,8 +10,8 @@
 #
 
 class PlaylistSong < ActiveRecord::Base
-  validates :song_id, null: false
-  validates :playlist_id, null: false
+  validates :song_id, presence: true
+  validates :playlist_id, presence: true
 
   belongs_to :playlist
   belongs_to :song

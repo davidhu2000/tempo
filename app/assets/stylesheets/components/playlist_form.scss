@@ -33,3 +33,27 @@
 .form-button {
   font-size: 18px;
 }
+
+.pick-playlist-parent {
+  position: relative;
+}
+
+.pick-playlist {
+  position: absolute;
+  height: 10vh;
+  width: 20vw;
+  top: -15vh;
+  left: 0;
+  // top: 50vh;
+
+  select {
+    color: white;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    font-size: 15px;
+
+    option {
+      text-align: center;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaylistForm from '../playlist_form/playlist_form';
+import SongIndex from '../song_index/song_index';
 
 class PlaylistDetail extends React.Component {
   constructor(props) {
@@ -88,7 +89,11 @@ class PlaylistDetail extends React.Component {
         </div>
 
         <div className='playlist-detail-song-list'>
-          { this.renderSongList() }
+          <SongIndex
+            showImage={ false }
+            songs={ this.props.songs }
+            addToQueue={ this.props.addToQueue }
+            fetchCurrentSong={ this.props.fetchCurrentSong } />
         </div>
 
         { this.renderForm() }

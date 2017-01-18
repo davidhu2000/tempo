@@ -23,7 +23,7 @@ class PickPlaylistForm extends React.Component {
       let playlists = this.props.playlists;
 
       return (
-        <select onChange={ this.handleChange }>
+        <select onChange={ this.handleChange } defaultValue='initial'>
           <option value='initial' disabled>{'--select a playlist--'}</option>
           { playlists.map( (pl, idx) => <option key={`pl${idx}`} value={pl.id}>{pl.title}</option> )}
         </select>

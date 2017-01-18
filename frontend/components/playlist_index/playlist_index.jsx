@@ -7,12 +7,15 @@ class PlaylistIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllPlaylists(this.props.filter);
+    if(this.props.fetchAllPlaylists) {
+      this.props.fetchAllPlaylists(this.props.filter);
+    }
   }
 
   renderPlaylist(playlist) {
+    console.log(this.props);
     return (
-      <div key={playlist.id} className='playlist-index-item'>
+      <div key={`${playlist.id}${Math.random()}`} className='playlist-index-item'>
 
         <button className='playlist-index-play' onClick={() => this.props.playFirstSongAndAddPlaylistToQueue(playlist.id) }>
           <span>Play</span>
@@ -40,9 +43,18 @@ class PlaylistIndex extends React.Component {
     );
   }
 
+  renderHeader() {
+    if (this.props.header) {
+      return (
+        <h1>{this.props.header}</h1>
+      );
+    }
+  }
+
   render() {
     return (
       <div className='playlist-index'>
+        { this.renderHeader() }
         { this.props.playlists.map( playlist => this.renderPlaylist(playlist) )}
       </div>
     );

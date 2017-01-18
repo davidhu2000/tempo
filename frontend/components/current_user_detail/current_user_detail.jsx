@@ -1,6 +1,7 @@
 import React from 'react';
-import PlaylistIndexContainer from '../playlist_index/playlist_index_container';
+import PlaylistIndex from '../playlist_index/playlist_index';
 import PlaylistForm from '../playlist_form/playlist_form';
+import { values } from 'lodash';
 
 class CurrentUserDetail extends React.Component {
   constructor(props) {
@@ -21,6 +22,10 @@ class CurrentUserDetail extends React.Component {
     } else {
       return user.first_name;
     }
+  }
+
+  componentDidMount() {
+    this.props.fetchUser(this.props.currentUser.id);
   }
 
   renderGreeting() {
@@ -52,6 +57,7 @@ class CurrentUserDetail extends React.Component {
 
   // TODO: provide random song
   render() {
+    // console.log(this.props);
     return (
       <div className='current-user-profile' id='current-user-profile'>
         <div className='current-user-info'>
@@ -66,7 +72,22 @@ class CurrentUserDetail extends React.Component {
           <button className='form-button' onClick={ this.toggleForm }>Create a playlist</button>
         </div>
         <div className='current-user-playlists'>
-          <PlaylistIndexContainer filter={ {ownerId: this.props.currentUser.id} }/>
+          <PlaylistIndex
+            header={'Here are your playlists'}
+            playlists={ values(this.props.user.ownPlaylists) }
+            playFirstSongAndAddPlaylistToQueue={ this.props.playFirstSongAndAddPlaylistToQueue}
+            fetchPlaylistToQueue={ this.props.fetchPlaylistToQueue }
+            addFollowerToPlaylist={ this.props.addFollowerToPlaylist } />
+
+        </div>
+
+        <div className='current-user-playlists'>
+          <PlaylistIndex
+            header={'Here are the playlists you follow'}
+            playlists={ values(this.props.user.followedPlaylists) }
+            playFirstSongAndAddPlaylistToQueue={ this.props.playFirstSongAndAddPlaylistToQueue}
+            fetchPlaylistToQueue={ this.props.fetchPlaylistToQueue }
+            addFollowerToPlaylist={ this.props.addFollowerToPlaylist } />
         </div>
 
         { this.renderForm() }

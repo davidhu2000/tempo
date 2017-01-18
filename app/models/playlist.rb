@@ -16,11 +16,11 @@ class Playlist < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :playlist_songs
+  has_many :playlist_songs, dependent: :destroy
 
   has_many :songs, through: :playlist_songs
 
-  has_many :playlist_follows
+  has_many :playlist_follows, dependent: :destroy
 
   has_many :followers, through: :playlist_follows, source: :user
 end

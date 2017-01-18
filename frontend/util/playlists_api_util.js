@@ -38,15 +38,15 @@ export const deletePlaylist = id => (
   })
 );
 
-export const addSongToPlaylist = playlistSong => {
-  console.log(playlistSong);
-
-  return $.ajax({
+export const addSongToPlaylist = playlistSong => (
+  $.ajax({
     method: 'POST',
     url: `/api/playlist_songs`,
-    data: { playlistSong }
-  });
-};
+    data: {
+      playlist_song: playlistSong
+    }
+  })
+);
 
 export const addFollowerToPlaylist = playlistId => (
   $.ajax({

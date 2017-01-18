@@ -5,8 +5,8 @@ class Api::PlaylistsController < ApplicationController
   def index
     if params[:ownerId]
       @playlists = Playlist.where(user_id: params[:ownerId])
-    elsif params[:user_id]
-
+    elsif params[:followId]
+      @playlists = current_user.followed_playlists
     else
       @playlists = Playlist.all
     end
@@ -21,6 +21,10 @@ class Api::PlaylistsController < ApplicationController
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.user_id = current_user.id
+    if @playlist.image_url.empty?
+      @playlist.image_url = 'http://res.cloudinary.com/davidhu2000/image/upload/v1484612456/playlist_default_image.png'
+    end
+
     if @playlist.save
       render 'api/playlists/show'
     else

@@ -7,6 +7,7 @@ import albumsReducer from './albums_reducer';
 import artistsReducer from './artists_reducer';
 import queueReducer from './queue_reducer';
 import playlistsReducer from './playlists_reducer';
+import usersReducer from './users_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   albums: albumsReducer,
   artists: artistsReducer,
   queue: queueReducer,
-  playlists: playlistsReducer
+  playlists: playlistsReducer,
+  users: usersReducer
 });
 
 export default rootReducer;

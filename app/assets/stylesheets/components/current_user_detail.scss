@@ -49,14 +49,33 @@
 
 .current-user-playlists {
   // overflow-x: hidden;
-
+  font-size: 20px;
   .playlist-index {
     height: auto;
     width: 100%;
+    margin-top: 20px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .playlist-index-item {
+    height: 6vh;
+    align-items: center;
+  }
+
+  .playlist-index-item:first-child {
+    border-top: 3px solid black;
+  }
+
+  img {
+    height: 4vh;
+    width: 4vh;
   }
 
   i {
-    font-size: 40px;
-    top: -12vh;
+    font-size: 20px;
+    // top: -12vh;
   }
 }

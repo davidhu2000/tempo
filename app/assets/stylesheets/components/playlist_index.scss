@@ -15,7 +15,7 @@
   // margin-bottom: 15px;
   box-sizing: border-box;
   display: flex;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   flex-direction: row;
   justify-content: flex-start;
@@ -26,15 +26,15 @@
   }
 
   img {
-    height: 8vh;
-    width: 8vh;
+    height: 6vh;
+    width: 6vh;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.5);
   }
 
   h4 {
     line-height: 100%;
-    font-size: 2em;
+    font-size: 1.2em;
   }
 }
 

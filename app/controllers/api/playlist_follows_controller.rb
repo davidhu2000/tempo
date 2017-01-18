@@ -1,7 +1,9 @@
 class Api::PlaylistFollowsController < ApplicationController
   def create
-    @playlist_follow = PlaylistSong.new(playlist_follow_params)
+    @playlist_follow = PlaylistFollow.new(playlist_follow_params)
+    @playlist_follow.user_id = current_user.id
 
+    # add functionality to prevent user from following their own playlists
     if @playlist_follow.save
       render json: ['Success']
     else

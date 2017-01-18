@@ -54,7 +54,10 @@ export const deletePlaylist = id => dispatch => (
     )
 );
 
-export const addSongToPlaylist = (songId, playlistId) => dispatch => (
-  PlaylistsApiUtil.addSongToPlaylist(songId, playlistId)
+export const addSongToPlaylist = (playlistSong) => dispatch => (
+  PlaylistsApiUtil.addSongToPlaylist(playlistSong)
+);
 
+export const addFollowerToPlaylist = (playlistFollow) => dispatch => (
+  PlaylistsApiUtil.addFollowerToPlaylist(playlistFollow)
 );

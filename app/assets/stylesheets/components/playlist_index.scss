@@ -46,7 +46,7 @@
   }
 }
 
-.playlist-index-play, .playlist-index-queue {
+.playlist-index-play, .playlist-index-queue, .playlist-index-follow {
   background: transparent;
   font-size: 2em;
   opacity: 0.4;
@@ -69,7 +69,7 @@
   }
 }
 
-.playlist-index-play:hover, .playlist-index-queue:hover {
+.playlist-index-play:hover, .playlist-index-queue:hover, .playlist-index-follow:hover {
   opacity: 0.9;
   span {
     visibility: visible;

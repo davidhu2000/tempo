@@ -24,6 +24,11 @@ class PlaylistIndex extends React.Component {
           <i className='fa fa-plus'></i>
         </button>
 
+        <button className='playlist-index-follow' onClick={() => this.props.addFollowerToPlaylist(playlist.id)}>
+          <span>Follow Playlist</span>
+          <i className='fa fa-share'></i>
+        </button>
+
         <Link to={`playlists/${playlist.id}`}>
           <img className='playlist-index-image'
                src={playlist.image_url} />

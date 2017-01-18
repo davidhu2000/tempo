@@ -275,7 +275,7 @@ Artist.create!(
 
 Album.create!(
   title: 'Live Album',
-  artist_id: 22,
+  artist_id: 6,
   image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/c_scale,h_500/v1484782224/eileen_ho/eileen_ho_live_album_artwork.jpg',
 )
 
@@ -330,7 +330,7 @@ Song.create!(
 
 Album.create!(
   title: 'Cover Album',
-  artist_id: 22,
+  artist_id: 6,
   image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/v1484782290/eileen_ho/cover_album/album_art_09.jpg',
 )
 

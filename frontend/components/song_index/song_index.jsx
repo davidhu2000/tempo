@@ -27,10 +27,21 @@ class Songs extends React.Component {
   renderSong(song) {
     return (
       <div key={song.id} className='song-index-item'>
-        <img className='song-index-image' src={song.image_url} />
-        <button className='song-index-play' onClick={() => this.props.fetchCurrentSong(song.id)}>
-          <i className='fa fa-play'></i>
-        </button>
+        <div className='song-index-item-info'>
+          <button className='song-index-play' onClick={() => this.props.fetchCurrentSong(song.id)}>
+            <span>Play</span>
+            <i className='fa fa-play'></i>
+          </button>
+
+          <button className='song-index-queue' onClick={() => this.props.addToQueue(song)}>
+            <span>Add To Queue</span>
+            <i className='fa fa-plus'></i>
+          </button>
+          <img className='song-index-image' src={ song.image_url } />
+          <span>{ song.title }</span>
+        </div>
+
+
       </div>
     );
   }

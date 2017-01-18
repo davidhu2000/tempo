@@ -1,54 +1,88 @@
 .song-index {
   color: white;
-  width: 95vw;
-  height: 100vh;
+  width: 98%;
   padding: 20px 50px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
+}
+
+.song-index-item:first-child {
+  border-top: 3px solid black;
 }
 
 .song-index-item {
-  box-sizing: border-box;
-  // display: relative;
-  margin: 15px;
+  padding: 5px;
+  border-bottom: 3px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   display: block;
-  height: 10vh;
-  width: 10vh;
-  text-align: center;
-  align-items: center;
-  box-shadow: 3px 3px 5px black;
+  height: 6vh;
 
-  img {
-    height: 10vh;
-    width: 10vh;
-    margin: 0 auto;
-  }
+  .song-index-item-info {
+    display: flex;
 
-  h4 {
-    font-size: 10px;
+    * {
+      margin-right: 15px;
+    }
+
+    button {
+      visibility: hidden;
+    }
+
+    img {
+      height: 4vh;
+      width: 4vh;
+      display: block;
+    }
+
+    span {
+      display: block;
+      font-size: 15px;
+    }
+
   }
 }
 
-.song-index-item:active {
-  box-shadow: none;
-  transform: translateY(3px);
+.song-index-item:hover {
+  background: rgba(0, 0, 0, 0.5);
+  button {
+    visibility: visible;
+  }
+}
+
+.song-index-play, .song-index-queue {
+  background: transparent;
+  position: relative;
+  font-size: 1em;
+  opacity: 0.4;
+  color: $color5;
+
+  span {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 20px;
+    top: -2vh;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+
+
+}
+
+.song-index-play:hover, .song-index-queue:hover {
+  opacity: 0.9;
+
+  span {
+    visibility: visible;
+  }
 }
 
 .song-index-play {
-  background: transparent;
-  position: relative;
-  top: -10vh;
-  width: 10vh;
-  height: 10vh;
-  font-size: 2em;
-  opacity: 0;
-  color: $color5;
-}
-
-.song-index-play:hover {
-  opacity: 0.9;
-  background: rgba(0, 0, 0, 0.7);
+  margin-left: 15px;
 }

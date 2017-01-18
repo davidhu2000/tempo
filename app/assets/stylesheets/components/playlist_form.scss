@@ -1,0 +1,38 @@
+@keyframes slideOut {
+  0% {
+    // width: 0vw;
+    opacity: 0;
+    transform: rotateY(90deg);
+    // transform: rotate3d(1, 1, 0, 90deg);
+  }
+
+  100% {
+    // width: 30vw;
+    opacity: 1;
+    transform: rotateY(0deg);
+    // transform: rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+.playlist-form {
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px black;
+  right: 6vw;
+  top: 10vh;
+  height: 80vh;
+  width: 30vw;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  animation-name: slideOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.form-button {
+  font-size: 18px;
+}

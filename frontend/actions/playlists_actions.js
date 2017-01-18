@@ -32,6 +32,11 @@ export const createPlaylist = playlist => dispatch => (
   PlaylistsApiUtil.createPlaylist(playlist)
     .then(
       res => dispatch(receivePlaylist(res))
+    ).then(
+      res => {
+        let url = `/playlists/${res.playlist.id}`;
+        hashHistory.push(url);
+      }
     )
 );
 

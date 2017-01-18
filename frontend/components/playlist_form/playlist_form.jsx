@@ -7,6 +7,7 @@ class PlaylistForm extends React.Component {
     if(props.formType === 'edit') {
 
       this.state = {
+        showForm: true,
         id: props.playlist.id,
         title: props.playlist.title,
         description: props.playlist.description,
@@ -18,6 +19,7 @@ class PlaylistForm extends React.Component {
     } else {
 
       this.state = {
+        showForm: true,
         title: '',
         description: '',
         image_url: ''
@@ -25,7 +27,6 @@ class PlaylistForm extends React.Component {
       this.buttonVal = 'Create a playlist';
       this.formAction = this.props.createPlaylist;
     }
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -39,48 +40,58 @@ class PlaylistForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.setState({
+      showForm: false
+    });
     this.formAction(this.state);
   }
 
   render() {
-    return (
-      <div>
-        <form onSubmit={ this.handleSubmit } className='playlist-form'>
-          <label htmlFor='title' className='form-label'>
-            { "Title" }
-          </label>
+    if (this.state.showForm) {
+      return (
+        <div>
+          <form onSubmit={ this.handleSubmit } className='playlist-form'>
+            <label htmlFor='title' className='form-label'>
+              { "Title" }
+            </label>
 
-          <input
-            name='title'
-            value={ this.state.title }
-            onChange={ this.update('title') }
-            className='form-input'></input>
+            <input
+              name='title'
+              value={ this.state.title }
+              onChange={ this.update('title') }
+              className='form-input'></input>
 
-          <label htmlFor='description' className='form-label'>
-            { "Description" }
-          </label>
+            <label htmlFor='description' className='form-label'>
+              { "Description" }
+            </label>
 
-          <input
-            name='description'
-            value={ this.state.description }
-            onChange={ this.update('description') }
-            className='form-input'></input>
+            <input
+              name='description'
+              value={ this.state.description }
+              onChange={ this.update('description') }
+              className='form-input'></input>
 
-          <label htmlFor='image_url' className='form-label'>
-            { "Image URL" }
-          </label>
+            <label htmlFor='image_url' className='form-label'>
+              { "Image URL" }
+            </label>
 
-          <input
-            name='image_url'
-            value={ this.state.image_url }
-            onChange={ this.update('image_url') }
-            className='form-input'></input>
+            <input
+              name='image_url'
+              value={ this.state.image_url }
+              onChange={ this.update('image_url') }
+              className='form-input'></input>
 
-          <input type='submit' value={ this.buttonVal } className='form-button' ></input>
+            <input type='submit' value={ this.buttonVal } className='form-button' ></input>
 
-        </form>
-      </div>
-    );
+          </form>
+        </div>
+      );
+    } else {
+      return (
+        <div></div>
+      );
+    }
+
   }
 }
 

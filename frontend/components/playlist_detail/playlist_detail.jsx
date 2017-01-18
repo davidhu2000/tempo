@@ -8,6 +8,9 @@ class PlaylistDetail extends React.Component {
     this.state = {
       showForm: false
     };
+
+    this.toggleForm = this.toggleForm.bind(this);
+    this.renderForm = this.renderForm.bind(this);
   }
 
   componentDidMount() {
@@ -20,10 +23,10 @@ class PlaylistDetail extends React.Component {
         <div>
           <button
             onClick={ () => this.props.deletePlaylist(this.props.playlistId)}
-            className='playlist-button' >
+            className='form-button' >
             Delete Playlist
           </button>
-          <button className='playlist-button'>Create a Playlist</button>
+          <button className='form-button' onClick={this.toggleForm}>Edit Playlist</button>
         </div>
       );
     } else {
@@ -31,8 +34,21 @@ class PlaylistDetail extends React.Component {
     }
   }
 
-  renderForm() {
+  toggleForm() {
+    this.setState({
+      showForm: !this.state.showForm
+    });
+  }
 
+  renderForm() {
+    if(this.state.showForm) {
+      return (
+        <PlaylistForm
+          formType='edit'
+          playlist={this.props.playlist}
+          updatePlaylist={this.props.updatePlaylist} />
+      );
+    }
   }
 
   renderSong(song) {
@@ -76,7 +92,7 @@ class PlaylistDetail extends React.Component {
           { this.renderSongList() }
         </div>
 
-
+        { this.renderForm() }
       </div>
     );
   }

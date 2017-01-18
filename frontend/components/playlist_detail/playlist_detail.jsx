@@ -84,7 +84,6 @@ class PlaylistDetail extends React.Component {
           <div className='playlist-detail-title'>
             <span>{ this.props.playlist.title }</span>
             { this.renderButtons() }
-
           </div>
         </div>
 

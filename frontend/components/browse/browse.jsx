@@ -17,7 +17,6 @@ class Browse extends React.Component {
         <nav className='browse-navbar'>
           <Link to='/artists'>Artists</Link>
           <Link to='/albums'>Albums</Link>
-          <Link to='/songs'>Songs</Link>
           <Link to='/playlists'>Playlists</Link>
         </nav>
 

@@ -1,7 +1,4 @@
 .playlist-detail {
-  background: $background-gradient-transparent-to-black;
-  width: 95vw;
-  height: 100vh;
   display: flex;
   padding: 30px 50px;
   flex-direction: column;
@@ -21,6 +18,11 @@
   display: block;
   font-size: 2em;
   padding-left: 20px;
+
+  button {
+    font-size: 12px;
+    width: 80px;
+  }
 }
 
 .playlist-detail-image {

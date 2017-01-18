@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router';
+import SongIndex from '../song_index/song_index';
 
 class ArtistDetail extends React.Component {
   constructor(props) {
@@ -26,18 +28,22 @@ class ArtistDetail extends React.Component {
   renderAlbum(album) {
     return (
       <div className='artist-detail-album' key={album.id}>
-
-        <div className='artist-detail-album-info'>
-          <div className='artist-detail-album-image'>
-            <img src={ album.image_url } />
+        <Link to={`/albums/${album.id}`}>
+          <div className='artist-detail-album-info'>
+            <div className='artist-detail-album-image'>
+              <img src={ album.image_url } />
+            </div>
+            <div className='artist-detail-album-title'>
+              { album.title }
+            </div>
           </div>
-          <div className='artist-detail-album-title'>
-            { album.title }
-          </div>
-        </div>
-
+        </Link>
         <div className='artist-detail-album-songs'>
-          { album.songs.map( song => this.renderSong(song) ) }
+          <SongIndex
+            showImage={false}
+            songs={ album.songs }
+            addToQueue={ this.props.addToQueue }
+            fetchCurrentSong={ this.props.fetchCurrentSong } />
         </div>
       </div>
     );

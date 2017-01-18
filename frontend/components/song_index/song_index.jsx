@@ -15,18 +15,16 @@ class Songs extends React.Component {
     });
   }
 
-
-  componentDidMount() {
-    if(this.props.router.location.pathname === '/browse') {
-      this.props.fetchAllSongs(8);
-    } else {
-      this.props.fetchAllSongs(-1);
+  renderImage(song) {
+    if(this.props.showImage) {
+      return <img className='song-index-image' src={ song.image_url } />;
     }
   }
 
   renderSong(song) {
     return (
       <div key={song.id} className='song-index-item'>
+
         <div className='song-index-item-info'>
           <button className='song-index-play' onClick={() => this.props.fetchCurrentSong(song.id)}>
             <span>Play</span>
@@ -37,10 +35,9 @@ class Songs extends React.Component {
             <span>Add To Queue</span>
             <i className='fa fa-plus'></i>
           </button>
-          <img className='song-index-image' src={ song.image_url } />
-          <span>{ song.title }</span>
+          { this.renderImage(song) }
+          <p>{ song.title }</p>
         </div>
-
 
       </div>
     );

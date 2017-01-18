@@ -1,4 +1,5 @@
 import React from 'react';
+import SongIndex from '../song_index/song_index';
 
 class AlbumDetail extends React.Component {
   constructor(props) {
@@ -46,7 +47,11 @@ class AlbumDetail extends React.Component {
         </div>
 
         <div className='album-detail-song-list'>
-          { this.renderSongList() }
+          <SongIndex
+            showImage={ false }
+            songs={ this.props.songs }
+            addToQueue={ this.props.addToQueue }
+            fetchCurrentSong={ this.props.fetchCurrentSong } />
         </div>
       </div>
     );

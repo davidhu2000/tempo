@@ -2,11 +2,13 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import Sidebar from './sidebar';
+import SearchContainer from '../search/search_container';
 import CurrentSongContainer from '../current_song/current_song_container';
 
 class App extends React.Component {
   constructor(props){
     super(props);
+
   }
 
   componentDidMount() {
@@ -36,11 +38,17 @@ class App extends React.Component {
 
       return (
         <div className='main'>
+          <div className='search-form'>
+            <SearchContainer />
+          </div>
+
           <div className=''>
             <Sidebar
               logout={ this.props.logout }
               currentUser={this.props.currentUser} />
+
           </div>
+
           <div className=''>
             { this.props.children }
           </div>

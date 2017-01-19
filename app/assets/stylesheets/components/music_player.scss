@@ -83,12 +83,24 @@ $height: 30px;
 
 .player-song-image {
   height: $height;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 
   img {
     height: $height;
     width: $height;
   }
+
+  span {
+    color: $aqua-blue;
+    position: absolute;
+    white-space: nowrap;
+    left: $height + 10px;
+    top: 0.5vh;
+  }
 }
+
 
 @keyframes moveUp {
   0% {

@@ -17,6 +17,7 @@ class Player extends React.Component {
 
         <div className='player-song-image'>
           <img src={ this.props.currentSong.image_url } />
+          <span>{ this.props.currentSong.title}</span>
         </div>
 
         <div className='player-main'>

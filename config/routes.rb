@@ -17,3 +17,9 @@ Rails.application.routes.draw do
   end
 
 end
+
+resources :tags do
+  collection do
+    get 'search', to: 'tags#search'
+  end
+end

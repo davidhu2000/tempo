@@ -71,11 +71,12 @@ class Search extends React.Component {
   render() {
     return (
       <div className='search'>
-        <input
-          type='text'
-          onChange={ this.handleChange }
-          value={ this.state.query }></input>
-        <i className='fa fa-search'></i>
+        <div className='search-input'>
+          <input
+            type='text'
+            onChange={ this.handleChange }
+            value={ this.state.query }></input>
+        </div>
 
         { this.showSongs() }
         { this.showAlbums() }

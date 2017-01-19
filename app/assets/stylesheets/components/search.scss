@@ -1,31 +1,36 @@
+@keyframes slideOutLeft {
+  0% {
+    opacity: 0;
+    // top: -80vh;
+    width: 0vw;
+  }
+
+  100% {
+    opacity: 1;
+    // top: 0vw;
+    width: 30vw;
+  }
+}
+
 .search-form {
-  border: 3px solid red;
-  // // background: white;
+  // border: 3px solid red;
+  box-shadow: 2px 2px 3px black;
   color: white;
   position: absolute;
   left: 5vw;
 
-  width: 25vw;
+  // width: 25vw;
   height: 80vh;
   z-index: 100;
   background: rgba(0,0,0, 0.95);
   padding: 20px;
 
-  input {
-    font-size: 18px;
-    color: white;
-    width: 80%;
-    margin: 0 auto;
-    border: 2px solid $aqua-blue-transparent;
-    border-radius: 20px;
-    margin-right: 10px;
-    padding: 3px 10px;
-  }
 
-  i {
-    color: white;
-    font-size: 18px;
-  }
+  animation-name: slideOutLeft;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .search-list {
@@ -38,6 +43,7 @@
     font-size: 15px;
     margin-bottom: 5px;
     text-decoration: underline;
+    text-transform: uppercase;
   }
 
   a {
@@ -49,4 +55,35 @@
   a:hover {
     background: $aqua-blue-more-transparent;
   }
+}
+
+.search-input {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  input {
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid $aqua-blue-transparent;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 3px 5px 3px 30px;
+    flex-grow: 2;
+    background-image: url('https://res.cloudinary.com/davidhu2000/image/upload/v1484176608/search_icon_czswj4.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+  }
+
+  input:focus {
+    border: 2px solid $aqua-blue;
+  }
+}
+
+#search {
+  visibility: hidden;
 }

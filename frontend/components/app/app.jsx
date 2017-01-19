@@ -8,7 +8,11 @@ import CurrentSongContainer from '../current_song/current_song_container';
 class App extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      showSearch: false
+    };
 
+    this.toggleSearch = this.toggleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -33,18 +37,34 @@ class App extends React.Component {
     );
   }
 
+  toggleSearch(e) {
+    e.preventDefault();
+    this.setState({
+      showSearch: !this.state.showSearch
+    });
+  }
+
+  renderSearch() {
+    if(this.state.showSearch) {
+      return (
+        <div className='search-form'>
+          <SearchContainer
+            toggleSearch={ this.toggleSearch }/>
+        </div>
+      );
+    }
+  }
+
   render() {
     if(this.props.currentUser) {
 
       return (
         <div className='main'>
-          <div className='search-form'>
-            <SearchContainer />
-          </div>
-
+          { this.renderSearch() }
           <div className=''>
             <Sidebar
               logout={ this.props.logout }
+              toggleSearch={ this.toggleSearch }
               currentUser={this.props.currentUser} />
 
           </div>

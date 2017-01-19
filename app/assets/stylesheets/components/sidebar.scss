@@ -7,6 +7,7 @@ $logo-width: 3.5vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  cursor: grab;
 
   a {
     transition: 0.5s;
@@ -18,7 +19,9 @@ $logo-width: 3.5vw;
     line-height: $sidebar-width;
     color: white;
     background-color: $aqua-blue-most-transparent;
-    cursor: grabbing;
+    cursor: pointer;
+
+
   }
 
   a:hover {

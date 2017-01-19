@@ -14,7 +14,6 @@ class Search extends React.Component {
   }
 
   clickDocument(e) {
-    console.log(React);
     let component = ReactDOM.findDOMNode(this.refs.component);
 
     if (e.target === component || $(component).has(e.target).length) {

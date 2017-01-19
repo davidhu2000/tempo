@@ -18,7 +18,7 @@ class PlaylistIndex extends React.Component {
       <div key={`${playlist.id}${Math.random()}`} className='playlist-index-item'>
 
         <button className='playlist-index-play' onClick={() => this.props.playFirstSongAndAddPlaylistToQueue(playlist.id) }>
-          <span>Play</span>
+          <span>Play Song</span>
           <i className='fa fa-play'></i>
         </button>
 

@@ -101,10 +101,6 @@ class PlaylistDetail extends React.Component {
 
         </div>
 
-
-
-
-
         <div className='playlist-detail-song-list'>
           <SongIndex
             showImage={ false }

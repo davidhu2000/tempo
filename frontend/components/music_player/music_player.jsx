@@ -65,7 +65,6 @@ class MusicPlayer extends React.Component {
     }
   }
 
-  // TODO: Fix forward and backward
   forward() {
     this.setState({
       playFromPosition: this.state.positionInMilliseconds + 10000

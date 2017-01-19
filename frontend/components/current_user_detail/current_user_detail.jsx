@@ -50,7 +50,10 @@ class CurrentUserDetail extends React.Component {
   renderForm() {
     if(this.state.showForm) {
       return (
-        <PlaylistForm formType='new' createPlaylist={this.props.createPlaylist}/>
+        <PlaylistForm
+          formType='new'
+          toggleForm={ this.toggleForm }
+          createPlaylist={this.props.createPlaylist}/>
       );
     }
   }

@@ -46,6 +46,7 @@ class PlaylistDetail extends React.Component {
       return (
         <PlaylistForm
           formType='edit'
+          toggleForm={ this.toggleForm }
           playlist={this.props.playlist}
           updatePlaylist={this.props.updatePlaylist} />
       );

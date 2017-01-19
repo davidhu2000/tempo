@@ -10,10 +10,10 @@ class Search extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.showSongs = this.showSongs.bind(this);
-    this.clickDocument = this.clickDocument.bind(this);
+    this.clickForm = this.clickForm.bind(this);
   }
 
-  clickDocument(e) {
+  clickForm(e) {
     let component = ReactDOM.findDOMNode(this.refs.component);
 
     if (e.target === component || $(component).has(e.target).length) {
@@ -24,11 +24,11 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-      $(document).bind('click', this.clickDocument);
+      $(document).bind('click', this.clickForm);
   }
 
   componentWillUnmount() {
-      $(document).unbind('click', this.clickDocument);
+      $(document).unbind('click', this.clickForm);
   }
 
   handleChange(e) {

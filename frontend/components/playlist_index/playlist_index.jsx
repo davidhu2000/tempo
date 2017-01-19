@@ -13,7 +13,6 @@ class PlaylistIndex extends React.Component {
   }
 
   renderPlaylist(playlist) {
-    console.log(this.props);
     return (
       <div key={`${playlist.id}${Math.random()}`} className='playlist-index-item'>
 

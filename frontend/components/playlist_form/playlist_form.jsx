@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class PlaylistForm extends React.Component {
   constructor(props) {
@@ -28,7 +29,27 @@ class PlaylistForm extends React.Component {
       this.formAction = this.props.createPlaylist;
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clickForm = this.clickForm.bind(this);
   }
+
+  clickForm(e) {
+    let component = ReactDOM.findDOMNode(this.refs.component);
+
+    if (e.target === component || $(component).has(e.target).length) {
+        // Inside of the component.
+    } else {
+        this.props.toggleForm();
+    }
+  }
+
+  componentDidMount() {
+      $(document).bind('click', this.clickForm);
+  }
+
+  componentWillUnmount() {
+      $(document).unbind('click', this.clickForm);
+  }
+
 
   update(field) {
     return e => {
@@ -49,7 +70,7 @@ class PlaylistForm extends React.Component {
   render() {
     if (this.state.showForm) {
       return (
-        <div>
+        <div ref='component'>
           <form onSubmit={ this.handleSubmit } className='playlist-form'>
             <label htmlFor='title' className='form-label'>
               { "Title" }

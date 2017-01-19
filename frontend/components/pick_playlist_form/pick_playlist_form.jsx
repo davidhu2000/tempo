@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class PickPlaylistForm extends React.Component {
   constructor(props) {
@@ -12,10 +13,28 @@ class PickPlaylistForm extends React.Component {
     this.renderSelection = this.renderSelection.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.clickForm = this.clickForm.bind(this);
   }
+
+  clickForm(e) {
+    let component = ReactDOM.findDOMNode(this.refs.component);
+
+    if (e.target === component || $(component).has(e.target).length) {
+        // Inside of the component.
+    } else {
+      console.log('here');
+        this.props.toggleForm();
+    }
+  }
+
+  componentWillUnmount() {
+      $(document).unbind('click', this.clickForm);
+  }
+
 
   componentDidMount() {
     this.props.fetchAllPlaylists({ ownerId: this.props.ownerId });
+    $(document).bind('click', this.clickForm);
   }
 
   renderSelection() {
@@ -47,10 +66,9 @@ class PickPlaylistForm extends React.Component {
   }
 
   render() {
-    // debugger;
     if(this.state.showForm) {
       return (
-        <div className='pick-playlist-parent'>
+        <div className='pick-playlist-parent' ref='component'>
           <form onSubmit={ this.handleSubmit } className='playlist-form pick-playlist'>
             { this.renderSelection() }
 

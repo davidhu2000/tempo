@@ -12,7 +12,8 @@ const mapStateToProps = ({ playlists, session }, ownProps) => ({
   playlist: playlists.detail,
   songs: values(playlists.detail.songs),
   playlistId: ownProps.params.playlistId,
-  currentUserId: session.currentUser.id
+  currentUserId: session.currentUser.id,
+  toggleForm: ownProps.toggleForm
 });
 
 const mapDispatchToProps = dispatch => ({

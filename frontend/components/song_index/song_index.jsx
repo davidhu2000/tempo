@@ -31,7 +31,6 @@ class Songs extends React.Component {
 
   toggleForm(id) {
     return e => {
-      e.preventDefault();
       this.setState({
         songId: id,
         showForm: !this.state.showForm
@@ -44,9 +43,10 @@ class Songs extends React.Component {
       return (
         <PickPlaylistFormContainer
           formType='new'
+          toggleForm={ this.toggleForm(this.state.songId) }
           songId={ this.state.songId } />
       );
-    } 
+    }
   }
 
   renderSong(song) {

@@ -52,6 +52,16 @@ class Api::PlaylistsController < ApplicationController
     end
   end
 
+  def search
+    if params[:query].empty?
+      @playlists = []
+    else
+      regex = ".*#{params[:query]}.*"
+      @playlists = Playlist.where("title ~* ?", regex).limit(3)
+      render :search
+    end
+  end
+
   private
 
   def get_playlist

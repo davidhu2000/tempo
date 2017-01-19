@@ -11,10 +11,26 @@ Rails.application.routes.draw do
         get 'search'
       end
     end
+
+    resources :albums, only: [:show, :index] do
+      collection do
+        get 'search'
+      end
+    end
+
+    resources :artists, only: [:show, :index] do
+      collection do
+        get 'search'
+      end
+    end
     
-    resources :albums, only: [:show, :index]
-    resources :artists, only: [:show, :index]
-    resources :playlists, except: [:new, :edit]
+    resources :playlists, except: [:new, :edit] do
+      collection do
+        get 'search'
+      end
+    end
+
+
     resources :playlist_songs, only: [:create, :destroy]
     resources :playlist_follows, only: [:create, :destroy]
   end

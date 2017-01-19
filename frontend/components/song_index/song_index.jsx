@@ -46,11 +46,10 @@ class Songs extends React.Component {
           formType='new'
           songId={ this.state.songId } />
       );
-    }
+    } 
   }
 
   renderSong(song) {
-    console.log(this.state);
     return (
       <div key={song.id} className='song-index-item'>
 

@@ -80,7 +80,8 @@ class CurrentUserDetail extends React.Component {
             playlists={ values(this.props.user.ownPlaylists) }
             playFirstSongAndAddPlaylistToQueue={ this.props.playFirstSongAndAddPlaylistToQueue}
             fetchPlaylistToQueue={ this.props.fetchPlaylistToQueue }
-            addFollowerToPlaylist={ this.props.addFollowerToPlaylist } />
+            followType={'Follow'}
+            playlistFollowAction={ this.props.addFollowerToPlaylist } />
 
         </div>
 
@@ -90,7 +91,8 @@ class CurrentUserDetail extends React.Component {
             playlists={ values(this.props.user.followedPlaylists) }
             playFirstSongAndAddPlaylistToQueue={ this.props.playFirstSongAndAddPlaylistToQueue}
             fetchPlaylistToQueue={ this.props.fetchPlaylistToQueue }
-            addFollowerToPlaylist={ this.props.addFollowerToPlaylist } />
+            followType={'Remove'}
+            playlistFollowAction={ this.props.removeFollowerFromPlaylist } />
         </div>
 
         { this.renderForm() }

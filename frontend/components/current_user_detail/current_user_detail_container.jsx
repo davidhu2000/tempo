@@ -2,7 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CurrentUserDetail from './current_user_detail.jsx';
 
-import { createPlaylist } from '../../actions/playlists_actions';
+import {
+  createPlaylist,
+  removeFollowerFromPlaylist
+} from '../../actions/playlists_actions';
+
 import { fetchUser } from '../../actions/users_actions';
 
 import {
@@ -24,6 +28,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   createPlaylist: playlist => dispatch(createPlaylist(playlist)),
   fetchUser: id => dispatch(fetchUser(id)),
+  removeFollowerFromPlaylist: id => dispatch(removeFollowerFromPlaylist(id)),
   playFirstSongAndAddPlaylistToQueue: id => dispatch(playFirstSongAndAddPlaylistToQueue(id)),
   addFollowerToPlaylist: id => dispatch(addFollowerToPlaylist(id)),
   fetchPlaylistToQueue: id => dispatch(fetchPlaylistToQueue(id))

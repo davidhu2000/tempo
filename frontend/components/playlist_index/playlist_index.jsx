@@ -12,6 +12,14 @@ class PlaylistIndex extends React.Component {
     }
   }
 
+  renderFollowIcon() {
+    if(this.props.followType === 'Remove') {
+      return <i className='fa fa-times'></i>;
+    } else {
+      return <i className='fa fa-share'></i>;
+    }
+  }
+
   renderPlaylist(playlist) {
     return (
       <div key={`${playlist.id}${Math.random()}`} className='playlist-index-item'>
@@ -26,9 +34,9 @@ class PlaylistIndex extends React.Component {
           <i className='fa fa-plus'></i>
         </button>
 
-        <button className='playlist-index-follow' onClick={() => this.props.addFollowerToPlaylist(playlist.id)}>
-          <span>Follow Playlist</span>
-          <i className='fa fa-share'></i>
+        <button className='playlist-index-follow' onClick={() => this.props.playlistFollowAction(playlist.id)}>
+          <span>{this.props.followType} Playlist</span>
+          { this.renderFollowIcon() }
         </button>
 
         <Link to={`playlists/${playlist.id}`}>

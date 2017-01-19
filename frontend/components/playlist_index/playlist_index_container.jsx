@@ -15,7 +15,8 @@ import {
 } from '../../actions/queue_actions';
 
 const mapStateToProps = ({ playlists }) => ({
-  playlists: values(playlists.index)
+  playlists: values(playlists.index),
+  followType: 'Follow'
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -23,7 +24,7 @@ const mapDispatchToProps = dispatch => ({
   fetchPlaylist: id => dispatch(fetchPlaylist(id)),
   fetchPlaylistToQueue: id => dispatch(fetchPlaylistToQueue(id)),
   playFirstSongAndAddPlaylistToQueue: id => dispatch(playFirstSongAndAddPlaylistToQueue(id)),
-  addFollowerToPlaylist: id => dispatch(addFollowerToPlaylist(id))
+  playlistFollowAction: id => dispatch(addFollowerToPlaylist(id))
 });
 
 export default connect(

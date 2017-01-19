@@ -61,3 +61,7 @@ export const addSongToPlaylist = (playlistSong) => dispatch => (
 export const addFollowerToPlaylist = (playlistFollow) => dispatch => (
   PlaylistsApiUtil.addFollowerToPlaylist(playlistFollow)
 );
+
+export const removeFollowerFromPlaylist = playlistId => dispatch => (
+  PlaylistsApiUtil.removeFollowerFromPlaylist(playlistId)
+);

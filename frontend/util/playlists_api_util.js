@@ -60,9 +60,12 @@ export const addFollowerToPlaylist = playlistId => (
   })
 );
 
-export const removeFollowerFromPlaylist = (playlistId, userId) => {
+export const removeFollowerFromPlaylist = (playlistId) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/playlist_follows/0`
+    url: `/api/playlist_follows/`,
+    data: {
+      playlist_id: playlistId
+    }
   })
-}
+);

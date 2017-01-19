@@ -99,7 +99,7 @@ class CurrentUserDetail extends React.Component {
             playlists={ values(this.props.user.followedPlaylists) }
             playFirstSongAndAddPlaylistToQueue={ this.props.playFirstSongAndAddPlaylistToQueue}
             fetchPlaylistToQueue={ this.props.fetchPlaylistToQueue }
-            followType={'Remove'}
+            followType={'Unfollow'}
             playlistFollowAction={ this.props.removeFollowerFromPlaylist } />
         </div>
 

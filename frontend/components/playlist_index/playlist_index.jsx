@@ -13,7 +13,7 @@ class PlaylistIndex extends React.Component {
   }
 
   renderFollowIcon() {
-    if(this.props.followType === 'Remove') {
+    if(this.props.followType === 'Unfollow') {
       return <i className='fa fa-times'></i>;
     } else {
       return <i className='fa fa-share'></i>;

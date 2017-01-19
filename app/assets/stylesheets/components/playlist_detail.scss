@@ -33,8 +33,13 @@
 .playlist-detail-image {
   height: 300px;
   width: 300px;
-  display: block;
   background: white;
+
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
 }
 
 .playlist-detail-song-list {

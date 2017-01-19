@@ -102,7 +102,7 @@ class PlaylistForm extends React.Component {
               onChange={ this.update('image_url') }
               className='form-input'></input>
 
-            <input type='submit' value={ this.buttonVal } className='form-button' ></input>
+            <input type='submit' value={ this.buttonVal } className='playlist-form-button' ></input>
 
           </form>
         </div>

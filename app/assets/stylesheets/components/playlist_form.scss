@@ -30,10 +30,6 @@
   animation-fill-mode: forwards;
 }
 
-.form-button {
-  font-size: 18px;
-}
-
 .pick-playlist-parent {
   position: relative;
 }
@@ -56,4 +52,14 @@
       text-align: center;
     }
   }
+}
+
+.playlist-form-button {
+  margin-top: 20px;
+  color: $aqua-blue-transparent;
+}
+
+.playlist-form-button:hover {
+  color: $aqua-blue;
+  text-decoration: underline;
 }

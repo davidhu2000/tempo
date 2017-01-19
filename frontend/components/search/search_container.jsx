@@ -5,10 +5,7 @@ import Search from './search';
 
 import {
   clearSearch,
-  fetchSearchSongs,
-  fetchSearchAlbums,
-  fetchSearchArtists,
-  fetchSearchPlaylists
+  fetchSearchResult,
 } from '../../actions/search_actions';
 
 const mapStateToProps = ({ search }) => ({
@@ -20,10 +17,7 @@ const mapStateToProps = ({ search }) => ({
 
 const mapDispatchToProps = dispatch => ({
   clearSearch: () => dispatch(clearSearch()),
-  fetchSearchSongs: query => dispatch(fetchSearchSongs(query)),
-  fetchSearchAlbums: query => dispatch(fetchSearchAlbums(query)),
-  fetchSearchArtists: query => dispatch(fetchSearchArtists(query)),
-  fetchSearchPlaylists: query => dispatch(fetchSearchPlaylists(query)),
+  fetchSearchResult: query => dispatch(fetchSearchResult(query)),
 });
 
 export default connect(

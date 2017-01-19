@@ -9,13 +9,4 @@ class Api::SongsController < ApplicationController
     @song = Song.where(id: params[:id]).includes(:album => :artist).first
   end
 
-  def search
-    if params[:query].empty?
-      @songs = []
-    else
-      regex = ".*#{params[:query]}.*"
-      @songs = Song.where("title ~* ?", regex).limit(3)
-      render :search
-    end
-  end
 end

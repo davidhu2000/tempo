@@ -35,10 +35,7 @@ class Search extends React.Component {
   handleChange(e) {
     this.setState({ query: e.target.value });
     if(e.target.value.length > 0) {
-      this.props.fetchSearchSongs(e.target.value);
-      this.props.fetchSearchAlbums(e.target.value);
-      this.props.fetchSearchArtists(e.target.value);
-      this.props.fetchSearchPlaylists(e.target.value);
+      this.props.fetchSearchResult(e.target.value);
     } else {
       this.props.clearSearch();
     }

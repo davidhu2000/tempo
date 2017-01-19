@@ -11,6 +11,12 @@ class ArtistDetail extends React.Component {
     this.props.fetchArtist(this.props.artistId);
   }
 
+  componentWillReceiveProps(newProps){
+    if(this.props.artistId !== newProps.artistId) {
+      newProps.fetchArtist(newProps.artistId);
+    }
+  }
+
   renderSong(song) {
     return (
       <div key={song.id} className='artist-detail-album-song'>

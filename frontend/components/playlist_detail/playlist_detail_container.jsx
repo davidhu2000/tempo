@@ -5,7 +5,7 @@ import PlaylistDetail from './playlist_detail.jsx';
 
 import { fetchPlaylist } from '../../actions/playlists_actions';
 import { fetchCurrentSong } from '../../actions/songs_actions';
-import { addToQueue } from '../../actions/queue_actions';
+import { addToQueue, playFirstSongAndAddPlaylistToQueue } from '../../actions/queue_actions';
 import { updatePlaylist, deletePlaylist, addFollowerToPlaylist } from '../../actions/playlists_actions';
 
 const mapStateToProps = ({ playlists, session }, ownProps) => ({
@@ -22,6 +22,7 @@ const mapDispatchToProps = dispatch => ({
   addToQueue: song => dispatch(addToQueue(song)),
   updatePlaylist: playlist => dispatch(updatePlaylist(playlist)),
   deletePlaylist: id => dispatch(deletePlaylist(id)),
+  playFirstSongAndAddPlaylistToQueue: id => dispatch(playFirstSongAndAddPlaylistToQueue(id)),
   addFollowerToPlaylist: id => dispatch(addFollowerToPlaylist(id))
 });
 

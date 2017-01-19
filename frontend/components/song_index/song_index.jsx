@@ -55,7 +55,7 @@ class Songs extends React.Component {
 
         <div className='song-index-item-info'>
           <button className='song-index-play' onClick={() => this.props.fetchCurrentSong(song.id)}>
-            <span>Play</span>
+            <span>Play Song</span>
             <i className='fa fa-play'></i>
           </button>
 

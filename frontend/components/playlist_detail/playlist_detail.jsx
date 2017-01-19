@@ -18,16 +18,22 @@ class PlaylistDetail extends React.Component {
     this.props.fetchPlaylist(this.props.playlistId);
   }
 
+  componentWillReceiveProps(newProps){
+    if(this.props.playlistId !== newProps.playlistId) {
+      newProps.fetchPlaylist(newProps.playlistId);
+    }
+  }
+
   renderButtons() {
     if(this.props.currentUserId === this.props.playlist.user_id) {
       return (
-        <div>
+        <div className='playlist-detail-buttons'>
           <button
             onClick={ () => this.props.deletePlaylist(this.props.playlistId)}
-            className='form-button' >
+            className='playlist-detail-button' >
             Delete Playlist
           </button>
-          <button className='form-button' onClick={this.toggleForm}>Edit Playlist</button>
+          <button className='playlist-detail-button' onClick={this.toggleForm}>Edit Playlist</button>
         </div>
       );
     } else {
@@ -84,10 +90,20 @@ class PlaylistDetail extends React.Component {
             <img src={ this.props.playlist.image_url } />
           </div>
           <div className='playlist-detail-title'>
-            <span>{ this.props.playlist.title }</span>
-            { this.renderButtons() }
+            <div>
+              <span>{ this.props.playlist.title }</span>
+              { this.renderButtons() }
+            </div>
+            <button className='playlist-detail-play-playlist-button' onClick={() => this.props.playFirstSongAndAddPlaylistToQueue(this.props.playlistId)}>
+              Play Playlist
+            </button>
           </div>
+
         </div>
+
+
+
+
 
         <div className='playlist-detail-song-list'>
           <SongIndex

@@ -1,6 +1,9 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_CURRENT_SONG, CLEAR_CURRENT_SONG } from '../actions/songs_actions';
+import {
+  RECEIVE_CURRENT_SONG,
+  CLEAR_CURRENT_SONG
+} from '../actions/songs_actions';
 
 const _defaultState = {};
 

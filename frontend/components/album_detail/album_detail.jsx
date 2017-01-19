@@ -10,6 +10,12 @@ class AlbumDetail extends React.Component {
     this.props.fetchAlbum(this.props.albumId);
   }
 
+  componentWillReceiveProps(newProps){
+    if(this.props.albumId !== newProps.albumId) {
+      newProps.fetchAlbum(newProps.albumId);
+    }
+  }
+
   renderSong(song) {
     return (
       <li key={song.id}>

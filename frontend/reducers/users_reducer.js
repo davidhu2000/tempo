@@ -1,5 +1,6 @@
 import { merge } from 'lodash';
 import { RECEIVE_USER } from '../actions/users_actions';
+import { UNFOLLOW_PLAYLIST } from '../actions/playlists_actions';
 
 const _defaultState ={
   index: {},
@@ -15,6 +16,12 @@ const usersReducer = (state = _defaultState, action) => {
       return merge({}, _defaultState, {
         detail: action.user
       });
+    case UNFOLLOW_PLAYLIST:
+      let newState = merge({}, state);
+      let followedPlaylists = newState.detail.followedPlaylists;
+      delete followedPlaylists[action.playlistId];
+      newState.detail.followedPlaylists = followedPlaylists;
+      return newState;
     default:
       return state;
   }

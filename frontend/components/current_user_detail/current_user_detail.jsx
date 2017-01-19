@@ -28,6 +28,14 @@ class CurrentUserDetail extends React.Component {
     this.props.fetchUser(this.props.currentUser.id);
   }
 
+  componentWillReceiveProps(newProps) {
+    // if(newProps.user.followedPlaylists.length !== this.props.user.followedPlaylists.length) {
+    //   newProps.fetchUser(newProps.currentUser.id);
+    // }
+    console.log(this.props.user);
+    console.log(newProps.user);
+  }
+
   renderGreeting() {
     let time = new Date;
     let hour = time.getHours();

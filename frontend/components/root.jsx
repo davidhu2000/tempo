@@ -60,7 +60,6 @@ const Root = ({ store }) => {
               <Route path='/playlists' component={ PlaylistIndexContainer } />
               <Route path='/playlists/:playlistId' component={ PlaylistDetailContainer } />
               <Route path='/profile' component={ CurrentUserDetailContainer } />
-
             </Route>
           </Route>
 

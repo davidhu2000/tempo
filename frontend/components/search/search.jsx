@@ -1,5 +1,5 @@
 import React from 'react';
-import Autocomplete from 'react-autocomplete';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 
 class Search extends React.Component {
@@ -10,6 +10,26 @@ class Search extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.showSongs = this.showSongs.bind(this);
+    this.clickDocument = this.clickDocument.bind(this);
+  }
+
+  clickDocument(e) {
+    console.log(React);
+    let component = ReactDOM.findDOMNode(this.refs.component);
+
+    if (e.target === component || $(component).has(e.target).length) {
+        // Inside of the component.
+    } else {
+        this.props.toggleSearch();
+    }
+  }
+
+  componentDidMount() {
+      $(document).bind('click', this.clickDocument);
+  }
+
+  componentWillUnmount() {
+      $(document).unbind('click', this.clickDocument);
   }
 
   handleChange(e) {
@@ -29,7 +49,7 @@ class Search extends React.Component {
       return (
         <div className='search-list'>
           <h2>Songs</h2>
-          { this.props.songs.map( song => <Link to={ `/albums/${song.album_id}` } key={Math.random()}>{ song.title }</Link> )}
+          { this.props.songs.map( song => <Link to={ `/albums/${song.album_id}` } key={Math.random()} onClick={this.props.toggleSearch}>{ song.title }</Link> )}
         </div>
       );
     }
@@ -40,7 +60,7 @@ class Search extends React.Component {
       return (
         <div className='search-list'>
           <h2>Albums</h2>
-          { this.props.albums.map( album => <Link to={ `/albums/${album.id}` } key={Math.random()}>{ album.title }</Link> )}
+          { this.props.albums.map( album => <Link to={ `/albums/${album.id}` } key={Math.random()} onClick={this.props.toggleSearch}>{ album.title }</Link> )}
         </div>
       );
     }
@@ -51,7 +71,7 @@ class Search extends React.Component {
       return (
         <div className='search-list'>
           <h2>Artists</h2>
-          { this.props.artists.map( artist => <Link to={ `/artists/${artist.id}` } key={Math.random()}>{ artist.name }</Link> )}
+          { this.props.artists.map( artist => <Link to={ `/artists/${artist.id}` } key={Math.random()} onClick={this.props.toggleSearch}>{ artist.name }</Link> )}
         </div>
       );
     }
@@ -62,7 +82,7 @@ class Search extends React.Component {
       return (
         <div className='search-list'>
           <h2>Playlists</h2>
-          { this.props.playlists.map( playlist => <Link to={ `/playlists/${playlist.id}` } key={Math.random()}>{ playlist.title }</Link> )}
+          { this.props.playlists.map( playlist => <Link to={ `/playlists/${playlist.id}` } key={Math.random()} onClick={this.props.toggleSearch}>{ playlist.title }</Link> )}
         </div>
       );
     }
@@ -70,7 +90,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div className='search'>
+      <div className='search' id='search' ref='component'>
         <div className='search-input'>
           <input
             type='text'

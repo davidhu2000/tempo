@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class Sidebar extends React.Component {
         </div>
 
         <div className='sidebar-browse'>
-          <Link to='' onClick={this.props.toggleSearch}>
+          <Link to={hashHistory.pathname} onClick={this.props.toggleSearch}>
             <img src='http://res.cloudinary.com/davidhu2000/image/upload/v1484176608/search_icon_czswj4.svg'/>
             <span>Search</span>
           </Link>

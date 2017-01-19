@@ -1,36 +1,43 @@
 @keyframes slideOutLeft {
   0% {
     opacity: 0;
-    // top: -80vh;
     width: 0vw;
   }
 
   100% {
     opacity: 1;
-    // top: 0vw;
     width: 30vw;
   }
 }
 
-.search-form {
-  // border: 3px solid red;
+@keyframes slideInRight {
+  0% {
+    opacity: 1;
+    width: 30vw;
+  }
+
+  100% {
+    opacity: 0;
+    width: 0vw;
+  }
+}
+
+.search {
   box-shadow: 2px 2px 3px black;
   color: white;
   position: absolute;
   left: 5vw;
-
-  // width: 25vw;
   height: 80vh;
   z-index: 100;
   background: rgba(0,0,0, 0.95);
   padding: 20px;
-
 
   animation-name: slideOutLeft;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
+
 }
 
 .search-list {
@@ -84,6 +91,6 @@
   }
 }
 
-#search {
-  visibility: hidden;
+.visible {
+  visibility: visible;
 }

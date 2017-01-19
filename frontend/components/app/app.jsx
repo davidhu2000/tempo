@@ -38,19 +38,19 @@ class App extends React.Component {
   }
 
   toggleSearch(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({
       showSearch: !this.state.showSearch
     });
+
+    $('#search').addClass('visible');
   }
 
   renderSearch() {
     if(this.state.showSearch) {
       return (
-        <div className='search-form'>
-          <SearchContainer
-            toggleSearch={ this.toggleSearch }/>
-        </div>
+        <SearchContainer
+          toggleSearch={ this.toggleSearch }/>
       );
     }
   }

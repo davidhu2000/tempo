@@ -283,7 +283,7 @@ Song.create!(
   title: 'Adam Sandler - Grow Old with You',
   album_id: 8,
   order: 1,
-  song_url: 'http://res.cloudinary.com/davidhu2000/image/upload/v1484782290/eileen_ho/cover_album/album_art_09.jpg'
+  song_url: 'https://res.cloudinary.com/davidhu2000/video/upload/v1484781951/eileen_ho/cover_album/Adam_Sandler_-_Grow_Old_With_You_cover_by_-eileen.mp3'
 )
 
 Song.create!(

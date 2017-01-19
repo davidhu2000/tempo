@@ -4,6 +4,7 @@
   font-size: 2em;
   overflow-x: hidden;
   height: 100vh;
+  width: 95vw;
   background-color: $background-gradient-transparent-to-black;
 }
 
@@ -48,8 +49,9 @@
 }
 
 .current-user-playlists {
-  // overflow-x: hidden;
   font-size: 20px;
+  width: 70%;
+
   .playlist-index {
     height: auto;
     width: 100%;
@@ -76,6 +78,5 @@
 
   i {
     font-size: 20px;
-    // top: -12vh;
   }
 }

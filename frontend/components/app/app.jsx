@@ -60,7 +60,7 @@ class App extends React.Component {
     if(this.props.popups[0]) {
       return (
         <div className='popup-container'>
-          { this.props.popups.map( popup =>  <Popup popup={ this.props.popups[0] } removePopup={ this.props.removePopup } key={Math.random()}/>)}
+          { this.props.popups.map( (popup, idx) =>  <Popup popup={ this.props.popups[idx] } removePopup={ this.props.removePopup } key={Math.random()}/>)}
         </div>
       );
     }

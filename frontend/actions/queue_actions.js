@@ -2,6 +2,7 @@ import * as AlbumsApiUtil from '../util/albums_api_util';
 import * as PlaylistsApiUtil from '../util/playlists_api_util';
 import { values } from 'lodash';
 import { receiveCurrentSong } from './songs_actions';
+import { receivePopup } from './popup_actions';
 
 export const ADD_TO_QUEUE = 'ADD_TO_QUEUE';
 export const SHUFFLE_QUEUE = 'SHUFFLE_QUEUE';
@@ -33,13 +34,17 @@ export const removeFirstSong = () => ({
 
 export const fetchAlbumToQueue = id => dispatch => (
   AlbumsApiUtil.fetchAlbum(id).then(
-    res => dispatch(addAlbumToQueue(values(res.songs)))
+    res => {
+      dispatch(receivePopup({ message: 'Album added to queue' }));
+      return dispatch(addAlbumToQueue(values(res.songs)));
+    }
   )
 );
 
 export const playFirstSongAndAddAlbumToQueue = id => dispatch => (
   AlbumsApiUtil.fetchAlbum(id).then(
     res => {
+      dispatch(receivePopup({ message: 'Album added to queue' }));
       dispatch(receiveCurrentSong( values(res.songs)[0] ));
       return dispatch(addAlbumToQueue( values(res.songs).slice(1) ));
     }
@@ -48,13 +53,17 @@ export const playFirstSongAndAddAlbumToQueue = id => dispatch => (
 
 export const fetchPlaylistToQueue = id => dispatch => (
   PlaylistsApiUtil.fetchPlaylist(id).then(
-    res => dispatch(addAlbumToQueue(values(res.songs)))
+    res => {
+      dispatch(receivePopup({ message: 'Playlist added to queue' }));
+      return dispatch(addAlbumToQueue(values(res.songs)));
+    }
   )
 );
 
 export const playFirstSongAndAddPlaylistToQueue = id => dispatch => (
   PlaylistsApiUtil.fetchPlaylist(id).then(
     res => {
+      dispatch(receivePopup({ message: 'Playlist added to queue' }));
       dispatch(receiveCurrentSong( values(res.songs)[0] ));
       return dispatch(addAlbumToQueue( values(res.songs).slice(1) ));
     }

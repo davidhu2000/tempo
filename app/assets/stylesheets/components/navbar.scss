@@ -57,18 +57,18 @@ $btn-blue: #175868;
     a {
       display: block;
       margin: 0 auto;
-      border-radius: 10px;
-      border: 1px solid #353535;
+      font-size: 20px;
       padding: 5px 8px;
-      width: 80px;
-      color: #1798c1;
+      width: 90px;
+      color: white;
+      text-shadow: 0.5px 0.5px 0.5px $aqua-blue;
       text-align: center;
-      background: white; //#1798c1; // $btn-blue;
+      border: 1px solid black;
       box-shadow: 2px 2px 2px #132B11;
     }
 
     a:hover {
-      background: $aqua-blue;
+      background-color: $aqua-blue;
       color: white;
     }
 

@@ -56,16 +56,16 @@
 }
 
 .form-button {
-  background-color: white;
   width: 30%;
   padding: 5px 0;
-  font-size: 12px;
+  font-size: 15px;
   margin: 10px auto;
   text-align: center;
   text-transform: uppercase;
   box-shadow: 3px 3px 3px black;
   border-radius: 4px;
-  color: $aqua-blue;
+  color: white;
+  border: 1px solid black;
 }
 
 .form-button:hover {

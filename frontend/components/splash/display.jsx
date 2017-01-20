@@ -6,8 +6,7 @@ const SplashDisplay = () => (
     <div className='jumbotron'>
       <h1 className='splash-header'>Find your sound.</h1>
       <div className='splash-buttons'>
-        <Link to='/login'>Login</Link>
-        <Link to='/signup'>Signup</Link>
+        <Link to='/login'>Start Exploring</Link>
       </div>
     </div>
   </div>

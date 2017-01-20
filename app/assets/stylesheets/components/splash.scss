@@ -33,29 +33,20 @@
     justify-content: center;
     margin-top: 10vh;
 
-    :first-child {
-      margin-right: 150px;
-    }
     a {
-      font-size: 2em;
-      border: 2px solid black;
+      margin-left: 50px;
+      font-size: 1.5em;
       padding: 20px 40px;
-      border-radius: 20px;
-      text-shadow: 2px 2px 2px black;
-      box-shadow: 6px 6px 10px black;
       color: white;
-      background: $aqua-blue-more-transparent;
-      // background: rgba(80, 80, 80, 0.8);
+      background: $aqua-blue-most-transparent;
     }
 
     a:hover {
-      text-shadow: -2px -2px 2px gray;
-      transform: skewX(2deg);
+      text-shadow: 2px 2px 2px black;
     }
 
     a:active {
       box-shadow: none;
-      transform: translateY(10px);
     }
   }
 }

@@ -9,6 +9,7 @@ import queueReducer from './queue_reducer';
 import playlistsReducer from './playlists_reducer';
 import usersReducer from './users_reducer';
 import searchReducer from './search_reducer';
+import popupReducer from './popup_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   queue: queueReducer,
   playlists: playlistsReducer,
   users: usersReducer,
-  search: searchReducer
+  search: searchReducer,
+  popup: popupReducer
 });
 
 export default rootReducer;

@@ -1,6 +1,8 @@
 import { merge } from 'lodash';
 
-const popupsReducer = (state, action) => {
+const _defaultState = [];
+
+const popupsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     default:

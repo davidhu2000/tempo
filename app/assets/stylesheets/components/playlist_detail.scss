@@ -105,6 +105,12 @@
   background-color: $play-button-color;
 }
 
+.playlist-detail-play-playlist-button:active {
+  background-color: $play-button-color;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
 .playlist-detail-buttons {
   display: -webkit-box;
   display: -ms-flexbox;

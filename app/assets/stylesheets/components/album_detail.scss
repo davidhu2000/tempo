@@ -61,6 +61,17 @@
   display: block;
   padding: 3px 15px 3px 20px;
   cursor: pointer;
+  color: white;
+}
+
+.album-detail-play-album-button:hover {
+  background-color: $play-button-color;
+}
+
+.album-detail-play-album-button:active {
+  background-color: $play-button-color;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .album-detail-title {

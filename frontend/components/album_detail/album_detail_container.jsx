@@ -5,7 +5,7 @@ import AlbumDetail from './album_detail.jsx';
 
 import { fetchAlbum } from '../../actions/albums_actions';
 import { fetchCurrentSong } from '../../actions/songs_actions';
-import { addToQueue } from '../../actions/queue_actions';
+import { addToQueue, playFirstSongAndAddAlbumToQueue } from '../../actions/queue_actions';
 
 const mapStateToProps = ({ albums }, ownProps) => ({
   album: albums.detail,
@@ -16,7 +16,8 @@ const mapStateToProps = ({ albums }, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   fetchAlbum: id => dispatch(fetchAlbum(id)),
   fetchCurrentSong: id => dispatch(fetchCurrentSong(id)),
-  addToQueue: song => dispatch(addToQueue(song))
+  addToQueue: song => dispatch(addToQueue(song)),
+  playFirstSongAndAddAlbumToQueue: id => dispatch(playFirstSongAndAddAlbumToQueue(id))
 });
 
 export default connect(

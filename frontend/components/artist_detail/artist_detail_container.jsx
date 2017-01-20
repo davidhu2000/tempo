@@ -5,7 +5,7 @@ import ArtistDetail from './artist_detail.jsx';
 
 import { fetchArtist } from '../../actions/artists_actions';
 import { fetchCurrentSong } from '../../actions/songs_actions';
-import { addToQueue } from '../../actions/queue_actions';
+import { addToQueue} from '../../actions/queue_actions';
 
 const mapStateToProps = ({ artists }, ownProps) => ({
   artist: artists.detail,

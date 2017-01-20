@@ -38,7 +38,6 @@ class AlbumDetail extends React.Component {
     );
   }
 
-  // TODO: Add artist image and name
   render() {
     return (
       <div className='album-detail'>
@@ -47,9 +46,18 @@ class AlbumDetail extends React.Component {
           <div className='album-detail-image'>
             <img src={ this.props.album.image_url } />
           </div>
-          <div className='album-detail-title'>
-            <span>{ this.props.album.title }</span>
+
+          <div className='album-detail-container'>
+            <div className='album-detail-title'>
+              <span>{ this.props.album.title }</span>
+              <span>By: { this.props.album.artist }</span>
+            </div>
+
+            <button className='album-detail-play-album-button' onClick={() => this.props.playFirstSongAndAddAlbumToQueue(this.props.albumId)}>
+              Play Album
+            </button>
           </div>
+
         </div>
 
         <div className='album-detail-song-list'>

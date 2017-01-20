@@ -66,11 +66,13 @@ class CurrentUserDetail extends React.Component {
             <img src={ this.props.currentUser.image_url} />
           </div>
           <div className='current-user-greeting'>
-            { this.renderGreeting() }
-            { this.displayUserName() }
+            <button className='form-button' onClick={ this.toggleForm }>Create a playlist</button>
+            <div>
+              { this.renderGreeting() }
+              { this.displayUserName() }
+            </div>
           </div>
 
-          <button className='form-button' onClick={ this.toggleForm }>Create a playlist</button>
         </div>
         <div className='current-user-playlists'>
           <PlaylistIndex

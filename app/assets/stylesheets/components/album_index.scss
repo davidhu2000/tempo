@@ -1,22 +1,28 @@
 .album-index {
   color: white;
-  // width: 95vw;
-  // height: 100vh;
   padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .album-index-item {
   box-sizing: border-box;
-  // display: relative;
   display: block;
   height: 20vh;
   width: 20vh;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 20px 20px;
 
   img {

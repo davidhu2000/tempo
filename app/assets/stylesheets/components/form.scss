@@ -38,8 +38,12 @@
   width: 100%;
   font-size: 0.9em;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 
   p {
     display: block;
@@ -76,5 +80,6 @@
 .form-button:active {
   box-shadow: none;
   background-color: $aqua-blue;
-  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }

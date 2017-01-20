@@ -12,8 +12,12 @@ $btn-blue: #175868;
   position: absolute;
   width: 100%;
   height: $line-height;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: $aqua-blue-more-transparent;
   color: #dddddd;
   box-shadow: 0 0 30px black;
@@ -46,8 +50,12 @@ $btn-blue: #175868;
 }
 
 .navbar-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   .navbar-button {
     margin: 0 15px;
@@ -75,7 +83,8 @@ $btn-blue: #175868;
     a:active {
       background: #175868;
       box-shadow: none;
-      transform: translateY(2px);
+      -webkit-transform: translateY(2px);
+              transform: translateY(2px);
     }
 
   }

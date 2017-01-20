@@ -1,3 +1,15 @@
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 30px;
+  }
+}
+
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -12,9 +24,16 @@
 
 .popup-container {
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   right: 20px;
   top: 30px;
@@ -29,9 +48,15 @@
   border-right: 20px solid rgba(155,155,155,0.8);
   box-shadow: 3px 3px 5px $color3;
 
-  animation-name: slideUp;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: slideUp;
+
+          animation-name: slideUp;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }

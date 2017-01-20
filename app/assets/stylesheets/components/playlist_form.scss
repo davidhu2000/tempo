@@ -1,12 +1,28 @@
-@keyframes slideOut {
+@-webkit-keyframes slideOut {
   0% {
     opacity: 0;
-    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
   }
 
   100% {
     opacity: 1;
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
 }
 
@@ -23,11 +39,17 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 
-  animation-name: slideOut;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: slideOut;
+
+          animation-name: slideOut;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .pick-playlist-parent {
@@ -40,7 +62,6 @@
   width: 20vw;
   top: -15vh;
   left: 0;
-  // top: 50vh;
 
   select {
     color: white;

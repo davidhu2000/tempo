@@ -5,17 +5,27 @@ $logo-width: 3.5vw;
 .sidebar {
   width: $sidebar-width;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: -webkit-grab;
   cursor: grab;
 
+  text-align: -webkit-center;
+
   a {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     box-sizing: border-box;
     display: block;
     width: 100%;
     height: $sidebar-width;
     text-align: center;
+    text-align: -webkit-center;
     line-height: $sidebar-width;
     color: white;
     background-color: $aqua-blue-most-transparent;
@@ -25,10 +35,13 @@ $logo-width: 3.5vw;
   }
 
   a:hover {
+    -webkit-transition: 0.4s;
     transition: 0.4s;
-    transform: translateX(8px);
+    -webkit-transform: translateX(8px);
+            transform: translateX(8px);
     background-color: $aqua-blue-most-transparent;
     border-bottom: 2px solid $color4;
+    cursor: -webkit-grab;
     cursor: grab;
   }
 
@@ -52,22 +65,39 @@ $logo-width: 3.5vw;
     background-color: $aqua-blue-most-transparent;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-grow: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
   }
 
 }
 
 .sidebar-browse {
   a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack:end;
+        -ms-flex-pack:end;
+            justify-content:flex-end;
 
     img {
-      filter: invert(30%);
+      -webkit-filter: invert(30%);
+              filter: invert(30%);
       width: $icon-width;
       margin: 0 auto;
       padding: 0;
@@ -89,13 +119,21 @@ $logo-width: 3.5vw;
   padding-bottom: 30px;
 
   a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack:end;
+        -ms-flex-pack:end;
+            justify-content:flex-end;
     background: none;
 
     img {
-      filter: invert(30%);
+      -webkit-filter: invert(30%);
+              filter: invert(30%);
       width: $icon-width;
       margin: 0 auto;
       padding: 0;
@@ -115,7 +153,8 @@ $logo-width: 3.5vw;
   }
 
   a:hover {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
     background: none;
     border: none;
   }

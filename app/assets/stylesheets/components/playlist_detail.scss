@@ -1,16 +1,28 @@
 .playlist-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 30px 50px;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .playlist-detail-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-
-  flex-direction: row;
-  // justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .playlist-detail-title {
@@ -19,15 +31,17 @@
   font-size: 2em;
   padding-left: 20px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 300px;
-
-  button {
-    // font-size: 12px;
-    // width: 80px;
-  }
 }
 
 .playlist-detail-image {
@@ -38,19 +52,29 @@
   img {
     height: 300px;
     width: 300px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
 .playlist-detail-song-list {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .playlist-detail-songs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
 
   li {
@@ -82,17 +106,20 @@
 }
 
 .playlist-detail-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 15px;
 }
 
 .playlist-detail-button {
-  // border: 1px solid black;
   display: block;
   font-size: 16px;
   width: 10vw;
-  // text-align: center;
   margin: 5px;
   color: $aqua-blue-transparent;
 }

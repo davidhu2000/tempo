@@ -1,3 +1,15 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    background-color: none;
+    opacity: 0;
+  }
+
+  100% {
+    background: $background-gradient-transparent-to-black;
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     background-color: none;
@@ -11,18 +23,23 @@
 }
 
 .browse {
-  // box-sizing: padding-box;
   padding: 20px 0px 20px 50px;
   height: 100vh;
   width: 95vw;
   overflow-y: auto;
   overflow-x: hidden;
 
-  animation-name: fadeIn;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeIn;
+
+          animation-name: fadeIn;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 
 }
 
@@ -30,8 +47,11 @@
   width: 100%;
   height: 5vh;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 20px;
 
   a {
@@ -48,6 +68,4 @@
 .browse-main {
   height: 90vh;
   width: 100%;
-  // overflow: hidden;
-  // overflow-y: scroll;
 }

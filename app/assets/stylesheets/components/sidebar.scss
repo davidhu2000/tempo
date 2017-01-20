@@ -12,8 +12,8 @@ $logo-width: 3.5vw;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: -webkit-pointer;
+  cursor: pointer;
 
   text-align: -webkit-center;
 
@@ -41,8 +41,6 @@ $logo-width: 3.5vw;
             transform: translateX(8px);
     background-color: $aqua-blue-most-transparent;
     border-bottom: 2px solid $color4;
-    cursor: -webkit-grab;
-    cursor: grab;
   }
 
   .sidebar-logo {

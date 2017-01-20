@@ -61,9 +61,10 @@ $btn-blue: #175868;
     margin: 0 15px;
     width: 80px;
 
-
     a {
       display: block;
+      cursor: pointer;
+      cursor: -webkit-pointer;
       margin: 0 auto;
       font-size: 20px;
       padding: 5px 8px;

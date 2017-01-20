@@ -2,12 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Popup from './popup.jsx';
 
+import { receivePopup, removePopup } from '../../actions/popup_actions';
+
 const mapStateToProps = ({ popups }, ownProps) => ({
-  popups
+  popup: popups[0]
 });
 
 const mapDispatchToProps = dispatch => ({
-  // your code here...
+  removePopup: () => dispatch(removePopup())
 });
 
 export default connect(

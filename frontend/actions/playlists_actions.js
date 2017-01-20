@@ -1,5 +1,6 @@
 import * as PlaylistsApiUtil from '../util/playlists_api_util';
 import { hashHistory } from 'react-router';
+import { receivePopup } from './popup_actions';
 
 export const RECEIVE_ALL_PLAYLISTS = 'RECEIVE_ALL_PLAYLISTS';
 export const RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
@@ -65,7 +66,10 @@ export const addSongToPlaylist = (playlistSong) => dispatch => (
 );
 
 export const addFollowerToPlaylist = (playlistFollow) => dispatch => (
-  PlaylistsApiUtil.addFollowerToPlaylist(playlistFollow)
+  PlaylistsApiUtil.addFollowerToPlaylist(playlistFollow).then (
+    res => {},
+    err => dispatch(receivePopup({ message: err.responseJSON }))
+  )
 );
 
 export const removeFollowerFromPlaylist = playlistId => dispatch => (

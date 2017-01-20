@@ -1,6 +1,6 @@
 # Tempo
 
-[Tempo](www.tempostream.com) is a web application that allows the users to stream music from their favorite artists. Inspired by [Spotify](https://www.spotify.com), Tempo allows user to browse different artists and albums. They can also create and follow different playlists.
+[Tempo](http://www.tempostream.com) is a web application that allows the users to stream music from their favorite artists. Inspired by [Spotify](https://www.spotify.com), Tempo allows user to browse different artists and albums. They can also create and follow different playlists.
 
 ![Tempo Splash Page](docs/images/splash_page.png)
 

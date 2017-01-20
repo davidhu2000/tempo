@@ -44,7 +44,6 @@ albums.each do |album|
   image_url = album[3]
 
   artist = Artist.find_by(name: artist_name)
-
   Album.create!(
     title: title,
     artist_id: artist.id,

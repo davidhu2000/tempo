@@ -68,3 +68,49 @@ songs.each do |song|
     song_url: song_url
   )
 end
+
+first = ['My', 'This', 'Sweet', 'The', 'Greatest']
+second = ['Awesome', 'Rocking', 'Hype', 'Music', 'Sound', 'Track']
+third = ['Playlist', 'Album', 'Songs']
+
+5.times do
+  Playlist.create!(
+    title: "#{first.sample} #{second.sample} #{third.sample}",
+    user_id: 1,
+    image_url: 'http://res.cloudinary.com/davidhu2000/image/upload/c_crop,h_1000,w_1000/v1484942922/636097581326278234875680958_Gym_20Playlist_j21re9.jpg'
+  )
+end
+
+25.times do
+  Playlist.create!(
+    title: "#{first.sample} #{second.sample} #{third.sample}",
+    user_id: rand(21),
+  )
+end
+
+
+song_idx = (1..100).to_a
+
+30.times do |i|
+
+  num_song = rand(10) + 1
+
+  pl_songs = song_idx.sample(num_song)
+
+  pl_songs.each do |idx|
+    PlaylistSong.create!(playlist_id: i+1, song_id: idx)
+  end
+end
+
+user_idx = (1..20).to_a
+
+30.times do |i|
+
+  num_user = rand(5) + 1
+
+  pl_users = user_idx.sample(num_user)
+
+  pl_users.each do |idx|
+    PlaylistFollow.create!(playlist_id: i+1, user_id: idx)
+  end
+end

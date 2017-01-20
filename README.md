@@ -12,8 +12,8 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 - [x] New account creation, login, and guest login
 - [x] Song playing while browsing
 - [x] Maintain song queue
-- [ ] Subscribe to playlists
-- [ ] CRUD playlist
+- [x] Subscribe to playlists
+- [x] CRUD playlist
 - [ ] Production README [sample](docs/production_readme.md)
 
 ## Design Docs
@@ -63,19 +63,19 @@ Tempo is a music streaming web application inspired by Spotify and is built usin
 - [x] Set up playlist component, reducer, and actions
 - [x] Add styling to playlist index and show page
 - [x] Allow user to create, update, and delete playlist
-- [ ] Allow user to add songs to playlist
+- [x] Allow user to add songs to playlist
 
-Objective: User can create, view, update, and delete custom playlists
+&#10004; Objective: User can create, view, update, and delete custom playlists
 
 ### Phase 5: Playlist follow (1 day)
 **Tasks:**
-- [ ] Set up user-playlist many to many association
-- [ ] Create actions to allow toggle follow
+- [x] Set up user-playlist many to many association
+- [x] Create actions to allow toggle follow
 
-Objective: User can follow different playlists and can view the playlists they are subscribed to.
+&#10004; Objective: User can follow different playlists and can view the playlists they are subscribed to.
 
 ## Bonus Features (TBD)
-- Search for songs, albums, artists, playlists, and users
+- &#10004; Search for songs, albums, artists, playlists, and users
 - Create radio option to play random songs
 - Create discovery page to showcase certain songs and/or artists
 - Add genre to songs, and allow for search by genre

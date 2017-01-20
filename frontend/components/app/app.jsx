@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import Sidebar from './sidebar';
 import SearchContainer from '../search/search_container';
 import CurrentSongContainer from '../current_song/current_song_container';
+import Popup from '../popup/popup';
 
 class App extends React.Component {
   constructor(props){
@@ -55,18 +56,28 @@ class App extends React.Component {
     }
   }
 
+  renderPopup() {
+    if(this.props.popups[0]) {
+      return (
+        <div className='popup-container'>
+          { this.props.popups.map( (popup, idx) =>  <Popup popup={ this.props.popups[idx] } removePopup={ this.props.removePopup } key={Math.random()}/>)}
+        </div>
+      );
+    }
+  }
+
   render() {
     if(this.props.currentUser) {
 
       return (
         <div className='main'>
           { this.renderSearch() }
+          { this.renderPopup() }
           <div className=''>
             <Sidebar
               logout={ this.props.logout }
               toggleSearch={ this.toggleSearch }
               currentUser={this.props.currentUser} />
-
           </div>
 
           <div className=''>

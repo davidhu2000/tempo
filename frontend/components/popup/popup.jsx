@@ -5,10 +5,16 @@ class Popup extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.removePopup();
+    }, 3000);
+  }
+
   render() {
     return (
-      <div>
-        // your code here...
+      <div className='popup'>
+        { this.props.popup.message }
       </div>
     );
   }

@@ -7,9 +7,9 @@ class Api::PlaylistFollowsController < ApplicationController
     if @playlist_follow.playlist.user_id === current_user.id
       render json: ['You cannot follow your own playlist'], status: 422
     elsif @playlist_follow.save
-      render json: ['Success']
+      render json: ['Playlist followed']
     else
-      render json: @playlist_follow.errors.full_messages, status: 422
+      render json: ['You already follow this playlist'], status: 422
     end
   end
 

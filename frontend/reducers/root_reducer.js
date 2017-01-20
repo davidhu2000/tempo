@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
   playlists: playlistsReducer,
   users: usersReducer,
   search: searchReducer,
-  popup: popupReducer
+  popups: popupReducer
 });
 
 export default rootReducer;

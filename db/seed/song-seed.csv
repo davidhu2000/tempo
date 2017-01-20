@@ -8,7 +8,7 @@ id,title,album_id,order,song_url
 7,First open mic night,2,1,https://res.cloudinary.com/davidhu2000/video/upload/v1484781234/eileen_ho/live_album/Eileen_s_first_open_mic.mp3
 8,Live at Whiskey RRFC Aerosmith Cryin,2,2,https://res.cloudinary.com/davidhu2000/video/upload/v1484782500/eileen_ho/live_album/RRFC_Aerosmith_-_Cryin.mp3
 9,Show at Whiskey Go Go,2,3,https://res.cloudinary.com/davidhu2000/video/upload/v1484782718/eileen_ho/live_album/RRFC_Show_at_Whiskey_a_Go_Go.mp3
-10,Tell It To The Judge On Sunday/Lights Of Downtown,3,1,https://res.cloudinary.com/davidhu2000/video/upload/v1484893713/The%20Long%20Ryders/The_Long_Ryders_-_01_-_Tell_It_To_The_Judge_On_SundayLights_Of_Downtown.mp3
+10,Tell It To The Judge On Sunday,3,1,https://res.cloudinary.com/davidhu2000/video/upload/v1484893713/The%20Long%20Ryders/The_Long_Ryders_-_01_-_Tell_It_To_The_Judge_On_SundayLights_Of_Downtown.mp3
 11,A Stitch In Time,3,2,https://res.cloudinary.com/davidhu2000/video/upload/v1484424709/The%20Long%20Ryders/The_Long_Ryders_-_02_-_A_Stitch_In_Time_qbfric.mp3
 12,Gunslinger,3,3,https://res.cloudinary.com/davidhu2000/video/upload/v1484424550/The%20Long%20Ryders/The_Long_Ryders_-_03_-_Gunslinger_stksdp.mp3
 13,I Don't Care What's Right,3,4,https://res.cloudinary.com/davidhu2000/video/upload/v1484424664/The%20Long%20Ryders/The_Long_Ryders_-_04_-_I_Dont_Care_Whats_Right_I_Dont_Care_Whats_Wrong_rsaheh.mp3
@@ -95,7 +95,7 @@ id,title,album_id,order,song_url
 94,Left Jersey,12,1,https://res.cloudinary.com/davidhu2000/video/upload/v1484928158/Aglow_Hollow/Sacred_Clowns_Secret_Handshakes/Aglow_Hollow_-_01_-_Left_Jersey.mp3
 95,Shimmering Saints,12,2,https://res.cloudinary.com/davidhu2000/video/upload/v1484928158/Aglow_Hollow/Sacred_Clowns_Secret_Handshakes/Aglow_Hollow_-_02_-_Shimmering_Saints.mp3
 96,Cheap for Free,12,3,https://res.cloudinary.com/davidhu2000/video/upload/v1484928159/Aglow_Hollow/Sacred_Clowns_Secret_Handshakes/Aglow_Hollow_-_03_-_Cheap_for_Free.mp3
-97,She is Good to Me and I will Always Take Good Care of Her,12,4,https://res.cloudinary.com/davidhu2000/video/upload/v1484928159/Aglow_Hollow/Sacred_Clowns_Secret_Handshakes/Aglow_Hollow_-_04_-_She_is_Good_to_Me_and_I_will_Always_Take_Good_Care_of_Her.mp3
+97,She is Good to Me,12,4,https://res.cloudinary.com/davidhu2000/video/upload/v1484928159/Aglow_Hollow/Sacred_Clowns_Secret_Handshakes/Aglow_Hollow_-_04_-_She_is_Good_to_Me_and_I_will_Always_Take_Good_Care_of_Her.mp3
 98,sonic maps and pictographs,13,1,https://res.cloudinary.com/davidhu2000/video/upload/v1484928368/Aglow_Hollow/Sonic_Maps_and_Pictographs/Aglow_Hollow_-_01_-_sonic_maps_and_pictographs.mp3
 99,An Honest Deceiver,13,2,https://res.cloudinary.com/davidhu2000/video/upload/v1484928369/Aglow_Hollow/Sonic_Maps_and_Pictographs/Aglow_Hollow_-_03_-_An_Honest_Deceiver.mp3
 100,DR0135,13,3,https://res.cloudinary.com/davidhu2000/video/upload/v1484928368/Aglow_Hollow/Sonic_Maps_and_Pictographs/Aglow_Hollow_-_04_-_DR0135.mp3

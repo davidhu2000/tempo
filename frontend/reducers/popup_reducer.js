@@ -5,7 +5,6 @@ const _defaultState = [];
 
 const popupsReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-  console.log(state);
   switch(action.type) {
     case RECEIVE_POPUP:
       return merge([], state).concat([action.popup]);

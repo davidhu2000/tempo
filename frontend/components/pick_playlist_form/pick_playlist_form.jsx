@@ -22,8 +22,7 @@ class PickPlaylistForm extends React.Component {
     if (e.target === component || $(component).has(e.target).length) {
         // Inside of the component.
     } else {
-      console.log('here');
-        this.props.toggleForm();
+      this.props.toggleForm();
     }
   }
 

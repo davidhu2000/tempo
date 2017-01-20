@@ -15,21 +15,9 @@ class Progress extends React.Component {
           </div>
         </div>
 
-
       </div>
     );
   }
 }
 
 export default Progress;
-
-// <progress value={this.props.position} max='1'></progress>
-
-
-// <span className='progress-label'>
-//   { this.props.total }
-// </span>
-//
-// <span className="progress-label">
-//   { this.props.elapsed }
-// </span>

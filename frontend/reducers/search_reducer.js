@@ -13,8 +13,6 @@ const _defaultState = {
 
 const searchReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-  // console.log('searchReducer');
-  // console.log(action);
   switch(action.type) {
     case RECEIVE_SEARCH_RESULT:
       return action.res;

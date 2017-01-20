@@ -5,9 +5,6 @@ import configureStore from './store/store.js';
 
 import Root from './components/root';
 
-// TODO: For testing
-import { fetchSearchSongs } from './util/search_api_util';
-
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 
@@ -28,7 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   ReactDOM.render(<Root store={ store } />, root);
-
-  // TODO: for testing
-  window.store = store;
 });

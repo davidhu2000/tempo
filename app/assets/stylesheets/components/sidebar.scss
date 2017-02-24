@@ -37,10 +37,10 @@ $logo-width: 3.5vw;
   a:hover {
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
     background-color: $aqua-blue-most-transparent;
-    border-bottom: 2px solid $color4;
+    border-left: 2px solid $color4;
   }
 
   .sidebar-logo {

@@ -30,8 +30,6 @@ $logo-width: 3.5vw;
     color: white;
     background-color: $aqua-blue-most-transparent;
     cursor: pointer;
-
-
   }
 
   a:hover {
@@ -39,8 +37,12 @@ $logo-width: 3.5vw;
     transition: 0.4s;
     -webkit-transform: translateX(2px);
             transform: translateX(2px);
-    background-color: $aqua-blue-most-transparent;
+    background-color: $aqua-blue-more-transparent;
     border-left: 2px solid $color4;
+  }
+
+  a:active {
+    background-color: gray;
   }
 
   .sidebar-logo {
@@ -85,13 +87,8 @@ $logo-width: 3.5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack:end;
-        -ms-flex-pack:end;
-            justify-content:flex-end;
+    flex-direction: column;
+    justify-content:center;
 
     img {
       -webkit-filter: invert(30%);
@@ -108,7 +105,7 @@ $logo-width: 3.5vw;
       line-height: normal;
       margin: 0 auto;
       padding-top: 5px;
-      padding-bottom: 15px;
+      // padding-bottom: 15px;
     }
   }
 }

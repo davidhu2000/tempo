@@ -1,4 +1,4 @@
-@keyframes rippleAnimation {
+@keyframes rippleAnimation2 {
     from {
       // transform: scale(1.2);
       opacity: 0;
@@ -13,9 +13,9 @@
 .artist-detail {
   color: white;
 
-  -webkit-animation-name: rippleAnimation;
+  -webkit-animation-name: rippleAnimation2;
 
-          animation-name: rippleAnimation;
+          animation-name: rippleAnimation2;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-out;

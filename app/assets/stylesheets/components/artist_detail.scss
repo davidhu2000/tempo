@@ -1,5 +1,29 @@
+@keyframes rippleAnimation {
+    from {
+      // transform: scale(1.2);
+      opacity: 0;
+    }
+    to {
+      // transform: scale(1);
+      opacity: 1;
+    }
+}
+
+
 .artist-detail {
   color: white;
+
+  -webkit-animation-name: rippleAnimation;
+
+          animation-name: rippleAnimation;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .artist-detail-info {

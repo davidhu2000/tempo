@@ -61,7 +61,11 @@
   }
   a:hover {
     color: $aqua-blue;
-    font-size: 25px;
+    // font-size: 25px;
+  }
+
+  a:active {
+    color: gray;
   }
 }
 

@@ -29,6 +29,7 @@
     height: 20vh;
     width: 20vh;
     margin: 0 auto;
+    opacity: 0.6;
   }
 
   h4 {
@@ -45,6 +46,17 @@
   font-size: 3em;
   opacity: 0.4;
   color: $color5;
+  visibility: hidden;
+}
+
+.album-index-item:hover {
+  img {
+    opacity: 1;
+  }
+
+  .album-index-play, .album-index-queue {
+    visibility: visible;
+  }
 }
 
 .album-index-play:hover, .album-index-queue:hover {

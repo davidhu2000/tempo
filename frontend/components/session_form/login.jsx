@@ -20,7 +20,6 @@ class LoginForm extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if(newProps.demo && !this.state.loginGuest) {
-      console.log(this.state);
       this.demoLogin();
       this.setState({
         loginGuest: true
@@ -46,7 +45,7 @@ class LoginForm extends React.Component {
       this.setState({
         loginGuest: false
       })
-      return this.props.login(this.state).then(hashHistory.replace('/'));
+      return this.props.login(this.state).then(hashHistory.replace('/browse'));
     } else {
       setTimeout(() => {
         this.setState({

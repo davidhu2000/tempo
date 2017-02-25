@@ -52,7 +52,7 @@ class Splash extends React.Component  {
               </Link>
             </div>
             <div className='navbar-button btn-demo'>
-              <a onClick={ () => this.props.login(demoUser) }>
+              <a onClick={ () => hashHistory.push('/login?demo=true') }>
                 <span>Demo</span>
               </a>
             </div>

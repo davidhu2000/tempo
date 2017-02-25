@@ -47,6 +47,20 @@
   opacity: 0.4;
   color: $color5;
   visibility: hidden;
+
+  span {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 15px;
+    top: -2.5vh;
+    left: -3vw;
+    padding: 5px;
+    text-transform: uppercase;
+    z-index: 100;
+  }
 }
 
 .album-index-item:hover {
@@ -61,6 +75,9 @@
 
 .album-index-play:hover, .album-index-queue:hover {
   opacity: 0.9;
+  span {
+    visibility: visible;
+  }
 }
 
 .album-index-play {

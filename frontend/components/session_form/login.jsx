@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 const demoUser = {
   username: 'Guest',
@@ -11,17 +11,20 @@ class LoginForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      loginGuest: false
     };
 
     this.loginUser = this.loginUser.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
-    console.log('here');
-    if(newProps.demo) {
-      console.log('demo');
+    if(newProps.demo && !this.state.loginGuest) {
+      console.log(this.state);
       this.demoLogin();
+      this.setState({
+        loginGuest: true
+      })
     }
   }
 
@@ -34,20 +37,23 @@ class LoginForm extends React.Component {
           username: username.slice(0, usernameIdx)
         });
         this.writeUsername(usernameIdx + 1, 'Guest');
-      }, 100);
+      }, 70);
     }
   }
 
   writePassword(passwordIdx = 0, password = 'password') {
     if(passwordIdx > password.length) {
-      return this.props.login(this.state);
+      this.setState({
+        loginGuest: false
+      })
+      return this.props.login(this.state).then(hashHistory.replace('/'));
     } else {
       setTimeout(() => {
         this.setState({
           password: password.slice(0, passwordIdx)
         });
         this.writePassword(passwordIdx + 1, 'password');
-      }, 100);
+      }, 70);
     }
   }
 
@@ -90,6 +96,7 @@ class LoginForm extends React.Component {
           <input
             type='password'
             name='password'
+            value={ this.state.password }
             onChange={ this.update('password')}
             className='form-input'></input>
 

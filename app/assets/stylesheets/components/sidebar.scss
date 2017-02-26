@@ -4,6 +4,7 @@ $logo-width: 3.5vw;
 
 .sidebar {
   width: $sidebar-width;
+  min-width: 40px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +24,7 @@ $logo-width: 3.5vw;
     box-sizing: border-box;
     display: block;
     width: 100%;
+    min-height: 40px;
     height: $sidebar-width;
     text-align: center;
     text-align: -webkit-center;
@@ -47,7 +49,11 @@ $logo-width: 3.5vw;
 
   .sidebar-logo {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
     height: $sidebar-width;
     padding: 0;
     margin: 0;
@@ -56,6 +62,8 @@ $logo-width: 3.5vw;
       position: absolute;
       height: $logo-width;
       width: $logo-width;
+      min-width: 15px;
+      min-height: 15px;
       top: ($sidebar-width - $logo-width) / 2;
       left: ($sidebar-width - $logo-width) / 2;
     }
@@ -94,6 +102,7 @@ $logo-width: 3.5vw;
       -webkit-filter: invert(30%);
               filter: invert(30%);
       width: $icon-width;
+      min-width: 15px;
       margin: 0 auto;
       padding: 0;
     }

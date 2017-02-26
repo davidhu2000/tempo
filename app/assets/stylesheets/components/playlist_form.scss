@@ -52,16 +52,12 @@
           animation-fill-mode: forwards;
 }
 
-.pick-playlist-parent {
-  position: relative;
-}
-
 .pick-playlist {
   position: absolute;
   height: 10vh;
   width: 20vw;
-  top: -15vh;
-  left: 0;
+  top: 50vh;
+  left: 30vw;
 
   select {
     color: white;

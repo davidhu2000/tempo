@@ -100,7 +100,7 @@ $logo-width: 3.5vw;
 
     span {
       text-align: center;
-      font-size: 0.8em;
+      font-size: 1vw;
       display:inherit;
       line-height: normal;
       margin: 0 auto;
@@ -156,7 +156,7 @@ $logo-width: 3.5vw;
   .sidebar-logout {
     display: block;
     margin: 5px auto;
-    font-size: 12px;
+    font-size: 1vw;
     border-radius: 3px;
     border: 1px solid #353535;
     padding: 3px 8px;
@@ -164,6 +164,7 @@ $logo-width: 3.5vw;
     text-align: center;
     background: rgba(0,0,0,0.7);
     box-shadow: 2px 2px 2px #132B11;
+    width: 100%;
   }
 
   .sidebar-logout:hover {

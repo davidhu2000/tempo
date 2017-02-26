@@ -52,12 +52,28 @@
           animation-fill-mode: forwards;
 }
 
+.playlist-form-button {
+  margin-top: 20px;
+  color: $aqua-blue-transparent;
+}
+
+.playlist-form-button:hover {
+  color: $aqua-blue;
+  text-decoration: underline;
+}
+
+
 .pick-playlist {
   position: absolute;
-  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 13vh;
   width: 20vw;
   top: 50vh;
   left: 30vw;
+  box-shadow: 0px 0px 10px $aqua-blue-more-transparent;
 
   select {
     color: white;
@@ -71,12 +87,15 @@
   }
 }
 
-.playlist-form-button {
-  margin-top: 20px;
-  color: $aqua-blue-transparent;
+.pick-playlist-button {
+  color: white;
+  background: $aqua-blue-more-transparent;
+  font-size: 1vw;
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px $aqua-blue-transparent;
 }
 
-.playlist-form-button:hover {
-  color: $aqua-blue;
-  text-decoration: underline;
+.pick-playlist-button:hover {
+  background: $aqua-blue;
 }

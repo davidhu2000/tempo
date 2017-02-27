@@ -14,13 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentUser: window.currentUser
       }
     };
-
     store = configureStore(preloadedState);
   } else {
     store = configureStore();
   }
 
   ReactDOM.render(<Root store={ store } />, root);
-
-  window.store = store;
 });

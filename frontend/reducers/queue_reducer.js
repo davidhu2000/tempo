@@ -22,7 +22,6 @@ const _defaultState = [];
 
 const queueReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-  console.log(action);
   switch(action.type) {
     case ADD_TO_QUEUE:
       let newState = state.concat([action.song]);

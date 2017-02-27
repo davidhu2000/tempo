@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import MusicPlayer from './music_player.jsx';
 
 import { receiveCurrentSong, clearCurrentSong } from '../../actions/songs_actions';
-import { removeFirstSong } from '../../actions/queue_actions';
+import { removeFirstSong, shuffleQueue } from '../../actions/queue_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   queue: state.queue,
@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   receiveCurrentSong: song => dispatch(receiveCurrentSong(song)),
   removeFirstSong: () => dispatch(removeFirstSong()),
-  clearCurrentSong: () => dispatch(clearCurrentSong())
+  clearCurrentSong: () => dispatch(clearCurrentSong()),
+  shuffleQueue: () => dispatch(shuffleQueue())
 });
 
 export default connect(

@@ -5,7 +5,9 @@ const Navbar = () => (
   <div className='navbar col'>
     <div className='navbar-logo'>
       <Link to='/'>
-        <img className='navbar-logo-icon' src="https://res.cloudinary.com/davidhu2000/image/upload/v1484198898/logo_hrwwkv.png" />
+        <img
+          className='navbar-logo-icon'
+          src="https://res.cloudinary.com/davidhu2000/image/upload/v1484198898/logo_hrwwkv.png" />
       </Link>
     </div>
 

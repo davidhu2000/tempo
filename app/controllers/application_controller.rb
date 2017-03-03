@@ -29,11 +29,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def redirect_all
-    url = logged_in? ? "/#/browse" : "/#/splash"
-    redirect_to url unless params['controller'] == 'static_pages'
-  end
-
-  before_action :redirect_all
+  # def redirect_all
+  #   url = logged_in? ? "/#/browse" : "/#/splash"
+  #   redirect_to url unless params['controller'] == 'static_pages'
+  # end
+  #
+  # before_action :redirect_all
 
 end

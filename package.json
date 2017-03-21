@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "webpack --config webpack.config.prod.js",
     "dev": "rm -Rf app/assets/javascripts/build/* | NODE_ENV=development webpack -w --env.dev ",
-    "build": "rm -Rf app/assets/javascripts/build/* | NODE_ENV=production webpack --progress --env.prod"
+    "build": "rm -Rf app/assets/javascripts/build/* | NODE_ENV=production webpack --progress --env.prod",
+    "heroku-postbuild": "yarn build"
   },
   "engines": {
     "node": "6.2.1",

@@ -79,8 +79,15 @@ class App extends React.Component {
               currentUser={this.props.currentUser} />
           </div>
 
-          <div className=''>
-            { this.props.children }
+          <div className='browse'>
+            <nav className='browse-navbar'>
+              <Link to='/artists'>Artists</Link>
+              <Link to='/albums'>Albums</Link>
+              <Link to='/playlists'>Playlists</Link>
+            </nav>
+            <div className='browse-main'>
+              { this.props.children }
+            </div>
           </div>
           { this.props.currentSong.song_url ? this.renderCurrentSong() : <div></div> }
 

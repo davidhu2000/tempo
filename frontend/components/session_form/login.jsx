@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
       this.setState({
         loginGuest: false
       })
-      return this.props.login(this.state).then(hashHistory.replace('/browse'));
+      return this.props.login(this.state).then(hashHistory.replace('/artists'));
     } else {
       setTimeout(() => {
         this.setState({

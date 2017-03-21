@@ -71,7 +71,7 @@ class PickPlaylistForm extends React.Component {
           <form onSubmit={ this.handleSubmit } className='playlist-form pick-playlist'>
             { this.renderSelection() }
 
-            <input type='submit' value={ this.buttonVal } className='form-button' ></input>
+            <input type='submit' value={ this.buttonVal } className='pick-playlist-button' ></input>
 
           </form>
         </div>

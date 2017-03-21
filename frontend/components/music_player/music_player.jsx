@@ -109,6 +109,7 @@ class MusicPlayer extends React.Component {
           playStatus={this.state.playStatus}
           forward={this.forward}
           backward={this.backward}
+          shuffleQueue={this.props.shuffleQueue}
           currentSong={this.props.currentSong} />
 
         <Sound

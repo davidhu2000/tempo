@@ -47,6 +47,10 @@ $hover-opacity: 0.7;
   }
 
   div:hover {
-    background: $aqua-blue-more-transparent;
+    background: $aqua-blue-most-transparent;
+  }
+
+  div:active {
+    background: $aqua-blue-transparent;
   }
 }

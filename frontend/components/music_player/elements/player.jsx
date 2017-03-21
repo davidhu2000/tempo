@@ -42,7 +42,7 @@ class Player extends React.Component {
         </div>
 
         <div className='player-random'>
-          <button>
+          <button onClick={ () => this.props.shuffleQueue() }>
             <i className='fa fa-random'></i>
           </button>
         </div>

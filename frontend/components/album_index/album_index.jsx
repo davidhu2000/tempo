@@ -19,9 +19,11 @@ class AlbumIndex extends React.Component {
         </Link>
 
         <button className='album-index-play' onClick={() => this.props.playFirstSongAndAddAlbumToQueue(album.id) }>
+          <span>Play Album</span>
           <i className='fa fa-play'></i>
         </button>
         <button className='album-index-queue' onClick={() => this.props.fetchAlbumToQueue(album.id)}>
+          <span>Add to Queue</span>
           <i className='fa fa-plus'></i>
         </button>
 

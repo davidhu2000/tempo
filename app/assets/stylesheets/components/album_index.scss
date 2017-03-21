@@ -17,8 +17,9 @@
 .album-index-item {
   box-sizing: border-box;
   display: block;
-  height: 20vh;
-  width: 20vh;
+  position: relative;
+  height: 170px;
+  width: 170px;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -26,9 +27,12 @@
   margin: 20px 20px;
 
   img {
-    height: 20vh;
-    width: 20vh;
+    height: 150px;
+    width: 150px;
     margin: 0 auto;
+    opacity: 0.6;
+    border-radius: 3px;
+    box-shadow: 0 0 3px $aqua-blue;
   }
 
   h4 {
@@ -38,17 +42,44 @@
 
 .album-index-play, .album-index-queue {
   background: transparent;
-  position: relative;
-  top: -6vh;
-  width: 10%;
-  height: 10%;
-  font-size: 3em;
+  position: absolute;
+  top: 60px;
+  font-size: 30px;
   opacity: 0.4;
   color: $color5;
+  visibility: hidden;
+
+  span {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    visibility: hidden;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 15px;
+    top: -2.5vh;
+    left: -3vw;
+    padding: 5px;
+    text-transform: uppercase;
+    z-index: 100;
+  }
+}
+
+.album-index-item:hover {
+  img {
+    opacity: 1;
+    box-shadow: none;
+  }
+
+  .album-index-play, .album-index-queue {
+    visibility: visible;
+  }
 }
 
 .album-index-play:hover, .album-index-queue:hover {
   opacity: 0.9;
+  span {
+    visibility: visible;
+  }
 }
 
 .album-index-play {

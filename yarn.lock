@@ -1144,8 +1144,8 @@ extsprintf@1.0.2:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
 fbjs@^0.8.1, fbjs@^0.8.4:
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.9.tgz#180247fbd347dcc9004517b904f865400a0c8f14"
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.10.tgz#d295265ca20982aec200d91d759b67fb1818699c"
   dependencies:
     core-js "^1.0.0"
     isomorphic-fetch "^2.1.1"

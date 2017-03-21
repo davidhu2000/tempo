@@ -60,8 +60,11 @@
     text-align: center;
   }
   a:hover {
+    color: $aqua-blue-transparent;
+  }
+
+  a:active {
     color: $aqua-blue;
-    font-size: 25px;
   }
 }
 

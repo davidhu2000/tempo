@@ -12,14 +12,13 @@ class SessionForm extends React.Component {
   componentDidMount() {
     this._redirectLoggedIn();
   }
-
+  
   componentDidUpdate() {
     this._redirectLoggedIn();
   }
 
   _redirectLoggedIn() {
     if(this.props.loggedIn) {
-
       this.props.router.replace('/artists');
     }
   }
@@ -39,7 +38,7 @@ class SessionForm extends React.Component {
       return (
         <div>
           { this.renderErrors() }
-          <LoginForm login={this.props.login} />
+          <LoginForm login={this.props.login} demo={this.props.demo}/>
         </div>
       );
     } else {

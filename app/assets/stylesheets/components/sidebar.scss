@@ -4,6 +4,7 @@ $logo-width: 3.5vw;
 
 .sidebar {
   width: $sidebar-width;
+  min-width: 40px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +24,7 @@ $logo-width: 3.5vw;
     box-sizing: border-box;
     display: block;
     width: 100%;
+    min-height: 40px;
     height: $sidebar-width;
     text-align: center;
     text-align: -webkit-center;
@@ -30,22 +32,28 @@ $logo-width: 3.5vw;
     color: white;
     background-color: $aqua-blue-most-transparent;
     cursor: pointer;
-
-
   }
 
   a:hover {
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-    background-color: $aqua-blue-most-transparent;
-    border-bottom: 2px solid $color4;
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+    background-color: $aqua-blue-more-transparent;
+    border-left: 2px solid $color4;
+  }
+
+  a:active {
+    background-color: gray;
   }
 
   .sidebar-logo {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     height: $sidebar-width;
     padding: 0;
     margin: 0;
@@ -54,6 +62,8 @@ $logo-width: 3.5vw;
       position: absolute;
       height: $logo-width;
       width: $logo-width;
+      min-width: 15px;
+      min-height: 15px;
       top: ($sidebar-width - $logo-width) / 2;
       left: ($sidebar-width - $logo-width) / 2;
     }
@@ -85,30 +95,25 @@ $logo-width: 3.5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack:end;
-        -ms-flex-pack:end;
-            justify-content:flex-end;
+    flex-direction: column;
+    justify-content:center;
 
     img {
       -webkit-filter: invert(30%);
               filter: invert(30%);
       width: $icon-width;
+      min-width: 15px;
       margin: 0 auto;
       padding: 0;
     }
 
     span {
       text-align: center;
-      font-size: 0.8em;
+      font-size: 1vw;
       display:inherit;
       line-height: normal;
       margin: 0 auto;
       padding-top: 5px;
-      padding-bottom: 15px;
     }
   }
 }
@@ -160,7 +165,7 @@ $logo-width: 3.5vw;
   .sidebar-logout {
     display: block;
     margin: 5px auto;
-    font-size: 12px;
+    font-size: 1vw;
     border-radius: 3px;
     border: 1px solid #353535;
     padding: 3px 8px;
@@ -168,6 +173,7 @@ $logo-width: 3.5vw;
     text-align: center;
     background: rgba(0,0,0,0.7);
     box-shadow: 2px 2px 2px #132B11;
+    width: 100%;
   }
 
   .sidebar-logout:hover {

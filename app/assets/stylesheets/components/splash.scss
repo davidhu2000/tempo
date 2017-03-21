@@ -30,6 +30,13 @@
     color: #FFFFFF;
   }
 
+  h2 {
+    display: block;
+    font-size: 2em;
+    text-shadow: 3px 3px 2px black;
+    color: #FFFFFF;
+  }
+
   .splash-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -45,6 +52,7 @@
       padding: 20px 40px;
       color: white;
       background: $aqua-blue-most-transparent;
+      box-shadow: 0px 0px 5px black;
     }
 
     a:hover {

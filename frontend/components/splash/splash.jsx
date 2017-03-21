@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, Link, hashHistory } from 'react-router';
 
-import Navbar from '../navbar/navbar';
+import Navbar from '../navbar';
 
 const demoUser = {
   username: 'Guest',

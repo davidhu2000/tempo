@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './app';
+// import App from './app';
 import { Router, Route, IndexRoute } from 'react-router';
 
 const errorLoading = error => {
@@ -11,7 +11,7 @@ const loadRoute = callback => {
 }
 
 const importComponent = (path, cb) => (
-  System.import(path).then(loadRoute(cb)).catch(errorLoading)
+  System.import('./splash/').then(loadRoute(cb)).catch(errorLoading)
 );
 
 const _redirect = (nextState, replace) => {
@@ -26,22 +26,22 @@ const routes = (
   <Route path="/">
     <IndexRoute onEnter={ _redirect } />
 
-    <Route path="/splash" getComponent={(location, cb) => importComponent('./splash', cb) }>
-      <IndexRoute getComponent={(location, cb) => importComponent('./splash/display', cb) } />
-      <Route path="/login" getComponent={(location, cb) => importComponent('./session_form', cb) } />
-      <Route path="/signup" getComponent={(location, cb) => importComponent('./session_form', cb) } />
+    <Route path="/splash" getComponent={(location, cb) => System.import('./splash').then(loadRoute(cb)).catch(errorLoading) }>
+      <IndexRoute getComponent={(location, cb) => System.import('./splash/display').then(loadRoute(cb)).catch(errorLoading) } />
+      <Route path="/login" getComponent={(location, cb) => System.import('./session_form').then(loadRoute(cb)).catch(errorLoading) } />
+      <Route path="/signup" getComponent={(location, cb) => System.import('./session_form').then(loadRoute(cb)).catch(errorLoading) } />
     </Route>
 
-    <Route getComponent={(location, cb) => importComponent('./app', cb) }>
-      <Route path='/browse' getComponent={(location, cb) => importComponent('./browse', cb) }>
-        <Route path='/artists' getComponent={(location, cb) => importComponent('./artist_index', cb) } />
-        <Route path='/artists/:artistId' getComponent={(location, cb) => importComponent('./artist_detail', cb) } />
-        <Route path='/albums' getComponent={(location, cb) => importComponent('./album_index', cb) } />
-        <Route path='/albums/:albumId' getComponent={(location, cb) => importComponent('./album_detail', cb) } />
-        <Route path='/playlists' getComponent={(location, cb) => importComponent('./playlist_index', cb) } />
-        <Route path='/playlists/:playlistId' getComponent={(location, cb) => importComponent('./playlist_detail', cb) } />
+    <Route getComponent={(location, cb) => System.import('./app').then(loadRoute(cb)).catch(errorLoading) }>
+      <Route path='/browse' getComponent={(location, cb) => System.import('./browse').then(loadRoute(cb)).catch(errorLoading) }>
+        <Route path='/artists' getComponent={(location, cb) => System.import('./artist_index').then(loadRoute(cb)).catch(errorLoading) } />
+        <Route path='/artists/:artistId' getComponent={(location, cb) => System.import('./artist_detail').then(loadRoute(cb)).catch(errorLoading) } />
+        <Route path='/albums' getComponent={(location, cb) => System.import('./album_index').then(loadRoute(cb)).catch(errorLoading) } />
+        <Route path='/albums/:albumId' getComponent={(location, cb) => System.import('./album_detail').then(loadRoute(cb)).catch(errorLoading) } />
+        <Route path='/playlists' getComponent={(location, cb) => System.import('./playlist_index').then(loadRoute(cb)).catch(errorLoading) } />
+        <Route path='/playlists/:playlistId' getComponent={(location, cb) => System.import('./playlist_detail').then(loadRoute(cb)).catch(errorLoading) } />
       </Route>
-      <Route path='/profile' getComponent={(location, cb) => importComponent('./current_user_detail', cb) } />
+      <Route path='/profile' getComponent={(location, cb) => System.import('./current_user_detail').then(loadRoute(cb)).catch(errorLoading) } />
     </Route>
 
   </Route>

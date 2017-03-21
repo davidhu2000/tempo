@@ -13,8 +13,8 @@ module.exports = env => {
       vendor: ['react', 'react-dom', 'react-router']
     },
     output: {
-      path: path.join(__dirname, 'app', 'assets', 'javascripts', 'build'),
-      publicPath: path.join('assets', 'build', '/'),
+      path: './public/js',
+      publicPath: './js/',
       filename: '[name].js'
     },
     module: {

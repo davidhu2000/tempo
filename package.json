@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "rm -Rf app/assets/javascripts/build/* | NODE_ENV=development webpack -w --env.dev ",
-    "build": "rm -Rf app/assets/javascripts/build/* | NODE_ENV=production webpack --progress --env.prod",
+    "dev": "rm -Rf public/js/* | NODE_ENV=development webpack -w --env.dev ",
+    "build": "rm -Rf public/js/* | NODE_ENV=production webpack --progress --env.prod",
     "heroku-postbuild": "NODE_ENV=production webpack --progress --env.prod"
   },
   "engines": {

@@ -38,8 +38,7 @@ module.exports = env => {
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: Infinity,
-        filename: '[name].js',
-        async: true
+        filename: '[name].js'
       }),
       isProduction(new webpack.DefinePlugin({
         'process.env': {
@@ -48,7 +47,7 @@ module.exports = env => {
       })),
       isProduction(new webpack.optimize.UglifyJsPlugin({
         compress: {
-          'screw_ie8': true,
+          'screw_ie8': false,
           'warnings': false,
           'unused': true,
           'dead_code': true

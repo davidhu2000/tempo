@@ -1,5 +1,4 @@
 import React from 'react';
-// import App from './app';
 import { Router, Route, IndexRoute } from 'react-router';
 
 const errorLoading = error => {
@@ -10,10 +9,6 @@ const loadRoute = callback => {
   return module => callback(null, module.default);
 }
 
-const importComponent = (path, cb) => (
-  System.import(path).then(loadRoute(cb)).catch(errorLoading)
-);
-
 const _redirect = (nextState, replace) => {
   if(window.currentUser) {
     replace('/artists');
@@ -21,30 +16,6 @@ const _redirect = (nextState, replace) => {
     replace('/splash');
   }
 };
-
-function lazyLoadComponent(lazyModule) {
-  return (location, cb) => {
-    lazyModule(module => {
-      cb(null, module)
-    })
-  }
-}
-
-function lazyLoadComponents(lazyModules) {
-  return (location, cb) => {
-    const moduleKeys = Object.keys(lazyModules);
-    const promises = moduleKeys.map(key =>
-      new Promise(resolve => lazyModules[key](resolve))
-    )
-
-    Promise.all(promises).then(modules => {
-      cb(null, modules.reduce((obj, module, i) => {
-        obj[moduleKeys[i]] = module;
-        return obj;
-      }, {}))
-    })
-  }
-}
 
 import Splash from './splash';
 

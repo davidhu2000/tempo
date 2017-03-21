@@ -19,7 +19,7 @@
 
   <%= yield %>
 
-  <script type="text/javascript" src="assets/javascripts/build/vendor.js"></script>
-  <script type="text/javascript" src="assets/build/app.js"></script>
+  <%= asset_path('vendor.js') %>
+  <%= asset_path('app.js') %>
 </body>
 </html>

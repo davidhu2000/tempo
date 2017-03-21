@@ -14,7 +14,6 @@ module.exports = env => {
     },
     output: {
       path: path.join(__dirname, 'app', 'assets', 'javascripts', 'build'),
-      // publicPath: path.join(__dirname, 'app', 'assets', 'javascripts', 'build/'),
       filename: '[name].js'
     },
     module: {

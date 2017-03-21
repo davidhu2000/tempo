@@ -11,7 +11,7 @@ const loadRoute = callback => {
 }
 
 const importComponent = (path, cb) => (
-  System.import('./splash/').then(loadRoute(cb)).catch(errorLoading)
+  System.import(path).then(loadRoute(cb)).catch(errorLoading)
 );
 
 const _redirect = (nextState, replace) => {
@@ -22,26 +22,52 @@ const _redirect = (nextState, replace) => {
   }
 };
 
+function lazyLoadComponent(lazyModule) {
+  return (location, cb) => {
+    lazyModule(module => {
+      cb(null, module)
+    })
+  }
+}
+
+function lazyLoadComponents(lazyModules) {
+  return (location, cb) => {
+    const moduleKeys = Object.keys(lazyModules);
+    const promises = moduleKeys.map(key =>
+      new Promise(resolve => lazyModules[key](resolve))
+    )
+
+    Promise.all(promises).then(modules => {
+      cb(null, modules.reduce((obj, module, i) => {
+        obj[moduleKeys[i]] = module;
+        return obj;
+      }, {}))
+    })
+  }
+}
+
+import Splash from './splash';
+
 const routes = (
   <Route path="/">
     <IndexRoute onEnter={ _redirect } />
 
-    <Route path="/splash" getComponent={(location, cb) => System.import('./splash').then(loadRoute(cb)).catch(errorLoading) }>
-      <IndexRoute getComponent={(location, cb) => System.import('./splash/display').then(loadRoute(cb)).catch(errorLoading) } />
-      <Route path="/login" getComponent={(location, cb) => System.import('./session_form').then(loadRoute(cb)).catch(errorLoading) } />
-      <Route path="/signup" getComponent={(location, cb) => System.import('./session_form').then(loadRoute(cb)).catch(errorLoading) } />
+    <Route path="/splash" getComponent={ lazyLoadComponent(Splash) }>
+      <IndexRoute           getComponent={(location, cb) => require.ensure(['./splash'], require => cb(null, require('./splash/display'))) } />
+      <Route path="/login"  getComponent={(location, cb) => require.ensure(['./splash'], require => cb(null, require('./session_form'))) } />
+      <Route path="/signup" getComponent={(location, cb) => require.ensure(['./splash'], require => cb(null, require('./session_form'))) } />
     </Route>
 
-    <Route getComponent={(location, cb) => System.import('./app').then(loadRoute(cb)).catch(errorLoading) }>
-      <Route path='/browse' getComponent={(location, cb) => System.import('./browse').then(loadRoute(cb)).catch(errorLoading) }>
-        <Route path='/artists' getComponent={(location, cb) => System.import('./artist_index').then(loadRoute(cb)).catch(errorLoading) } />
-        <Route path='/artists/:artistId' getComponent={(location, cb) => System.import('./artist_detail').then(loadRoute(cb)).catch(errorLoading) } />
-        <Route path='/albums' getComponent={(location, cb) => System.import('./album_index').then(loadRoute(cb)).catch(errorLoading) } />
-        <Route path='/albums/:albumId' getComponent={(location, cb) => System.import('./album_detail').then(loadRoute(cb)).catch(errorLoading) } />
-        <Route path='/playlists' getComponent={(location, cb) => System.import('./playlist_index').then(loadRoute(cb)).catch(errorLoading) } />
-        <Route path='/playlists/:playlistId' getComponent={(location, cb) => System.import('./playlist_detail').then(loadRoute(cb)).catch(errorLoading) } />
+    <Route getComponent={(location, cb) => require.ensure([], require => require('./app')) }>
+      <Route path='/browse' getComponent={(location, cb) => require.ensure(['./app'], require => require('./browse')) }>
+        <Route path='/artists'               getComponent={(location, cb) => require.ensure(['./browse'], require => require('./artist_index')) } />
+        <Route path='/artists/:artistId'     getComponent={(location, cb) => require.ensure(['./browse'], require => require('./artist_detail')) } />
+        <Route path='/albums'                getComponent={(location, cb) => require.ensure(['./browse'], require => require('./album_index')) } />
+        <Route path='/albums/:albumId'       getComponent={(location, cb) => require.ensure(['./browse'], require => require('./album_detail')) } />
+        <Route path='/playlists'             getComponent={(location, cb) => require.ensure(['./browse'], require => require('./playlist_index')) } />
+        <Route path='/playlists/:playlistId' getComponent={(location, cb) => require.ensure(['./browse'], require => require('./playlist_detail')) } />
       </Route>
-      <Route path='/profile' getComponent={(location, cb) => System.import('./current_user_detail').then(loadRoute(cb)).catch(errorLoading) } />
+      <Route path='/profile' getComponent={(location, cb) => require.ensure(['./app'], require => require('./current_user_detail')) } />
     </Route>
 
   </Route>

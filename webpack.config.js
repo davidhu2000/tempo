@@ -38,7 +38,8 @@ module.exports = env => {
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: Infinity,
-        filename: '[name].js'
+        filename: '[name].js',
+        async: true
       }),
       isProduction(new webpack.DefinePlugin({
         'process.env': {

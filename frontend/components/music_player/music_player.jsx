@@ -25,6 +25,10 @@ class MusicPlayer extends React.Component {
       positionInMilliseconds: 0,
       playerShow: 'player-popup'
     };
+
+    soundManager.setup({
+      debugMode: false
+    })
   }
 
   formatMilliseconds(milliseconds) {

@@ -7,25 +7,25 @@ import { logout } from '../actions/session_actions';
 import routes from './routes';
 
 // // app components
-// import AppContainer from './app/app_container';
+// import App from './app';
 // import Sidebar from './app/sidebar';
-// import BrowseContainer from './browse/browse_container';
+// import Browse from './browse';
 //
-// import ArtistIndexContainer from './artist_index/artist_index_container';
-// import SongIndexContainer from './song_index/song_index_container';
-// import AlbumIndexContainer from './album_index/album_index_container';
-// import PlaylistIndexContainer from './playlist_index/playlist_index_container';
+// import ArtistIndex from './artist_index';
+// import SongIndex from './song_index';
+// import AlbumIndex from './album_index';
+// import PlaylistIndex from './playlist_index';
 //
-// import AlbumDetailContainer from './album_detail/album_detail_container';
-// import ArtistDetailContainer from './artist_detail/artist_detail_container';
-// import PlaylistDetailContainer from './playlist_detail/playlist_detail_container';
-// import CurrentUserDetailContainer from './current_user_detail/current_user_detail_container';
+// import AlbumDetail from './album_detail';
+// import ArtistDetail from './artist_detail';
+// import PlaylistDetail from './playlist_detail';
+// import CurrentUserDetail from './current_user_detail';
 //
 //
 // // splash components
-// import SplashContainer from './splash/splash_container';
+// import Splash from './splash';
 // import SplashDisplay from './splash/display';
-// import SessionFormContainer from './session_form/session_form_container';
+// import SessionForm from './session_form';
 
 const errorLoading = error => {
   throw new Error(`Dynamic page loading failed: ${error}`)

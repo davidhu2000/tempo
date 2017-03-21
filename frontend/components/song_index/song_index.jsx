@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import ClassNames from 'classnames';
-import PickPlaylistFormContainer from '../pick_playlist_form/pick_playlist_form_container';
+import PickPlaylistForm from '../pick_playlist_form';
 
 class Songs extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class Songs extends React.Component {
   renderForm() {
     if(this.state.showForm) {
       return (
-        <PickPlaylistFormContainer
+        <PickPlaylistForm
           formType='new'
           toggleForm={ this.toggleForm(this.state.songId) }
           songId={ this.state.songId } />

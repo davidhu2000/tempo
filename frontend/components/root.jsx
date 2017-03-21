@@ -59,24 +59,24 @@ export default Root;
 //   <Route path="/">
 //     <IndexRoute onEnter={ _redirect } />
 //
-//     <Route path="/splash" component={ SplashContainer }>
+//     <Route path="/splash" component={ Splash }>
 //       <IndexRoute component={ SplashDisplay } />
-//       <Route path="/login" component={ SessionFormContainer } />
-//       <Route path="/signup" component={ SessionFormContainer } />
+//       <Route path="/login" component={ SessionForm } />
+//       <Route path="/signup" component={ SessionForm } />
 //     </Route>
 //
-//     <Route component={AppContainer}>
-//       <Route path='/browse' component={ BrowseContainer }>
+//     <Route component={App}>
+//       <Route path='/browse' component={ Browse }>
 //
-//         <Route path='/artists' component={ ArtistIndexContainer } />
-//         <Route path='/artists/:artistId' component={ ArtistDetailContainer } />
-//         <Route path='/albums' component={ AlbumIndexContainer } />
-//         <Route path='/albums/:albumId' component={ AlbumDetailContainer} />
-//         <Route path='/songs' component={ SongIndexContainer } />
-//         <Route path='/playlists' component={ PlaylistIndexContainer } />
-//         <Route path='/playlists/:playlistId' component={ PlaylistDetailContainer } />
+//         <Route path='/artists' component={ ArtistIndex } />
+//         <Route path='/artists/:artistId' component={ ArtistDetail } />
+//         <Route path='/albums' component={ AlbumIndex } />
+//         <Route path='/albums/:albumId' component={ AlbumDetail} />
+//         <Route path='/songs' component={ SongIndex } />
+//         <Route path='/playlists' component={ PlaylistIndex } />
+//         <Route path='/playlists/:playlistId' component={ PlaylistDetail } />
 //       </Route>
-//       <Route path='/profile' component={ CurrentUserDetailContainer } />
+//       <Route path='/profile' component={ CurrentUserDetail } />
 //     </Route>
 //
 //   </Route>

@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 import Sidebar from './sidebar';
-import SearchContainer from '../search/search_container';
-import CurrentSongContainer from '../current_song/current_song_container';
+import Search from '../search';
+import CurrentSong from '../current_song';
 import Popup from '../popup/popup';
 
 class App extends React.Component {
@@ -33,7 +33,7 @@ class App extends React.Component {
   renderCurrentSong() {
     return (
       <div className='current-song'>
-        <CurrentSongContainer />
+        <CurrentSong />
       </div>
     );
   }
@@ -50,8 +50,7 @@ class App extends React.Component {
   renderSearch() {
     if(this.state.showSearch) {
       return (
-        <SearchContainer
-          toggleSearch={ this.toggleSearch }/>
+        <Search toggleSearch={ this.toggleSearch }/>
       );
     }
   }

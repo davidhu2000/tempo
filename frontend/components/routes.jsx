@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './app/app_container';
+import App from './app';
 import { Router, Route, IndexRoute } from 'react-router';
 
 const errorLoading = error => {

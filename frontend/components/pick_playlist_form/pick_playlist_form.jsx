@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 
 class PickPlaylistForm extends React.Component {
   constructor(props) {

@@ -8,7 +8,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png' %>
-  
+
   <% if logged_in? %>
     <script type="text/javascript">
       window.currentUser = <%= render("api/users/user.json.jbuilder", user: current_user).html_safe %>
@@ -19,5 +19,7 @@
 
 <%= yield %>
 
+<script type="text/javascript" src="assets/build/vendor.js"></script>
+<script type="text/javascript" src="assets/build/app.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Modal from 'react-modal';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 
 import { logout } from '../actions/session_actions';

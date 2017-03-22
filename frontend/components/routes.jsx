@@ -17,8 +17,6 @@ const _redirect = (nextState, replace) => {
   }
 };
 
-import Splash from './splash';
-
 const routes = (
   <Route path="/">
     <IndexRoute onEnter={ _redirect } />

@@ -3,7 +3,6 @@
 ![circle ci](https://circleci.com/gh/davidhu2000/tempo.svg?style=shield)
 [![dependencies Status](https://david-dm.org/davidhu2000/tempo/status.svg)](https://david-dm.org/davidhu2000/tempo)
 [![devDependencies Status](https://david-dm.org/davidhu2000/tempo/dev-status.svg)](https://david-dm.org/davidhu2000/tempo?type=dev)
-[![peerDependencies Status](https://david-dm.org/davidhu2000/tempo/peer-status.svg)](https://david-dm.org/davidhu2000/tempo?type=peer)
 
 [Tempo](http://www.tempostream.com) is a web application that allows the users to stream music from their favorite artists. Inspired by [Spotify](https://www.spotify.com), Tempo allows user to browse different artists and albums. They can also create and follow different playlists.
 
